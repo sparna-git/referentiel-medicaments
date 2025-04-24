@@ -3,19 +3,19 @@ var sampleQueries = {
 	{
   "distinct": true,
   "variables": [
-    "SpecialitePharmaceutique_1",
-    "CIP_6",
-    "UCD_10"
+    { "termType": "Variable", "value": "SpecialitePharmaceutique_1"},
+    { "termType": "Variable", "value": "CIP_6"},
+    { "termType": "Variable", "value": "UCD_10"}
   ],
   "order": null,
   "branches": [
     {
       "line": {
-        "s": "?SpecialitePharmaceutique_1",
-        "p": "http://data.esante.gouv.fr/ansm/medicament/codeATC",
-        "o": "?CodeATC_2",
-        "sType": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique",
-        "oType": "http://data.esante.gouv.fr/ansm/medicament/sparnatural-config/CodeATC",
+        "s": "SpecialitePharmaceutique_1",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_codeATC",
+        "o": "CodeATC_2",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#ATC",
         "values": [
           {
             "label": "J01DC02",
@@ -27,21 +27,21 @@ var sampleQueries = {
     },
     {
       "line": {
-        "s": "?SpecialitePharmaceutique_1",
-        "p": "http://data.esante.gouv.fr/ansm/medicament/aPourPresentation",
-        "o": "?Presentation_4",
-        "sType": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique",
-        "oType": "http://data.esante.gouv.fr/ansm/medicament/Presentation",
+        "s": "SpecialitePharmaceutique_1",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_aPourPresentation",
+        "o": "Presentation_4",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Presentation",
         "values": []
       },
       "children": [
         {
           "line": {
-            "s": "?Presentation_4",
-            "p": "http://data.esante.gouv.fr/ansm/medicament/CIP13",
-            "o": "?CIP_6",
-            "sType": "http://data.esante.gouv.fr/ansm/medicament/Presentation",
-            "oType": "http://data.esante.gouv.fr/ansm/medicament/sparnatural-config/CIP",
+            "s": "Presentation_4",
+            "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Presentation_CIP13",
+            "o": "CIP_6",
+            "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Presentation",
+            "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Code",
             "values": []
           },
           "children": []
@@ -50,21 +50,21 @@ var sampleQueries = {
     },
     {
       "line": {
-        "s": "?SpecialitePharmaceutique_1",
-        "p": "http://data.esante.gouv.fr/ansm/medicament/aPourUniteDeDispensation",
-        "o": "?UniteCommuneDeDispensation_8",
-        "sType": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique",
-        "oType": "http://data.esante.gouv.fr/ansm/medicament/UniteCommuneDeDispensation",
+        "s": "SpecialitePharmaceutique_1",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_aPourUniteDeDispensation",
+        "o": "UniteCommuneDeDispensation_8",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#UniteCommuneDeDispensation",
         "values": []
       },
       "children": [
         {
           "line": {
-            "s": "?UniteCommuneDeDispensation_8",
-            "p": "http://data.esante.gouv.fr/ansm/medicament/codeUCD13",
-            "o": "?UCD_10",
-            "sType": "http://data.esante.gouv.fr/ansm/medicament/UniteCommuneDeDispensation",
-            "oType": "http://data.esante.gouv.fr/ansm/medicament/sparnatural-config/UCD",
+            "s": "UniteCommuneDeDispensation_8",
+            "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#UniteCommuneDeDispensation_codeUCD13",
+            "o": "UCD_10",
+            "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#UniteCommuneDeDispensation",
+            "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Code",
             "values": []
           },
           "children": []
@@ -78,28 +78,28 @@ var sampleQueries = {
 {
   "distinct": true,
   "variables": [
-    "Substance_1",
-    "CodeSMS_6"
+    { "termType": "Variable", "value": "Substance_1" },
+    { "termType": "Variable", "value": "CodeSMS_6" }
   ],
   "order": null,
   "branches": [
     {
       "line": {
-        "s": "?Substance_1",
-        "p": "http://data.esante.gouv.fr/ansm/medicament/sparnatural-config/estSubstanceActiveDans",
-        "o": "?SpecialitePharmaceutique_2",
-        "sType": "http://data.esante.gouv.fr/ansm/medicament/Substance",
-        "oType": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique",
+        "s": "Substance_1",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Substance_estSubstanceActiveDans",
+        "o": "SpecialitePharmaceutique_2",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Substance",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
         "values": []
       },
       "children": [
         {
           "line": {
-            "s": "?SpecialitePharmaceutique_2",
-            "p": "http://data.esante.gouv.fr/ansm/medicament/codeATC",
-            "o": "?CodeATC_4",
-            "sType": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique",
-            "oType": "http://data.esante.gouv.fr/ansm/medicament/sparnatural-config/CodeATC",
+            "s": "SpecialitePharmaceutique_2",
+            "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_codeATC",
+            "o": "CodeATC_4",
+            "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+            "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Code",
             "values": [
               {
                 "label": "C09AA04",
@@ -113,11 +113,11 @@ var sampleQueries = {
     },
     {
       "line": {
-        "s": "?Substance_1",
-        "p": "http://data.esante.gouv.fr/ansm/medicament/codeSMS",
-        "o": "?CodeSMS_6",
-        "sType": "http://data.esante.gouv.fr/ansm/medicament/Substance",
-        "oType": "http://data.esante.gouv.fr/ansm/medicament/sparnatural-config/CodeSMS",
+        "s": "Substance_1",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Substance_codeSMS",
+        "o": "CodeSMS_6",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Substance",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Code",
         "values": []
       },
       "children": [],
@@ -130,17 +130,17 @@ var sampleQueries = {
 {
   "distinct": true,
   "variables": [
-    "CodeATC_2"
+    { "termType": "Variable", "value": "CodeATC_2" }
   ],
   "order": null,
   "branches": [
     {
       "line": {
-        "s": "?SpecialitePharmaceutique_1",
-        "p": "http://data.esante.gouv.fr/ansm/medicament/sparnatural-config/labelATC",
-        "o": "?CodeATC_2",
-        "sType": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique",
-        "oType": "http://data.esante.gouv.fr/ansm/medicament/sparnatural-config/CodeATC",
+        "s": "SpecialitePharmaceutique_1",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_labelATC",
+        "o": "CodeATC_2",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Code",
         "values": [
           {
             "label": "betamethasone",
@@ -157,17 +157,17 @@ var sampleQueries = {
 {
   "distinct": true,
   "variables": [
-    "SpecialitePharmaceutique_1"
+    { "termType": "Variable", "value": "SpecialitePharmaceutique_1" }
   ],
   "order": null,
   "branches": [
     {
       "line": {
-        "s": "?SpecialitePharmaceutique_1",
-        "p": "http://www.w3.org/2000/01/rdf-schema#label",
-        "o": "?Text_2",
-        "sType": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique",
-        "oType": "http://data.esante.gouv.fr/ansm/medicament/sparnatural-config/Text",
+        "s": "SpecialitePharmaceutique_1",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_label",
+        "o": "Text_2",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Text",
         "values": [
           {
             "label": "vaccin",
@@ -179,11 +179,11 @@ var sampleQueries = {
     },
     {
       "line": {
-        "s": "?SpecialitePharmaceutique_1",
-        "p": "http://www.w3.org/2000/01/rdf-schema#label",
-        "o": "?Text_4",
-        "sType": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique",
-        "oType": "http://data.esante.gouv.fr/ansm/medicament/sparnatural-config/Text",
+        "s": "SpecialitePharmaceutique_1",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_label",
+        "o": "Text_4",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Text",
         "values": [
           {
             "label": "covid",
@@ -200,22 +200,25 @@ var sampleQueries = {
 {
   "distinct": true,
   "variables": [
-    "Evenement_1",
-    "SpecialitePharmaceutique_2"
+    { "termType": "Variable", "value": "Evenement_1" },
+    { "termType": "Variable", "value": "SpecialitePharmaceutique_2" }
   ],
   "order": null,
   "branches": [
     {
       "line": {
-        "s": "?Evenement_1",
-        "p": "http://data.esante.gouv.fr/ansm/medicament/concerne",
-        "o": "?SpecialitePharmaceutique_2",
-        "sType": "http://data.esante.gouv.fr/ansm/medicament/Evenement",
-        "oType": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique",
+        "s": "Evenement_1",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Evenement_concerne",
+        "o": "SpecialitePharmaceutique_2",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Evenement",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
         "values": [
           {
             "label": "FORTUM 2 g, poudre pour solution injectable (IV) ou pour perfusion",
-            "uri": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique_69443806"
+            "rdfTerm": {
+              "type": "uri",
+              "value": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique_69443806"
+            }
           }
         ]
       },
@@ -228,33 +231,36 @@ var sampleQueries = {
 {
   "distinct": true,
   "variables": [
-    "Presentation_1",
-    "Substance_4",
-    "TypeProcedure_6"
+    { "termType": "Variable", "value": "Presentation_1" },
+    { "termType": "Variable", "value": "Substance_4" },
+    { "termType": "Variable", "value": "TypeProcedure_6" }
   ],
   "order": null,
   "branches": [
     {
       "line": {
-        "s": "?Presentation_1",
-        "p": "http://data.esante.gouv.fr/ansm/medicament/presente",
-        "o": "?SpecialitePharmaceutique_2",
-        "sType": "http://data.esante.gouv.fr/ansm/medicament/Presentation",
-        "oType": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique",
+        "s": "Presentation_1",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Presentation_presente",
+        "o": "SpecialitePharmaceutique_2",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Presentation",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
         "values": []
       },
       "children": [
         {
           "line": {
-            "s": "?SpecialitePharmaceutique_2",
-            "p": "http://data.esante.gouv.fr/ansm/medicament/substanceActive",
-            "o": "?Substance_4",
-            "sType": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique",
-            "oType": "http://data.esante.gouv.fr/ansm/medicament/Substance",
+            "s": "SpecialitePharmaceutique_2",
+            "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_substanceActive",
+            "o": "Substance_4",
+            "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+            "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Substance",
             "values": [
               {
                 "label": "ézétimibe",
-                "uri": "http://data.esante.gouv.fr/ansm/medicament/Substance_73242"
+                "rdfTerm": {
+                  "type": "uri",
+                  "value": "http://data.esante.gouv.fr/ansm/medicament/Substance_73242"
+                }
               }
             ]
           },
@@ -262,15 +268,18 @@ var sampleQueries = {
         },
         {
           "line": {
-            "s": "?SpecialitePharmaceutique_2",
-            "p": "http://data.esante.gouv.fr/ansm/medicament/typeProcedureCourante",
-            "o": "?TypeProcedure_6",
-            "sType": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique",
-            "oType": "http://data.esante.gouv.fr/ansm/medicament/TypeProcedure",
+            "s": "SpecialitePharmaceutique_2",
+            "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_typeProcedureCourante",
+            "o": "TypeProcedure_6",
+            "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+            "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#TypeProcedure",
             "values": [
               {
                 "label": "Autorisation d'importation parallèle d’une spécialité pharmaceutique en vue de la mise sur le marché en France (300)",
-                "uri": "http://data.esante.gouv.fr/ansm/medicament/Procedure_31"
+                "rdfTerm": {
+                  "type": "uri",
+                  "value": "http://data.esante.gouv.fr/ansm/medicament/TypeProcedure_31"
+                }
               }
             ]
           },
@@ -285,17 +294,17 @@ var sampleQueries = {
 {
   "distinct": true,
   "variables": [
-    "Presentation_1"
+    { "termType": "Variable", "value": "Presentation_1" }
   ],
   "order": null,
   "branches": [
     {
       "line": {
-        "s": "?Presentation_1",
-        "p": "http://www.w3.org/2000/01/rdf-schema#label",
-        "o": "?Text_2",
-        "sType": "http://data.esante.gouv.fr/ansm/medicament/Presentation",
-        "oType": "http://data.esante.gouv.fr/ansm/medicament/sparnatural-config/Text",
+        "s": "Presentation_1",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_label",
+        "o": "Text_2",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Presentation",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Text",
         "values": [
           {
             "label": "metformine",
@@ -307,11 +316,11 @@ var sampleQueries = {
     },
     {
       "line": {
-        "s": "?Presentation_1",
-        "p": "http://www.w3.org/2000/01/rdf-schema#label",
-        "o": "?Text_4",
-        "sType": "http://data.esante.gouv.fr/ansm/medicament/Presentation",
-        "oType": "http://data.esante.gouv.fr/ansm/medicament/sparnatural-config/Text",
+        "s": "Presentation_1",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Presentation_label",
+        "o": "Text_4",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Presentation",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Text",
         "values": [
           {
             "label": "1000",
@@ -327,28 +336,28 @@ var sampleQueries = {
 {
   "distinct": true,
   "variables": [
-    "Substance_1",
-    "Text_4"
+    { "termType": "Variable", "value": "Substance_1" },
+    { "termType": "Variable", "value": "Text_4" }
   ],
   "order": null,
   "branches": [
     {
       "line": {
-        "s": "?Substance_1",
-        "p": "http://data.esante.gouv.fr/ansm/medicament/sparnatural-config/estSubstanceActiveDans",
-        "o": "?SpecialitePharmaceutique_2",
-        "sType": "http://data.esante.gouv.fr/ansm/medicament/Substance",
-        "oType": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique",
+        "s": "Substance_1",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Substance_estSubstanceActiveDans",
+        "o": "SpecialitePharmaceutique_2",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Substance",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
         "values": []
       },
       "children": [
         {
           "line": {
-            "s": "?SpecialitePharmaceutique_2",
-            "p": "http://www.w3.org/2000/01/rdf-schema#label",
-            "o": "?Text_4",
-            "sType": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique",
-            "oType": "http://data.esante.gouv.fr/ansm/medicament/sparnatural-config/Text",
+            "s": "SpecialitePharmaceutique_2",
+            "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_label",
+            "o": "Text_4",
+            "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+            "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Text",
             "values": [
               {
                 "label": "humex rhume",

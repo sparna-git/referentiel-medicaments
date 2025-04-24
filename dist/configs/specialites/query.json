@@ -7,17 +7,58 @@
     },
     {
       "termType": "Variable",
-      "value": "CIS"
+      "value": "Code"
+    },
+    {
+      "termType": "Variable",
+      "value": "SubstanceActive"
+    },
+    {
+      "termType": "Variable",
+      "value": "SubstanceFraction"
+    },
+    {
+      "termType": "Variable",
+      "value": "Voie"
+    },
+    {
+      "termType": "Variable",
+      "value": "ATC"
+    },
+    {
+      "termType": "Variable",
+      "value": "NiveauPrescriptibilite"
+    },
+    {
+      "termType": "Variable",
+      "value": "JustificationNiveauPrescriptibilite"
+    },
+    {
+      "termType": "Variable",
+      "value": "Organisation"
+    },
+    {
+      "termType": "Variable",
+      "value": "StatutSpecialite"
+    },
+    {
+      "termType": "Variable",
+      "value": "TypeProcedure"
+    },
+    {
+      "termType": "Variable",
+      "value": "Date"
     }
   ],
+  "order": null,
   "branches": [
     {
       "line": {
         "s": "SpecialitePharmaceutique",
-        "p": "http://data.esante.gouv.fr/ansm/medicament/CIS",
-        "o": "CIS",
-        "sType": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique",
-        "oType": "http://data.esante.gouv.fr/ansm/medicament/sparnatural-config/CIS",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_CIS",
+        "o": "Code",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Code",
         "values": []
       },
       "children": []
@@ -25,13 +66,114 @@
     {
       "line": {
         "s": "SpecialitePharmaceutique",
-        "p": "http://data.esante.gouv.fr/ansm/medicament/substanceActive",
-        "o": "Substance",
-        "sType": "http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique",
-        "oType": "http://data.esante.gouv.fr/ansm/medicament/Substance",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_substanceActive",
+        "o": "SubstanceActive",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Substance",
+        "values": []
+      },
+      "children": []
+    },
+    {
+      "line": {
+        "s": "SpecialitePharmaceutique",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_fractionTherapeutique",
+        "o": "SubstanceFraction",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Substance",
+        "values": []
+      },
+      "children": []
+    },
+    {
+      "line": {
+        "s": "SpecialitePharmaceutique",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_voie",
+        "o": "Voie",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Voie",
+        "values": []
+      },
+      "children": []
+    },
+    {
+        "line": {
+        "s": "SpecialitePharmaceutique",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_classificationATC",
+        "o": "ATC",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#ATC",
+        "values": []
+      },
+      "children": []
+    },
+    {
+      "line": {
+        "s": "SpecialitePharmaceutique",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_prescriptibiliteEnDC",
+        "o": "NiveauPrescriptibilite",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#NiveauPrescriptibilite",
+        "values": []
+      },
+      "children": []
+    },
+    {
+      "line": {
+        "s": "SpecialitePharmaceutique",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_justificationPrescriptibiliteEnDC",
+        "o": "JustificationNiveauPrescriptibilite",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#JustificationNiveauPrescriptibilite",
+        "values": []
+      },
+      "children": [],
+      "optional": true
+    },
+    {
+      "line": {
+        "s": "SpecialitePharmaceutique",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_titulaireCourant",
+        "o": "Organisation",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Organisation",
+        "values": []
+      },
+      "children": []
+    },
+    {
+      "line": {
+        "s": "SpecialitePharmaceutique",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_statutCourant",
+        "o": "StatutSpecialite",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#StatutSpecialite",
+        "values": []
+      },
+      "children": []
+    },
+    {
+      "line": {
+        "s": "SpecialitePharmaceutique",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_typeProcedureCourante",
+        "o": "TypeProcedure",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#TypeProcedure",
+        "values": []
+      },
+      "children": []
+    },
+    {
+      "line": {
+        "s": "SpecialitePharmaceutique",
+        "p": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique_dateDebut",
+        "o": "Date",
+        "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#SpecialitePharmaceutique",
+        "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Date",
         "values": []
       },
       "children": []
     }
-  ]
+  ],
+  "limit": -1
 }
