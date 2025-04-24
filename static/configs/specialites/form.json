@@ -1,13 +1,86 @@
 {
   "bindings": [
     {
-      "variable": "Substance",
+      "variable": "SubstanceActive",
       "node": {
         "type": "UserPrompt",
         "name": {
-          "fr": "Substance"
+          "fr": "Substance Active"
         }
       }
-    }   
+    } 
+,
+  {
+      "variable": "SubstanceFraction",
+      "node": {
+        "type": "UserPrompt",
+        "name": {
+          "fr": "Fraction thérapeutique"
+        }
+      }
+    } 
+
+,
+{
+      "variable": "Voie",
+      "node": {
+        "type": "UserPrompt",
+        "name": {
+          "fr": "Voie"
+        }
+      }
+    } 
+,
+{
+      "variable": "ATC",
+      "node": {
+        "type": "UserPrompt",
+        "name": {
+          "fr": "Classement ATC"
+        }
+      }
+    } 
+,
+    {
+      "variable": "NiveauPrescriptibilite",
+      "node": {
+        "type": "UserPrompt",
+        "name": {
+          "fr": "Niveau de prescriptibilité"
+        }
+      }
+    } 
+
+,
+    {
+      "variable": "StatutSpecialite",
+      "node": {
+        "type": "UserPrompt",
+        "name": {
+          "fr": "Statut"
+        }
+      }
+    } 
+,
+{
+      "variable": "TypeProcedure",
+      "node": {
+        "type": "UserPrompt",
+        "name": {
+          "fr": "Type de procédure"
+        }
+      }
+    } 
+,
+{
+      "variable": "Date",
+      "node": {
+        "type": "UserPrompt",
+        "name": {
+          "fr": "Date de mise sur le marché"
+        }
+      }
+    } 
+
   ]
 }
