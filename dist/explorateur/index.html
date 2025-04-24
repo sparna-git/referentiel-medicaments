@@ -478,12 +478,6 @@
     // binds Sparnatural with itself for the query execution and integration with yasqe and yasr
     bindSparnaturalWithItself(sparnatural, yasqe, yasr);
 
-    // link yasqe and yasr
-    yasqe.on("queryResponse", function(_yasqe, response, duration) {
-      yasr.setResponse(response, duration);
-      sparnatural.enablePlayBtn();
-    });
-
     document.getElementById('sparql-toggle').onclick = function() {
       if(document.getElementById('yasqe').style.display == 'none') {
         document.getElementById('yasqe').style.display = 'block';

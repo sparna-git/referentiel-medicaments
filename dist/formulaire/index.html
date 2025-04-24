@@ -98,15 +98,9 @@
             <ul class="nav nav-tabs">
               <li class="nav-item">
                 <a class="nav-link active form-tab" id="tab-1" href="#" data-bs-toggle="tab" data-bs-target="#sparnatural-form-1">Spécialités</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link form-tab" id="tab-2" aria-current="page" href="#" data-bs-toggle="tab" data-bs-target="#sparnatural-form-2">Présentations</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link form-tab" id="tab-3" aria-current="page" href="#" data-bs-toggle="tab" data-bs-target="#sparnatural-form-3">UCD</a>
-              </li>              
+              </li>          
             </ul>
-
+            
 
             <!-- Tab panes -->
             <div class="tab-content" style="margin-bottom:15px;">
@@ -114,7 +108,7 @@
               <div class="tab-pane active" id="sparnatural-form-1">
                 <!-- Sparnatural Form -->
                 <sparnatural-form
-                  src="../configs/sparnatural-config.ttl"
+                  src="https://xls2rdf.sparna.fr/rest/convert?noPostProcessings=true&url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1ZkgVyfG1rnl3yZALOdxovj7ommoKDn7ieudi7jCwoYw%2Fexport%3Fformat%3Dxlsx"
                   form="../configs/specialites/form.json"
                   query="../configs/specialites/query.json"
                   endpoint="https://proxy.sparnatural.eu/sparql-proxy/sparql?endpoint=https%3A%2F%2Fsmt.esante.gouv.fr%2Fapi%2Fsparql"
@@ -126,40 +120,7 @@
                 ></sparnatural-form>
               </div>
 
-              <div class="tab-pane" id="sparnatural-form-2">
-                <!-- Sparnatural Form -->
-                <sparnatural-form
-                  src="../configs/sparnatural-config.ttl"
-                  form="../configs/presentations/form.json"
-                  query="../configs/presentations/query.json"
-                  endpoint="https://proxy.sparnatural.eu/sparql-proxy/sparql?endpoint=https%3A%2F%2Fsmt.esante.gouv.fr%2Fapi%2Fsparql"
-                  typePredicate="<http://www.w3.org/2000/01/rdf-schema#subClassOf>"
-                  lang="fr"
-                  defaultLang="fr"
-                  limit="10000"
-                  prefixes="med:http://data.esante.gouv.fr/ansm/medicament/ skos:http://www.w3.org/2004/02/skos/core#"
-                ></sparnatural-form>
-              </div>
-
-              <div class="tab-pane" id="sparnatural-form-3">
-                <!-- Sparnatural Form -->
-                <sparnatural-form
-                  src="../configs/sparnatural-config.ttl"
-                  form="../configs/ucd/form.json"
-                  query="../configs/ucd/query.json"
-                  endpoint="https://proxy.sparnatural.eu/sparql-proxy/sparql?endpoint=https%3A%2F%2Fsmt.esante.gouv.fr%2Fapi%2Fsparql"
-                  typePredicate="<http://www.w3.org/2000/01/rdf-schema#subClassOf>"
-                  lang="fr"
-                  defaultLang="fr"
-                  limit="10000"
-                  prefixes="med:http://data.esante.gouv.fr/ansm/medicament/ skos:http://www.w3.org/2004/02/skos/core#" 
-                ></sparnatural-form>
-              </div>
-
-
             </div>
-
-
 
             <input type="hidden" id="query-json"></input>
           </div>
@@ -458,24 +419,10 @@
     document.getElementById('tab-1').onclick = function() {
       if(!document.getElementById('tab-1').classList.contains("active")) {
         document.getElementById('tab-1').classList.add("active");
-        document.getElementById('tab-2').classList.remove("active");
-        document.getElementById('tab-3').classList.remove("active");
+
       }
     }
-    document.getElementById('tab-2').onclick = function() {
-      if(!document.getElementById('tab-2').classList.contains("active")) {
-        document.getElementById('tab-2').classList.add("active");
-        document.getElementById('tab-1').classList.remove("active");
-        document.getElementById('tab-3').classList.remove("active");
-      }
-    }
-    document.getElementById('tab-3').onclick = function() {
-      if(!document.getElementById('tab-3').classList.contains("active")) {
-        document.getElementById('tab-3').classList.add("active");
-        document.getElementById('tab-1').classList.remove("active");
-        document.getElementById('tab-2').classList.remove("active");
-      }
-    }
+
 
   </script>
 
