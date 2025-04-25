@@ -11,14 +11,6 @@
     },
     {
       "termType": "Variable",
-      "value": "SubstanceActive"
-    },
-    {
-      "termType": "Variable",
-      "value": "SubstanceFraction"
-    },
-    {
-      "termType": "Variable",
       "value": "Voie"
     },
     {
