@@ -11,7 +11,7 @@
     } 
 ,
   {
-      "variable": "SubstanceFraction",
+      "variable": "FractionTherapeutique",
       "node": {
         "type": "UserPrompt",
         "name": {
