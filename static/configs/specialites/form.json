@@ -1,25 +1,14 @@
 {
   "bindings": [
     {
-      "variable": "SubstanceActive",
+      "variable": "Substance",
       "node": {
         "type": "UserPrompt",
         "name": {
-          "fr": "Substance Active"
+          "fr": "Substance"
         }
       }
     } 
-,
-  {
-      "variable": "FractionTherapeutique",
-      "node": {
-        "type": "UserPrompt",
-        "name": {
-          "fr": "Fraction thérapeutique"
-        }
-      }
-    } 
-
 ,
 {
       "variable": "Voie",
