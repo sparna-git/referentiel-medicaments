@@ -1,5 +1,4 @@
-var sampleQueries = {
-	"example.1" :
+[
 	{
   "distinct": true,
   "variables": [
