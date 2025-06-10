@@ -386,8 +386,8 @@
     delete Yasr.plugins['table'];
     delete Yasr.plugins['response'];
     const yasr = new Yasr(document.getElementById("yasr"), {
-      pluginOrder: ["TableX", "Grid", "Stats"],
-      defaultPlugin: "TableX",
+      pluginOrder: ["Grid", "TableX", "Stats"],
+      defaultPlugin: "Grid",
       // disable persistency
       persistencyExpire: 0,
       maxPersistentResponseSize: 0
