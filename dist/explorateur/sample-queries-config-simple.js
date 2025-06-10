@@ -1,5 +1,4 @@
-var sampleQueries = {
-	"example.1" :
+[
 	{
   "distinct": true,
   "variables": [
@@ -324,12 +323,7 @@ var sampleQueries = {
         "o": "Text_2",
         "sType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Presentation",
         "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Text",
-        "values": [
-          {
-            "label": "multidose",
-            "regex": "multidose"
-          }
-        ]
+        "values": []
       },
       "children": []
     },
@@ -835,6 +829,13 @@ var sampleQueries = {
         "oType": "https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Voie",
         "values": [
           {
+            "label": "orale (9981)",
+            "rdfTerm": {
+              "type": "uri",
+              "value": "http://data.esante.gouv.fr/ansm/medicament/Voie_20"
+            }
+          },
+          {
             "label": "intraveineuse (2225)",
             "rdfTerm": {
               "type": "uri",
@@ -842,17 +843,10 @@ var sampleQueries = {
             }
           },
           {
-            "label": "intramusculaire (611)",
+            "label": "intralymphatique (1)",
             "rdfTerm": {
               "type": "uri",
-              "value": "http://data.esante.gouv.fr/ansm/medicament/Voie_13"
-            }
-          },
-          {
-            "label": "orale (9981)",
-            "rdfTerm": {
-              "type": "uri",
-              "value": "http://data.esante.gouv.fr/ansm/medicament/Voie_20"
+              "value": "http://data.esante.gouv.fr/ansm/medicament/Voie_448"
             }
           }
         ]
@@ -860,5 +854,6 @@ var sampleQueries = {
       "children": []
     }
   ]
-  }
+}
+
 	};
