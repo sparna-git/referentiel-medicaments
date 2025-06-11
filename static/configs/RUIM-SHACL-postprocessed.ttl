@@ -117,7 +117,7 @@ med:Voie  rdf:type                   sh:NodeShape , rdfs:Class ;
         sh:target                    med:Voie-target ;
         shacl-play:background-color  "00B050" .
 
-med:Voie-target  sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:Voie }" .
+med:Voie-target  sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:Voie }" .
 
 med:P119  med:sousClasseDe  med:ElementPresentation ;
         sh:description    "Référence à un élément d'une présentation dans lequel cet élément abstrait se manifeste." ;
@@ -174,7 +174,7 @@ med:P90  med:sousClasseDe            med:Substance ;
         sh:severity                  sh:Warning ;
         shacl-play:background-color  "#EAF1DD" .
 
-med:Evenement-target  sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf med:Evenement . FILTER(?this NOT IN (med:Autorisation, med:AccesDerogatoire, med:ChangementDeStatut)) }" .
+med:Evenement-target  sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf med:Evenement . FILTER(?this NOT IN (med:Autorisation, med:AccesDerogatoire, med:ChangementDeStatut)) }" .
 
 med:P246  sh:datatype                xsd:date ;
         sh:description               "Date de dernière modification de cette valeur dans la liste" ;
@@ -191,7 +191,7 @@ med:P60  sh:datatype    cdt:ucumunit ;
         sh:nodeKind     sh:Literal ;
         sh:path         med:uniteQuantitePresentation .
 
-med:Forme-target  sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:Forme }" .
+med:Forme-target  sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:Forme }" .
 
 med:ElementPresentation
         rdf:type                     sh:NodeShape , rdfs:Class ;
@@ -290,7 +290,7 @@ med:P42  rdfs:comment     "Note : sur la prescription en DC on peut avoir 3 subs
         sh:path           med:substancePortantLeDosage .
 
 med:DosagePresentation-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:DosagePresentation }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:DosagePresentation }" .
 
 med:P12  dash:propertyRole  dash:LabelRole ;
         sh:datatype        rdf:langString ;
@@ -407,7 +407,7 @@ med:P96  med:sousClasseDe            med:Presentation ;
         shacl-play:background-color  "#EAF1DD" .
 
 med:Presentation-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:Presentation }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:Presentation }" .
 
 med:P211  dash:propertyRole  dash:LabelRole ;
         sh:datatype        rdf:langString ;
@@ -474,7 +474,7 @@ med:P253  sh:datatype   xsd:string ;
         sh:path         skos:notation .
 
 med:Organisation-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:Organisation }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:Organisation }" .
 
 med:P168  med:sousClasseDe           med:Element ;
         sh:description               "Référence à un Element de Spécialité dont cet élément de présentation est une manifestation concrète." ;
@@ -494,7 +494,7 @@ med:P223  med:sousClasseDe  med:TypeProcedure ;
         sh:nodeKind       sh:IRI ;
         sh:path           med:typeProcedure .
 
-med:Element-target  sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf med:Element }" .
+med:Element-target  sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf med:Element }" .
 
 med:P138  dash:propertyRole          dash:LabelRole ;
         sh:datatype                  rdf:langString ;
@@ -727,7 +727,7 @@ med:StatutSpecialite  rdf:type       rdfs:Class , sh:NodeShape ;
         shacl-play:background-color  "00B050" .
 
 med:UniteDePresentation-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:UniteDePresentation }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:UniteDePresentation }" .
 
 med:P73  rdfs:comment      "Uniquement pour des questions d'affichage dans le SMT" ;
         dash:propertyRole  dash:LabelRole ;
@@ -846,7 +846,7 @@ med:BusinessRule_9  rdf:type  sh:SPARQLConstraint ;
         sh:select        "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this\nWHERE {\n FILTER NOT EXISTS { $this med:quantiteSubstance ?qtt }\n FILTER NOT EXISTS { $this med:quantiteSubstanceInf ?qttInf . }\n FILTER NOT EXISTS { $this med:quantiteSubstanceSup ?qttSup . }\n}" .
 
 med:NiveauPrescriptibilite-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:NiveauPrescriptibilite }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:NiveauPrescriptibilite }" .
 
 med:P25  med:sousClasseDe  med:Forme ;
         sh:description    "Forme pharmaceutique administrable définissant ce PhPID.\nIl s'agit d'une forme pharmaceutique administrable, et non pas d'une forme manufacturée." ;
@@ -941,7 +941,7 @@ med:P67  sh:datatype    cdt:ucumunit ;
         sh:path         med:uniteInf .
 
 med:NiveauVirtualisation-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:NiveauVirtualisation }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:NiveauVirtualisation }" .
 
 med:PrescriptionEnDC  rdf:type       rdfs:Class , sh:NodeShape ;
         rdfs:comment                 "Les prescriptions en DC sont définies par leurs caractéristiques formelles, comme les produits pharmaceutiques : \n\n- [Substances qui portent le dosage](#med:PrescriptionEnDC_med:substancePortantLeDosage) dans cette prescription. \n- Dosages [présentation](#med:PrescriptionEnDC_med:dosagePresentation) et [concentration](#med:PrescriptionEnDC_med:dosageConcentration) dans cette prescription. \n- Forme [manufacturée](#med:PrescriptionEnDC_med:formeManufacturee). \n- [Voie d’administration](#med:PrescriptionEnDC_med:voie). \n- [Unité de présentation](#med:PrescriptionEnDC_med:uniteDePresentation). \n\nLes prescriptions en DC sont par ailleurs liées à/aux médicaments virtuels Medicabase dont elles sont dérivées, et au [PhPID4 correspondant](#med:PrescriptionEnDC_med:classementSubstanceDosageForme) à cette prescription en DC."@fr ;
@@ -967,8 +967,13 @@ med:P199  sh:description  "Identifiant de la forme équivalente dans le référe
         sh:nodeKind     sh:IRI ;
         sh:path         skos:exactMatch .
 
+[ sh:description  "The class of which the value is expected to be a subClassOf"@en ;
+  sh:name         "sous-classe de"@fr , "subClass of"@en ;
+  sh:path         med:sousClasseDe
+] .
+
 med:ExpressionDeDosage-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:ExpressionDeDosage }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:ExpressionDeDosage }" .
 
 med:P169  sh:datatype                xsd:string ;
         sh:description               "Le conditionnement primaire qui contient le médicament, indépendemment de tous les éventuels dispositifs d'administration qui sont \"autour\", sous forme de chaine de caractères non-normalisée." ;
@@ -980,7 +985,7 @@ med:P169  sh:datatype                xsd:string ;
         shacl-play:background-color  "#EAF1DD" .
 
 med:PPhParSubstanceDosageForme-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:PPhParSubstanceDosageForme }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:PPhParSubstanceDosageForme }" .
 
 med:P139  med:sousClasseDe           med:SpecialitePharmaceutique ;
         sh:description               "Référence à la spécialité pharmaceutique dispensée par cette UCD. Cet attribut est obligatoire et unique." ;
@@ -993,7 +998,7 @@ med:P139  med:sousClasseDe           med:SpecialitePharmaceutique ;
         shacl-play:background-color  "#EAF1DD" .
 
 med:TypeProcedure-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:TypeProcedure }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:TypeProcedure }" .
 
 med:P79  dash:propertyRole           dash:LabelRole ;
         sh:datatype                  rdf:langString ;
@@ -1007,7 +1012,7 @@ med:P79  dash:propertyRole           dash:LabelRole ;
         shacl-play:background-color  "#EAF1DD" .
 
 med:ElementPresentation-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:ElementPresentation }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:ElementPresentation }" .
 
 med:P109  sh:datatype                xsd:string ;
         sh:description               "Identifiant (séquentiel) de l'élément dans la spécialité" ;
@@ -1060,6 +1065,16 @@ med:P80  sh:datatype                 xsd:boolean ;
         sh:path                      med:actif ;
         shacl-play:background-color  "#EAF1DD" .
 
+med:P110  dash:propertyRole          dash:LabelRole ;
+        sh:datatype                  rdf:langString ;
+        sh:description               "Libellé de l'élément" ;
+        sh:maxCount                  1 ;
+        sh:minCount                  1 ;
+        sh:name                      "libellé de l'élémént" ;
+        sh:nodeKind                  sh:Literal ;
+        sh:path                      rdfs:label ;
+        shacl-play:background-color  "#EAF1DD" .
+
 med:JustificationNiveauVirtualisation
         rdf:type                     sh:NodeShape , rdfs:Class ;
         rdfs:comment                 "Liste contrôlée des justification du niveau de virtualisation d'une spécialité (\"pas de principe actif\", etc.), utilisée par la propriété de [justification du niveau de virtualisation](#med:SpecialitePharmaceutique_med:justificationNiveauDeVirtualisation)"@fr ;
@@ -1081,15 +1096,9 @@ med:P236  sh:datatype                rdf:langString ;
         sh:path                      skos:definition ;
         shacl-play:background-color  "#EAF1DD" .
 
-med:P110  dash:propertyRole          dash:LabelRole ;
-        sh:datatype                  rdf:langString ;
-        sh:description               "Libellé de l'élément" ;
-        sh:maxCount                  1 ;
-        sh:minCount                  1 ;
-        sh:name                      "libellé de l'élémént" ;
-        sh:nodeKind                  sh:Literal ;
-        sh:path                      rdfs:label ;
-        shacl-play:background-color  "#EAF1DD" .
+[ sh:name  "closed by super classes"@en , "fermé par les super classes"@fr ;
+  sh:path  med:closedBySuperClasses
+] .
 
 med:BusinessRule_4  rdf:type  sh:SPARQLConstraint ;
         dct:description  "Toutes les Présentations de Spécialités prescriptibles en DC devraient avoir une prescription en DC"@fr ;
@@ -1115,14 +1124,7 @@ med:P182  sh:datatype                xsd:string ;
         shacl-play:background-color  "#EAF1DD" .
 
 med:JustificationNiveauVirtualisation-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:JustificationNiveauVirtualisation }" .
-
-med:P152  med:sousClasseDe  med:PrescriptionEnDC ;
-        sh:description    "Référence à une prescription en dénomination commune à laquelle cette présentation peut correspondre. Une présentation peut correspondre à plusieurs prescription en DC. Cette référence n'est pas renseignée pour les spécialités non virtualisables ou les spécialités virtualisables mais faisant exception à la prescription en DC." ;
-        sh:name           "prescriptible comme" ;
-        sh:node           med:PrescriptionEnDC ;
-        sh:nodeKind       sh:IRI ;
-        sh:path           med:prescriptibleComme .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:JustificationNiveauVirtualisation }" .
 
 med:P92  med:sousClasseDe            med:Substance ;
         sh:description               "Substance de cette spécialité dans laquelle est exprimée son dosage." ;
@@ -1133,6 +1135,13 @@ med:P92  med:sousClasseDe            med:Substance ;
         sh:path                      med:substancePortantLeDosage ;
         sh:severity                  sh:Warning ;
         shacl-play:background-color  "#EAF1DD" .
+
+med:P152  med:sousClasseDe  med:PrescriptionEnDC ;
+        sh:description    "Référence à une prescription en dénomination commune à laquelle cette présentation peut correspondre. Une présentation peut correspondre à plusieurs prescription en DC. Cette référence n'est pas renseignée pour les spécialités non virtualisables ou les spécialités virtualisables mais faisant exception à la prescription en DC." ;
+        sh:name           "prescriptible comme" ;
+        sh:node           med:PrescriptionEnDC ;
+        sh:nodeKind       sh:IRI ;
+        sh:path           med:prescriptibleComme .
 
 med:P122  med:sousClasseDe           med:Substance ;
         sh:description               "substance pour laquelle ce dosage est donné" ;
@@ -1183,10 +1192,6 @@ med:P164  med:sousClasseDe           med:Presentation ;
         sh:path                      med:compose ;
         shacl-play:background-color  "#EAF1DD" .
 
-med:Diagramme_PrescriptionEnDC
-        dct:title  "3. Prescriptions en DC"@fr ;
-        sh:order   3 .
-
 med:P134  med:sousClasseDe           med:SpecialitePharmaceutique ;
         sh:description               "Spécialité non générique mais substituable à la spécialité de référence." ;
         sh:name                      "spécialité substituable" ;
@@ -1194,6 +1199,10 @@ med:P134  med:sousClasseDe           med:SpecialitePharmaceutique ;
         sh:nodeKind                  sh:IRI ;
         sh:path                      med:specialiteSubstituable ;
         shacl-play:background-color  "#EAF1DD" .
+
+med:Diagramme_PrescriptionEnDC
+        dct:title  "3. Prescriptions en DC"@fr ;
+        sh:order   3 .
 
 med:P74  sh:datatype    cdt:ucumunit ;
         sh:description  "Code de cette unité de mesure normalisé dans la grammaire UCUM." ;
@@ -1203,10 +1212,6 @@ med:P74  sh:datatype    cdt:ucumunit ;
         sh:nodeKind     sh:Literal ;
         sh:path         med:codeUcum .
 
-[ sh:name  "closed by super classes"@en , "fermé par les super classes"@fr ;
-  sh:path  med:closedBySuperClasses
-] .
-
 med:P104  med:sousClasseDe           med:GroupeGenerique ;
         sh:description               "Groupe générique pour lequel cette spécialité est la spécialité de référence" ;
         sh:name                      "est spécialité de référence dans" ;
@@ -1215,6 +1220,8 @@ med:P104  med:sousClasseDe           med:GroupeGenerique ;
         sh:path                      med:estSpecialiteDeReferenceDans ;
         shacl-play:background-color  "#EAF1DD" .
 
+med:Unite-target  sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:Unite }" .
+
 med:P44  med:sousClasseDe  med:DosageConcentration ;
         sh:description    "Dosage de présentation définissant ce libellé de prescription.\nEn fonction des motifs de dosage, les dosages présentation et concentration peuvent être présents ou omis. Au moins un dosage (présentation ou concentration) doit être indiqué." ;
         sh:maxCount       6 ;
@@ -1222,8 +1229,6 @@ med:P44  med:sousClasseDe  med:DosageConcentration ;
         sh:node           med:DosageConcentration ;
         sh:nodeKind       sh:IRI ;
         sh:path           med:dosageConcentration .
-
-med:Unite-target  sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:Unite }" .
 
 med:P176  med:sousClasseDe  med:TypeDose ;
         sh:description    "Indique le type de dose de cet élément dans la présentation : unidose (usage unique) ou multidose (usage multiple)." ;
@@ -1323,7 +1328,7 @@ med:P98  med:sousClasseDe  med:NiveauVirtualisation ;
         sh:nodeKind       sh:IRI ;
         sh:path           med:niveauDeVirtualisation .
 
-med:Gamme-target  sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:Gamme }" .
+med:Gamme-target  sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:Gamme }" .
 
 med:P128  med:sousClasseDe           med:Substance ;
         sh:description               "Eventuelle fraction thérapeutique libérée par la substance dont on exprime le dosage" ;
@@ -1334,7 +1339,7 @@ med:P128  med:sousClasseDe           med:Substance ;
         shacl-play:background-color  "#EAF1DD" .
 
 med:Autorisation-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:Autorisation }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:Autorisation }" .
 
 med:P68  sh:datatype    xsd:decimal ;
         sh:description  "\"Pas plus de cette concentration de substance...\" : Borne supérieure d'un dosage exprimé par intervalle. Cet attribut n'est pas renseigné pour les dosages exacts." ;
@@ -1543,7 +1548,7 @@ med:Substance  rdf:type              rdfs:Class , sh:NodeShape ;
         foaf:depiction               med:Diagramme_SpecialitesPresentationsUCD ;
         shacl-play:background-color  "00B050" .
 
-med:Substance-target  sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:Substance }" .
+med:Substance-target  sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:Substance }" .
 
 med:P250  sh:datatype   xsd:string ;
         sh:description  "Identifiant technique" ;
@@ -1554,7 +1559,7 @@ med:P250  sh:datatype   xsd:string ;
         sh:path         skos:notation .
 
 med:JustificationNiveauPrescriptibilite-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:JustificationNiveauPrescriptibilite }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:JustificationNiveauPrescriptibilite }" .
 
 med:P165  sh:description             "Un élément présentation porte 2 informations de classement : il est toujours sous-classe de med:ElementPresentation mais également sous-classe de l'élément de spécialité correspondant. Les élément de présentations héritent de toutes les caractéristiques de l'élément de spécialité correspondant." ;
         sh:maxCount                  2 ;
@@ -1643,8 +1648,6 @@ med:P232  sh:datatype                xsd:date ;
         sh:path                      dct:modified ;
         shacl-play:background-color  "#EAF1DD" .
 
-med:TypeDose-target  sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:TypeDose }" .
-
 med:P147  sh:datatype                xsd:integer ;
         sh:description               "Donne le nombre d'unité de dispensation dans la présentation" ;
         sh:maxCount                  1 ;
@@ -1653,6 +1656,8 @@ med:P147  sh:datatype                xsd:integer ;
         sh:nodeKind                  sh:Literal ;
         sh:path                      med:nombreUniteDeDispensation ;
         shacl-play:background-color  "#EAF1DD" .
+
+med:TypeDose-target  sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:TypeDose }" .
 
 med:Diagramme_PhPIDs  dct:title  "4. PhPIDs"@fr ;
         sh:order   4 .
@@ -1836,7 +1841,7 @@ med:P40  sh:datatype    xsd:date ;
         sh:path         med:dateFin .
 
 med:PrescriptionEnDC-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:PrescriptionEnDC }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:PrescriptionEnDC }" .
 
 med:P172  med:sousClasseDe  med:PPhParSubstance ;
         sh:description    "Classement de cet élément de présentation sur un PhPID1. Cet attribut est renseigné seulement pour les spécialités non virtualisables." ;
@@ -1893,11 +1898,6 @@ med:P52  med:sousClasseDe  med:Substance ;
         sh:nodeKind       sh:IRI ;
         sh:path           med:substance .
 
-[ sh:description  "The class of which the value is expected to be a subClassOf"@en ;
-  sh:name         "subClass of"@en , "sous-classe de"@fr ;
-  sh:path         med:sousClasseDe
-] .
-
 med:P208  dash:propertyRole          dash:LabelRole ;
         sh:datatype                  rdf:langString ;
         sh:description               "Libellé" ;
@@ -1915,7 +1915,7 @@ med:BusinessRule_6  rdf:type  sh:SPARQLConstraint ;
         sh:select        "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this\nWHERE {\n $this med:compose/med:presente/med:niveauDeVirtualisation ?niveauVirt .\n FILTER( ?niveauVirt IN(med:Categorie_xx, med:Categorie_yy))\n FILTER NOT EXISTS {\n $this med:classementSubstanceDosageForme ?phpid4 .\n }\n}" .
 
 med:GroupeGenerique-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:GroupeGenerique }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:GroupeGenerique }" .
 
 med:P22  sh:datatype    xsd:string ;
         sh:description  "Identifiant du PhPID3" ;
@@ -1963,7 +1963,7 @@ med:P94  sh:datatype                 xsd:boolean ;
         shacl-play:background-color  "#EAF1DD" .
 
 med:DosageConcentration-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:DosageConcentration }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:DosageConcentration }" .
 
 med:P124  sh:datatype   xsd:string ;
         sh:description  "expression de la quantité après étape de normalisation (suppression de la référence dosage redondante à la fin de l'expression de la quantité)" ;
@@ -1997,7 +1997,7 @@ med:P34  med:sousClasseDe  med:PPhParSubstanceDosage ;
         sh:path           med:precisePPhParSubstanceDosage .
 
 med:StatutSpecialite-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:StatutSpecialite }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:StatutSpecialite }" .
 
 med:P166  sh:datatype                xsd:string ;
         sh:description               "Identifiant (séquentiel) de l'élément dans la présentation" ;
@@ -2179,10 +2179,10 @@ med:P191  sh:datatype                xsd:string ;
         shacl-play:background-color  "#EAF1DD" .
 
 med:PPhParSubstanceDosage-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:PPhParSubstanceDosage }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:PPhParSubstanceDosage }" .
 
 med:PPhParSubstance-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:PPhParSubstance }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:PPhParSubstance }" .
 
 med:P161  med:sousClasseDe  med:Voie ;
         sh:description    "La voie d'administration de cette présentation." ;
@@ -2193,7 +2193,7 @@ med:P161  med:sousClasseDe  med:Voie ;
         sh:path           med:voie .
 
 med:SpecialitePharmaceutique-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf med:SpecialitePharmaceutique }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf med:SpecialitePharmaceutique }" .
 
 med:P257  sh:datatype   rdf:langString ;
         sh:description  "Chaine de caractère du libellé dans cette plage de date" ;
@@ -2202,6 +2202,13 @@ med:P257  sh:datatype   rdf:langString ;
         sh:name         "libellé" ;
         sh:nodeKind     sh:Literal ;
         sh:path         skosxl:literalForm .
+
+med:P71  sh:datatype    xsd:boolean ;
+        sh:description  "Indique si ce dosage en concentration peut être exprimé en pourcent en plus de l'indication de concentration, par exemple \"2,5% (25 mg/g)\" plutôt que simplement \"25 mg/g\".\nCela joue uniquement sur la façon de présenter ce dosage mais ce n'est pas une caractéristique formelle de celui-ci.\nL'expression d'un dosage concentration en pourcent peut être utilisé dans les libellés de prescription en DC et certain libellés de PhPIDs correspondant à des gaz médicinaux, des pommades, des collyres, etc." ;
+        sh:maxCount     1 ;
+        sh:name         "exprimable en pourcent" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         med:exprimableEnPourcent .
 
 med:P131  dash:propertyRole          dash:LabelRole ;
         sh:datatype                  rdf:langString ;
@@ -2212,13 +2219,6 @@ med:P131  dash:propertyRole          dash:LabelRole ;
         sh:nodeKind                  sh:Literal ;
         sh:path                      rdfs:label ;
         shacl-play:background-color  "#EAF1DD" .
-
-med:P71  sh:datatype    xsd:boolean ;
-        sh:description  "Indique si ce dosage en concentration peut être exprimé en pourcent en plus de l'indication de concentration, par exemple \"2,5% (25 mg/g)\" plutôt que simplement \"25 mg/g\".\nCela joue uniquement sur la façon de présenter ce dosage mais ce n'est pas une caractéristique formelle de celui-ci.\nL'expression d'un dosage concentration en pourcent peut être utilisé dans les libellés de prescription en DC et certain libellés de PhPIDs correspondant à des gaz médicinaux, des pommades, des collyres, etc." ;
-        sh:maxCount     1 ;
-        sh:name         "exprimable en pourcent" ;
-        sh:nodeKind     sh:Literal ;
-        sh:path         med:exprimableEnPourcent .
 
 med:ExpressionDeDosage
         rdf:type                     rdfs:Class , sh:NodeShape ;
@@ -2242,7 +2242,7 @@ med:P101  med:sousClasseDe           med:JustificationNiveauPrescriptibilite ;
         shacl-play:background-color  "#EAF1DD" .
 
 med:UniteCommuneDeDispensation-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:UniteCommuneDeDispensation }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:UniteCommuneDeDispensation }" .
 
 med:P41  sh:datatype    xsd:boolean ;
         sh:description  "Booléen indiquant si ce libellé est actif." ;
@@ -2253,7 +2253,7 @@ med:P41  sh:datatype    xsd:boolean ;
         sh:path         med:actif .
 
 med:TypeEvenement-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf/rdfs:subClassOf med:TypeEvenement }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf/rdfs:subClassOf med:TypeEvenement }" .
 
 med:P11  sh:datatype    xsd:string ;
         sh:description  "Identifiant du PhPID1" ;
@@ -2387,7 +2387,7 @@ med:P65  sh:datatype    xsd:decimal ;
         sh:path         med:quantiteSubstance .
 
 med:TypeContenant-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:TypeContenant }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:TypeContenant }" .
 
 med:P35  med:sousClasseDe  med:PPhParSubstanceForme ;
         sh:description    "Lien vers le PhPID3 que ce PHPID4 précise." ;
@@ -2435,6 +2435,6 @@ med:P137  sh:datatype                xsd:string ;
         shacl-play:background-color  "#EAF1DD" .
 
 med:PPhParSubstanceForme-target
-        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:PPhParSubstanceForme }" .
+        sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT $this WHERE { $this rdfs:subClassOf+ med:PPhParSubstanceForme }" .
 
 [ rdf:first rdf:type ; rdf:rest ( rdfs:subClassOf owl:equivalentClass ) ] .
