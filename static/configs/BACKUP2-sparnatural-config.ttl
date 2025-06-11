@@ -62,10 +62,10 @@ shape:SpecialitePharmaceutique a sh:NodeShape;
   volipi:iconName "fa-thin fa-mortar-pestle";
   sh:property shape:SpecialitePharmaceutique_label, shape:SpecialitePharmaceutique_CIS,
     shape:SpecialitePharmaceutique_dateDebut, shape:SpecialitePharmaceutique_dateFin,
-    shape:SpecialitePharmaceutique_classificationATC, shape:SpecialitePharmaceutique_classificationATCdirect,
-    shape:SpecialitePharmaceutique_concernePar, shape:SpecialitePharmaceutique_typeProcedureCourante,
-    shape:SpecialitePharmaceutique_statutCourant, shape:SpecialitePharmaceutique_prescriptibiliteEnDC,
-    shape:SpecialitePharmaceutique_justificationPrescriptibiliteEnDC, shape:SpecialitePharmaceutique_SAouFT,
+    shape:SpecialitePharmaceutique_classificationATC, shape:SpecialitePharmaceutique_codeATC,
+    shape:SpecialitePharmaceutique_labelATC, shape:SpecialitePharmaceutique_concernePar,
+    shape:SpecialitePharmaceutique_typeProcedureCourante, shape:SpecialitePharmaceutique_statutCourant,
+    shape:SpecialitePharmaceutique_prescriptibiliteEnDC, shape:SpecialitePharmaceutique_justificationPrescriptibiliteEnDC,
     shape:SpecialitePharmaceutique_substanceActive, shape:SpecialitePharmaceutique_fractionTherapeutique,
     shape:SpecialitePharmaceutique_substancePortantLeDosage, shape:SpecialitePharmaceutique_aPourUniteDeDispensation,
     shape:SpecialitePharmaceutique_aPourPresentation, shape:SpecialitePharmaceutique_titulaireCourant,
@@ -73,12 +73,13 @@ shape:SpecialitePharmaceutique a sh:NodeShape;
     shape:SpecialitePharmaceutique_estSpecialiteSubstituableDans, shape:SpecialitePharmaceutique_voie .
 
 shape:ATC a sh:NodeShape;
-  sh:nodeKind sh:IRI;
+  sh:targetClass atc:ATC;
+  sh:nodeKind sh:Literal;
   rdfs:label "Classification ATC"@fr;
   sh:order "16"^^xsd:integer;
   volipi:iconName "fa-thin fa-folder-tree";
   sh:deactivated "true"^^xsd:boolean;
-  sh:property shape:ATC_labelATC, shape:ATC_codeATC .
+  sh:property shape:ATC_labelATC .
 
 shape:Evenement a sh:NodeShape;
   sh:targetClass med:Evenement;
@@ -182,17 +183,7 @@ shape:Voie a sh:NodeShape;
   rdfs:label "Voie"@fr;
   sh:order "26"^^xsd:integer;
   volipi:iconName "fa-thin fa-list";
-  sh:deactivated "true"^^xsd:boolean;
-  sh:property shape:Voie_label .
-
-shape:SubstanceSMS a sh:NodeShape;
-  sh:targetClass <http://data.esante.gouv.fr/ema/sms>;
-  sh:nodeKind sh:IRI;
-  rdfs:label "Substance SMS"@fr;
-  sh:order "14"^^xsd:integer;
-  volipi:iconName "fa-thin fa-atom";
-  sh:deactivated "true"^^xsd:boolean;
-  sh:property shape:SubstanceSMS_label .
+  sh:deactivated "true"^^xsd:boolean .
 
 shape:Text a sh:NodeShape;
   sh:nodeKind sh:Literal;
@@ -235,54 +226,52 @@ shape:Presentation_label sh:path rdfs:label;
   sh:nodeKind sh:Literal;
   sh:node shape:Text;
   dash:searchWidget config-core:SearchProperty;
+  config-datasources:datasource shape:list_literal_alpha_rdfssubClassOf;
   dash:propertyRole dash:LabelRole .
 
 shape:Presentation_altLabel sh:path skos:altLabel;
   sh:name "autre dénomination"@fr;
-  sh:description "Libellé court principal. Le dernier libellé court dans l'historique des libellés sera pris comme valeur."@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Text;
-  dash:searchWidget config-core:SearchProperty .
+  dash:searchWidget config-core:SearchProperty;
+  config-datasources:datasource shape:list_literal_alpha_rdfssubClassOf .
 
 shape:Presentation_CIP13 sh:path med:CIP13;
   sh:name "code CIP13"@fr;
-  sh:description "Code CIP13 (code principal)"@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Code;
-  dash:searchWidget config-core:SearchProperty .
+  dash:searchWidget config-core:SearchProperty;
+  config-datasources:datasource shape:list_literal_alpha_rdfssubClassOf .
 
 shape:Presentation_CIP7 sh:path med:CIP7;
   sh:name "code CIP7"@fr;
-  sh:description "Code CIP7. Il n'est pas toujours présent, c'est un identifiant historique."@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Code;
-  dash:searchWidget config-core:SearchProperty .
+  dash:searchWidget config-core:SearchProperty;
+  config-datasources:datasource shape:list_literal_alpha_rdfssubClassOf .
 
 shape:Presentation_nombreUniteDeDispensation sh:path med:nombreUniteDeDispensation;
   sh:name "contient"@fr;
-  sh:description "Donne le nombre d'unité de dispensation dans la présentation"@fr;
   sh:nodeKind sh:Literal;
-  sh:datatype xsd:integer;
-  sh:node shape:NombreUnites .
+  sh:node shape:NombreUnites;
+  dash:searchWidget config-core:SearchProperty;
+  config-datasources:datasource shape:list_literal_alpha_rdfssubClassOf .
 
 shape:Presentation_typeDispositif sh:path med:typeDispositif;
   sh:name "comprend"@fr;
-  sh:description "Type de dispositif d'administration dans cette présentation (exemple : \"cuillère-mesure\"). Il peut y avoir plusieurs dispositifs. Ce champs n'a pas été renseigné de façon systématique."@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:TypeDispositif;
   dash:searchWidget config-core:SearchProperty .
 
 shape:Presentation_presente sh:path med:presente;
-  sh:name "présentation de"@fr;
-  sh:description "Référence à la spécialité pharmaceutique présentée dans cette présentation. Cet attribut est obligatoire et unique."@fr;
+  sh:name "associée à"@fr;
   sh:nodeKind sh:IRI;
   sh:class med:SpecialitePharmaceutique;
   dash:searchWidget config-core:AutocompleteProperty;
   config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
 
 shape:Presentation_contientUniteDeDispensation sh:path med:contientUniteDeDispensation;
-  sh:name "contient"@fr;
-  sh:description "Référence à l'UCD contenue dans cette présentation. Une présentation ne peut contenir qu'une seule UCD."@fr;
+  sh:name "associée à"@fr;
   sh:nodeKind sh:IRI;
   sh:class med:UniteCommuneDeDispensation;
   dash:searchWidget config-core:AutocompleteProperty;
@@ -290,7 +279,6 @@ shape:Presentation_contientUniteDeDispensation sh:path med:contientUniteDeDispen
 
 shape:Presentation_concernePar sh:path med:concernePar;
   sh:name "concernée par"@fr;
-  sh:description "Référence à un évènement qui concerne cette présentation (typiquement début ou fin de commercialisation)."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:Evenement;
   dash:searchWidget config-core:NonSelectableProperty;
@@ -312,32 +300,31 @@ shape:Presentation_uniteQuantiteConditionnement sh:path med:uniteQuantiteConditi
 
 shape:UniteCommuneDeDispensation_label sh:path rdfs:label;
   sh:name "a pour désignation"@fr;
-  sh:description "Libellé d'affichage principal. Le dernier libellé dans l'historique des libellés sera pris comme libellé d'affichage principal."@fr;
   sh:nodeKind sh:Literal;
   sh:datatype rdf:langString;
   sh:node shape:Text;
   dash:searchWidget config-core:SearchProperty;
+  config-datasources:datasource shape:list_literal_alpha_rdfssubClassOf;
   dash:propertyRole dash:LabelRole .
 
 shape:UniteCommuneDeDispensation_codeUCD13 sh:path med:codeUCD13;
   sh:name "code UCD 13"@fr;
-  sh:description "Code UCD13 (code principal)"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:string;
   sh:node shape:Code;
-  dash:searchWidget config-core:SearchProperty .
+  dash:searchWidget config-core:SearchProperty;
+  config-datasources:datasource shape:list_literal_alpha_rdfssubClassOf .
 
 shape:UniteCommuneDeDispensation_codeUCD7 sh:path med:codeUCD7;
   sh:name "code UCD 7"@fr;
-  sh:description "Code UCD7"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:string;
   sh:node shape:Code;
-  dash:searchWidget config-core:SearchProperty .
+  dash:searchWidget config-core:SearchProperty;
+  config-datasources:datasource shape:list_literal_alpha_rdfssubClassOf .
 
 shape:UniteCommuneDeDispensation_uniteDeDispensationDe sh:path med:uniteDeDispensationDe;
   sh:name "est UCD de"@fr;
-  sh:description "Référence à la spécialité pharmaceutique dispensée par cette UCD. Cet attribut est obligatoire et unique."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:SpecialitePharmaceutique;
   dash:searchWidget config-core:AutocompleteProperty;
@@ -345,7 +332,6 @@ shape:UniteCommuneDeDispensation_uniteDeDispensationDe sh:path med:uniteDeDispen
 
 shape:UniteCommuneDeDispensation_presenteDans sh:path med:presenteDans;
   sh:name "présentée dans"@fr;
-  sh:description "Référence à une présentation qui contient cette UCD. Plusieurs présentations peuvent contenir la même UCD."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:Presentation;
   dash:searchWidget config-core:AutocompleteProperty;
@@ -353,7 +339,6 @@ shape:UniteCommuneDeDispensation_presenteDans sh:path med:presenteDans;
 
 shape:SpecialitePharmaceutique_label sh:path rdfs:label;
   sh:name "a pour désignation"@fr;
-  sh:description "Nom de spécialité"@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Text;
   dash:searchWidget config-core:SearchProperty;
@@ -361,64 +346,62 @@ shape:SpecialitePharmaceutique_label sh:path rdfs:label;
 
 shape:SpecialitePharmaceutique_CIS sh:path med:CIS;
   sh:name "code CIS"@fr;
-  sh:description "Code CIS (code principal identifiant de la spécialité)"@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Code;
   dash:searchWidget config-core:SearchProperty .
 
 shape:SpecialitePharmaceutique_dateDebut sh:path med:dateDebut;
   sh:name "mise sur le marché"@fr;
-  sh:description "Date de la (première) AMM ou de la première autorisation de cette spécialité."@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:date;
   sh:node shape:Date;
-  dash:searchWidget config-core:TimeProperty-Date .
+  dash:searchWidget config-core:TimeProperty-Date;
+  config-datasources:datasource shape:list_literal_alpha_rdfssubClassOf .
 
 shape:SpecialitePharmaceutique_dateFin sh:path med:dateFin;
   sh:name "plus active depuis"@fr;
-  sh:description "Date à laquelle la spécialité n'est plus active."@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:date;
   sh:node shape:Date;
-  dash:searchWidget config-core:TimeProperty-Date .
+  dash:searchWidget config-core:TimeProperty-Date;
+  config-datasources:datasource shape:list_literal_alpha_rdfssubClassOf .
 
-shape:SpecialitePharmaceutique_classificationATC sh:path _:1c23ec99aeed4801a9fbc3eddcf4f8d69406;
+shape:SpecialitePharmaceutique_classificationATC sh:path _:edd6143998a34be492b5ce3b23fc834d59692;
   sh:name "est classée sous"@fr;
-  sh:description "Référence à un élément de la classification ATC de cette spécialité. Cet attribut n'est pas historisé et contient la dernière valeur en date du code ATC. Les évolutions de l’ATC elle-même sont historisées dans le référentiel ATC. Pour certaines spécialités archivées, il est possible que la référence à l'ATC ne soit pas présente dans le cas où ce code aurait disparu avant l'ATC 2022. Après 2022 l'ATC est cumulative et mêmes les codes dépréciés restent présents."@fr;
   sh:nodeKind sh:IRI;
   sh:node shape:ATC;
   dash:searchWidget config-core:TreeProperty;
   config-datasources:treeRootsDatasource shape:tree_atc_root;
   config-datasources:treeChildrenDatasource shape:tree_atc_child .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69406 rdf:first med:classificationATC;
-  rdf:rest _:1c23ec99aeed4801a9fbc3eddcf4f8d69407 .
+_:edd6143998a34be492b5ce3b23fc834d59692 rdf:first med:classificationATC;
+  rdf:rest _:edd6143998a34be492b5ce3b23fc834d59693 .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69407 rdf:first _:1c23ec99aeed4801a9fbc3eddcf4f8d69408;
+_:edd6143998a34be492b5ce3b23fc834d59693 rdf:first _:edd6143998a34be492b5ce3b23fc834d59694;
   rdf:rest rdf:nil .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69408 sh:zeroOrMorePath rdfs:subClassOf .
+_:edd6143998a34be492b5ce3b23fc834d59694 sh:oneOrMorePath rdfs:subClassOf .
 
-shape:SpecialitePharmaceutique_classificationATCdirect sh:path med:classificationATC;
-  sh:name "est classée sous (direct)"@fr;
-  sh:description "Référence à un élément de la classification ATC de cette spécialité. Cet attribut n'est pas historisé et contient la dernière valeur en date du code ATC. Les évolutions de l’ATC elle-même sont historisées dans le référentiel ATC. Pour certaines spécialités archivées, il est possible que la référence à l'ATC ne soit pas présente dans le cas où ce code aurait disparu avant l'ATC 2022. Après 2022 l'ATC est cumulative et mêmes les codes dépréciés restent présents."@fr;
+shape:SpecialitePharmaceutique_codeATC sh:path med:codeATC;
+  sh:name "code ATC"@fr;
   sh:nodeKind sh:Literal;
-  sh:datatype xsd:string;
   sh:node shape:ATC;
-  dash:searchWidget config-core:TreeProperty;
-  config-datasources:treeRootsDatasource shape:tree_atc_root;
-  config-datasources:treeChildrenDatasource shape:tree_atc_child .
+  dash:searchWidget config-core:SearchProperty .
+
+shape:SpecialitePharmaceutique_labelATC sh:path med:libelleATC;
+  sh:name "libellé ATC (données source)"@fr;
+  sh:nodeKind sh:Literal;
+  sh:node shape:ATC;
+  dash:searchWidget config-core:SearchProperty .
 
 shape:SpecialitePharmaceutique_concernePar sh:path med:concernePar;
   sh:name "est concernée par"@fr;
-  sh:description "Référence à un évènement qui concerne cette spécialité (autorisation, changement de statut, changement de procédure, etc.)"@fr;
   sh:nodeKind sh:IRI;
   sh:class med:Evenement;
   dash:searchWidget config-core:NonSelectableProperty .
 
 shape:SpecialitePharmaceutique_typeProcedureCourante sh:path med:typeProcedureCourante;
   sh:name "type de procédure courante"@fr;
-  sh:description "Le régime de procédure courant de la spécialité. Le régime de procédure courant peut être différant du type de procédure de l'autorisation d'origine de la spécialité, dans les cas où un évènement à changé le type de procédure de la spécialité."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:TypeProcedure;
   dash:searchWidget config-core:ListProperty;
@@ -426,7 +409,6 @@ shape:SpecialitePharmaceutique_typeProcedureCourante sh:path med:typeProcedureCo
 
 shape:SpecialitePharmaceutique_statutCourant sh:path med:statutCourant;
   sh:name "a pour statut"@fr;
-  sh:description "Le statut courant de la spécialité. Le statut peut évoluer au fil des évènements réglementaires qui concernent la spécialité. Cet attribut capture seulement le dernier statut de la spécialité."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:StatutSpecialite;
   dash:searchWidget config-core:ListProperty;
@@ -434,7 +416,6 @@ shape:SpecialitePharmaceutique_statutCourant sh:path med:statutCourant;
 
 shape:SpecialitePharmaceutique_prescriptibiliteEnDC sh:path med:prescriptibiliteEnDC;
   sh:name "niveau de prescriptibilité"@fr;
-  sh:description "Indique a quel degré la spécialité est prescriptible en DC : prescriptible, non-prescriptible, prescriptible avec nom de marque."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:NiveauPrescriptibilite;
   dash:searchWidget config-core:ListProperty;
@@ -442,31 +423,13 @@ shape:SpecialitePharmaceutique_prescriptibiliteEnDC sh:path med:prescriptibilite
 
 shape:SpecialitePharmaceutique_justificationPrescriptibiliteEnDC sh:path med:justificationPrescriptibiliteEnDC;
   sh:name "justification de la prescriptibilité en DC"@fr;
-  sh:description "Indique la justification du niveau de prescriptibilité en DC (plus de 3 substances, gaz médicinal, etc.). Cet attribut est obligatoire si la prescriptibilité en DC est \"non prescriptible\" ou \"prescriptible avec nom de marque\". Il peut être répété."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:JustificationNiveauPrescriptibilite;
   dash:searchWidget config-core:ListProperty;
   config-datasources:datasource shape:list_rdfslabel_alpha_rdfssubClassOf_with_count .
 
-shape:SpecialitePharmaceutique_SAouFT sh:path _:1c23ec99aeed4801a9fbc3eddcf4f8d69409;
-  sh:name "contient (SA ou FT)"@fr;
-  sh:description "Contient en susbtance active ou en fraction thérapeutique"@fr;
-  sh:nodeKind sh:IRI;
-  sh:class med:Substance;
-  dash:searchWidget config-core:AutocompleteProperty;
-  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
-
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69409 sh:alternativePath _:1c23ec99aeed4801a9fbc3eddcf4f8d69410 .
-
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69410 rdf:first med:substanceActive;
-  rdf:rest _:1c23ec99aeed4801a9fbc3eddcf4f8d69411 .
-
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69411 rdf:first med:fractionTherapeutique;
-  rdf:rest rdf:nil .
-
 shape:SpecialitePharmaceutique_substanceActive sh:path med:substanceActive;
   sh:name "substance active"@fr;
-  sh:description "Substance active dans la spécialité, substance \"contenue dans la boite\" (qui n'est pas forcément identique à la substance dans laquelle est exprimée le dosage). En principe toutes les spécialités ont au moins une substance active, mais des exceptions rares existent (les témoins de prick tests) où aucune substance active n'est répertoriée."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:Substance;
   dash:searchWidget config-core:AutocompleteProperty;
@@ -474,7 +437,6 @@ shape:SpecialitePharmaceutique_substanceActive sh:path med:substanceActive;
 
 shape:SpecialitePharmaceutique_fractionTherapeutique sh:path med:fractionTherapeutique;
   sh:name "fraction thérapeutique"@fr;
-  sh:description "Substance qui n'est pas directement \"contenue dans la boite\", mais qui est libérée par une des susbtance actives du médicament. Tous les éléments n'ont pas forcément de fraction thérapeutique indiquée."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:Substance;
   dash:searchWidget config-core:AutocompleteProperty;
@@ -482,7 +444,6 @@ shape:SpecialitePharmaceutique_fractionTherapeutique sh:path med:fractionTherape
 
 shape:SpecialitePharmaceutique_substancePortantLeDosage sh:path med:substancePortantLeDosage;
   sh:name "substance portant le dosage"@fr;
-  sh:description "Substance de cette spécialité dans laquelle est exprimée son dosage."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:Substance;
   dash:searchWidget config-core:AutocompleteProperty;
@@ -490,15 +451,13 @@ shape:SpecialitePharmaceutique_substancePortantLeDosage sh:path med:substancePor
 
 shape:SpecialitePharmaceutique_aPourUniteDeDispensation sh:path med:aPourUniteDeDispensation;
   sh:name "a pour UCD"@fr;
-  sh:description "Référence à une UCD qui dispense cette spécialité. Une Spécialité peut être dispensée dans plusieurs UCD. Une Spécialité peut être dispensée dans plusieurs UCD. Elle est dispensée dans au moins une UCD."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:UniteCommuneDeDispensation;
   dash:searchWidget config-core:AutocompleteProperty;
   config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
 
 shape:SpecialitePharmaceutique_aPourPresentation sh:path med:aPourPresentation;
-  sh:name "est conditionnée dans"@fr;
-  sh:description "Référence à une présentation qui présente cette spécialité. Une Spécialité peut être présentée dans plusieurs présentations. Une Spécialité est présente dans au moins une présentation à partir du moment où elle a été commercialisée."@fr;
+  sh:name "est conditionnée sous"@fr;
   sh:nodeKind sh:IRI;
   sh:class med:Presentation;
   dash:searchWidget config-core:AutocompleteProperty;
@@ -539,19 +498,19 @@ shape:Evenement_concerne sh:path med:concerne;
   sh:name "concerne"@fr;
   sh:description "Référence à la Spécialité ou à la Présentation concernée par cet évènement"@fr;
   sh:nodeKind sh:IRI;
-  sh:or _:1c23ec99aeed4801a9fbc3eddcf4f8d69414;
+  sh:or _:edd6143998a34be492b5ce3b23fc834d59697;
   dash:searchWidget config-core:AutocompleteProperty;
   config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69412 sh:class med:SpecialitePharmaceutique .
+_:edd6143998a34be492b5ce3b23fc834d59695 sh:class med:SpecialitePharmaceutique .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69413 sh:class med:Presentation .
+_:edd6143998a34be492b5ce3b23fc834d59696 sh:class med:Presentation .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69414 a rdf:List;
-  rdf:first _:1c23ec99aeed4801a9fbc3eddcf4f8d69412;
-  rdf:rest _:1c23ec99aeed4801a9fbc3eddcf4f8d69415 .
+_:edd6143998a34be492b5ce3b23fc834d59697 a rdf:List;
+  rdf:first _:edd6143998a34be492b5ce3b23fc834d59695;
+  rdf:rest _:edd6143998a34be492b5ce3b23fc834d59698 .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69415 rdf:first _:1c23ec99aeed4801a9fbc3eddcf4f8d69413;
+_:edd6143998a34be492b5ce3b23fc834d59698 rdf:first _:edd6143998a34be492b5ce3b23fc834d59696;
   rdf:rest rdf:nil .
 
 shape:Evenement_typeEvenement sh:path med:typeEvenement;
@@ -580,32 +539,32 @@ shape:Evenement_label sh:path rdfs:label;
 
 shape:Substance_notation sh:path skos:notation;
   sh:name "code (ANSM)"@fr;
-  sh:description "Identifiant technique de la substance, issu des bases ANSM"@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Code;
-  dash:searchWidget config-core:SearchProperty .
+  dash:searchWidget config-core:SearchProperty;
+  config-datasources:datasource shape:list_literal_alpha_rdfssubClassOf .
 
 shape:Substance_codeSMS sh:path med:codeSMS;
-  sh:name "code SMS"@fr;
-  sh:description "Code SMS correspondant de la substance. Toutes les substances n'ont pas d'équivalent SMS, ce code n'est pas obligatoirement présent."@fr;
+  sh:name "identifiant"@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Code;
-  dash:searchWidget config-core:AutocompleteProperty .
+  dash:searchWidget config-core:SearchProperty;
+  config-datasources:datasource shape:list_literal_alpha_rdfssubClassOf .
 
 shape:Substance_label sh:path rdfs:label;
   sh:name "a pour désignation"@fr;
-  sh:description "Libellé préférentiel de la substance qui est utilisé dans les PhPID du référentiel du médicament"@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Text;
   dash:searchWidget config-core:SearchProperty;
+  config-datasources:datasource shape:list_literal_alpha_rdfssubClassOf;
   dash:propertyRole dash:LabelRole .
 
 shape:Substance_altLabel sh:path skos:altLabel;
   sh:name "autre dénomination"@fr;
-  sh:description "Libellé synonyme de cette substance"@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Text;
-  dash:searchWidget config-core:SearchProperty .
+  dash:searchWidget config-core:SearchProperty;
+  config-datasources:datasource shape:list_literal_alpha_rdfssubClassOf .
 
 shape:Substance_created sh:path dct:created;
   sh:name "date de création"@fr;
@@ -630,24 +589,7 @@ shape:Substance_exactMatch sh:path skos:exactMatch;
   sh:name "équivalent SMS"@fr;
   sh:description "Identifiant de substance équivalente dans le référentiel SMS"@fr;
   sh:nodeKind sh:IRI;
-  sh:node shape:SubstanceSMS;
-  dash:searchWidget config-core:AutocompleteProperty;
-  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
-
-shape:ATC_labelATC sh:path rdfs:label;
-  sh:name "libellé"@fr;
-  sh:description "Libellé de la classification ATC"@fr;
-  sh:nodeKind sh:Literal;
-  sh:datatype rdf:langString;
-  dash:propertyRole dash:LabelRole;
-  sh:deactivated "true"^^xsd:boolean .
-
-shape:ATC_codeATC sh:path skos:notation;
-  sh:name "code"@fr;
-  sh:description "Code de la classification ATC"@fr;
-  sh:nodeKind sh:Literal;
-  sh:datatype xsd:string;
-  sh:node shape:Code .
+  sh:class med:Substance .
 
 shape:GroupeGenerique_notation sh:path skos:notation;
   sh:name "identifiant"@fr;
@@ -739,19 +681,6 @@ shape:JustificationNiveauPrescriptibilite_label sh:path rdfs:label;
   sh:datatype rdf:langString;
   dash:propertyRole dash:LabelRole .
 
-shape:Voie_label sh:path rdfs:label;
-  sh:name "libellé"@fr;
-  sh:description "Libellé du vocabulaire"@fr;
-  sh:nodeKind sh:Literal;
-  sh:datatype rdf:langString;
-  dash:propertyRole dash:LabelRole .
-
-shape:SubstanceSMS_label sh:path rdfs:label;
-  sh:name "label"@fr;
-  sh:nodeKind sh:Literal;
-  sh:datatype rdf:langString;
-  dash:propertyRole dash:LabelRole .
-
 shape:list_rdfslabel_alpha_rdfssubClassOf_with_count a config-datasources:SparqlDatasource;
   config-datasources:queryTemplate shape:query_list_label_subClassOfOf_alpha_with_count;
   config-datasources:labelProperty rdfs:label .
@@ -783,8 +712,7 @@ WHERE {
  ?x $property ?uri .
  }
 }
-GROUP BY ?uri ?code ?rdfs_label
-ORDER BY ?label""" .
+GROUP BY ?uri ?code ?rdfs_label""" .
 
 shape:tree_atc_child a config-datasources:SparqlDatasource;
   config-datasources:queryString """PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -805,8 +733,7 @@ WHERE {
  }
 
 }
-GROUP BY ?uri ?code ?rdfs_label ?hasChildren
-ORDER BY ?label""" .
+GROUP BY ?uri ?code ?rdfs_label ?hasChildren""" .
 
 shape:query_list_label_subClassOfOf_alpha_with_count a config-datasources:SPARQLQuery;
   config-datasources:queryString """PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -942,6 +869,7 @@ WHERE {
  ?uri rdfs:subClassOf $range .
  ?uri $labelPath ?label .
  FILTER(isIRI(?uri))
+ FILTER(lang(?label) = '' || lang(?label) = $lang)
  FILTER(CONTAINS(LCASE(STR(?label)), LCASE(\"$key\"))) 
 } 
 ORDER BY UCASE(?label)
