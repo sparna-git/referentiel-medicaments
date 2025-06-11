@@ -250,13 +250,6 @@ med:P162  med:sousClasseDe  med:Forme ;
         sh:nodeKind       sh:IRI ;
         sh:path           med:formeManufacturee .
 
-med:P258  sh:datatype   xsd:date ;
-        sh:description  "Date de fin de cette entrée d'historique" ;
-        sh:maxCount     1 ;
-        sh:name         "jusqu'au" ;
-        sh:nodeKind     sh:Literal ;
-        sh:path         med:dateFin .
-
 med:P132  med:sousClasseDe           med:SpecialitePharmaceutique ;
         sh:description               "Spécialité de référence (princeps) du groupe générique. Un groupe générique peut ne pas avoir de spécialité de référence, ou peut en avoir plusieurs." ;
         sh:name                      "spécialité de référence" ;
@@ -425,14 +418,6 @@ med:P211  dash:propertyRole  dash:LabelRole ;
         sh:nodeKind        sh:Literal ;
         sh:path            rdfs:label .
 
-med:P126  sh:datatype   xsd:string ;
-        sh:description  "référence du dosage après l'étape de normalisation" ;
-        sh:maxCount     1 ;
-        sh:minCount     1 ;
-        sh:name         "référence dosage normalisée" ;
-        sh:nodeKind     sh:Literal ;
-        sh:path         med:referenceDosageNormalisee .
-
 med:PPhParSubstanceForme
         rdf:type                     sh:NodeShape , rdfs:Class ;
         rdfs:comment                 "Produit pharmaceutique de niveau 3 (PhPID3) défini par les [substances qui portent le dosage](#med:PPhParSubstanceForme_med:substancePortantLeDosage) + la [forme administrable](#med:PPhParSubstanceDosageForme_med:formeAdministrable) du produit. Le PhPID3 [précise](#med:PPhParSubstanceDosage_med:precisePPhParSubstance) un PhPID1."@fr ;
@@ -445,6 +430,14 @@ med:PPhParSubstanceForme
         sh:target                    med:PPhParSubstanceForme-target ;
         foaf:depiction               <https://smt.esante.gouv.fr/ruim/images/phpid123.png> , med:Diagramme_PhPIDs ;
         shacl-play:background-color  "4472C4" .
+
+med:P126  sh:datatype   xsd:string ;
+        sh:description  "référence du dosage après l'étape de normalisation" ;
+        sh:maxCount     1 ;
+        sh:minCount     1 ;
+        sh:name         "référence dosage normalisée" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         med:referenceDosageNormalisee .
 
 med:P66  sh:datatype    xsd:decimal ;
         sh:description  "\"Au moins cette concentration de substance...\" : Borne inférieure d'un dosage exprimé par intervalle. Cet attribut n'est pas renseigné pour les dosages exacts." ;
@@ -462,9 +455,6 @@ med:TypeDose  rdf:type               rdfs:Class , sh:NodeShape ;
         sh:pattern                   "^http://data.esante.gouv.fr/ansm/medicament/TypeDose_.*$" ;
         sh:target                    med:TypeDose-target ;
         shacl-play:background-color  "00B050" .
-
-med:ExceptionPrescriptionDC
-        sh:property  med:P214 .
 
 med:P198  dash:propertyRole  dash:LabelRole ;
         sh:datatype        rdf:langString ;
@@ -533,7 +523,7 @@ med:JustificationNiveauPrescriptibilite
         sh:ignoredProperties         ( rdf:type rdfs:subClassOf owl:equivalentClass ) ;
         sh:nodeKind                  sh:IRI ;
         sh:pattern                   "^http://data.esante.gouv.fr/ansm/medicament/JustificationNiveauPrescriptibilite_.*$" ;
-        sh:property                  med:P255 ;
+        sh:property                  med:P214 ;
         sh:target                    med:JustificationNiveauPrescriptibilite-target ;
         shacl-play:background-color  "00B050" .
 
@@ -716,14 +706,6 @@ med:NiveauVirtualisation
         sh:property                  med:P249 , med:P250 ;
         sh:target                    med:NiveauVirtualisation-target ;
         shacl-play:background-color  "00B050" .
-
-med:P259  sh:datatype   rdf:langString ;
-        sh:description  "Chaine de caractère du libellé dans cette plage de date" ;
-        sh:maxCount     1 ;
-        sh:minCount     1 ;
-        sh:name         "libellé" ;
-        sh:nodeKind     sh:Literal ;
-        sh:path         skosxl:literalForm .
 
 med:P133  med:sousClasseDe           med:SpecialitePharmaceutique ;
         sh:description               "Spécialité générique à la spécialité de référence." ;
@@ -973,17 +955,17 @@ med:PrescriptionEnDC  rdf:type       rdfs:Class , sh:NodeShape ;
         foaf:depiction               <https://smt.esante.gouv.fr/ruim/images/prescriptions_dc.png> , med:Diagramme_PrescriptionEnDC ;
         shacl-play:background-color  "F94107" .
 
-med:P199  sh:description  "Identifiant de la forme équivalente dans le référentiel EDQM" ;
-        sh:name         "équivalent EDQM" ;
-        sh:nodeKind     sh:IRI ;
-        sh:path         skos:exactMatch .
-
 med:P37  sh:datatype    xsd:string ;
         sh:description  "Identifiant de la prescription en DC" ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "identifiant" ;
         sh:path         skos:notation .
+
+med:P199  sh:description  "Identifiant de la forme équivalente dans le référentiel EDQM" ;
+        sh:name         "équivalent EDQM" ;
+        sh:nodeKind     sh:IRI ;
+        sh:path         skos:exactMatch .
 
 med:ExpressionDeDosage-target
         sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:ExpressionDeDosage }" .
@@ -1086,6 +1068,7 @@ med:JustificationNiveauVirtualisation
         sh:ignoredProperties         ( rdf:type rdfs:subClassOf owl:equivalentClass ) ;
         sh:nodeKind                  sh:IRI ;
         sh:pattern                   "^http://data.esante.gouv.fr/ansm/medicament/JustificationNiveauVirtualisation_.*$" ;
+        sh:property                  med:P211 , med:P212 ;
         sh:target                    med:JustificationNiveauVirtualisation-target ;
         shacl-play:background-color  "00B050" .
 
@@ -1134,6 +1117,13 @@ med:P182  sh:datatype                xsd:string ;
 med:JustificationNiveauVirtualisation-target
         sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf+ med:JustificationNiveauVirtualisation }" .
 
+med:P152  med:sousClasseDe  med:PrescriptionEnDC ;
+        sh:description    "Référence à une prescription en dénomination commune à laquelle cette présentation peut correspondre. Une présentation peut correspondre à plusieurs prescription en DC. Cette référence n'est pas renseignée pour les spécialités non virtualisables ou les spécialités virtualisables mais faisant exception à la prescription en DC." ;
+        sh:name           "prescriptible comme" ;
+        sh:node           med:PrescriptionEnDC ;
+        sh:nodeKind       sh:IRI ;
+        sh:path           med:prescriptibleComme .
+
 med:P92  med:sousClasseDe            med:Substance ;
         sh:description               "Substance de cette spécialité dans laquelle est exprimée son dosage." ;
         sh:minCount                  1 ;
@@ -1143,13 +1133,6 @@ med:P92  med:sousClasseDe            med:Substance ;
         sh:path                      med:substancePortantLeDosage ;
         sh:severity                  sh:Warning ;
         shacl-play:background-color  "#EAF1DD" .
-
-med:P152  med:sousClasseDe  med:PrescriptionEnDC ;
-        sh:description    "Référence à une prescription en dénomination commune à laquelle cette présentation peut correspondre. Une présentation peut correspondre à plusieurs prescription en DC. Cette référence n'est pas renseignée pour les spécialités non virtualisables ou les spécialités virtualisables mais faisant exception à la prescription en DC." ;
-        sh:name           "prescriptible comme" ;
-        sh:node           med:PrescriptionEnDC ;
-        sh:nodeKind       sh:IRI ;
-        sh:path           med:prescriptibleComme .
 
 med:P122  med:sousClasseDe           med:Substance ;
         sh:description               "substance pour laquelle ce dosage est donné" ;
@@ -1200,6 +1183,10 @@ med:P164  med:sousClasseDe           med:Presentation ;
         sh:path                      med:compose ;
         shacl-play:background-color  "#EAF1DD" .
 
+med:Diagramme_PrescriptionEnDC
+        dct:title  "3. Prescriptions en DC"@fr ;
+        sh:order   3 .
+
 med:P134  med:sousClasseDe           med:SpecialitePharmaceutique ;
         sh:description               "Spécialité non générique mais substituable à la spécialité de référence." ;
         sh:name                      "spécialité substituable" ;
@@ -1208,10 +1195,6 @@ med:P134  med:sousClasseDe           med:SpecialitePharmaceutique ;
         sh:path                      med:specialiteSubstituable ;
         shacl-play:background-color  "#EAF1DD" .
 
-med:Diagramme_PrescriptionEnDC
-        dct:title  "3. Prescriptions en DC"@fr ;
-        sh:order   3 .
-
 med:P74  sh:datatype    cdt:ucumunit ;
         sh:description  "Code de cette unité de mesure normalisé dans la grammaire UCUM." ;
         sh:maxCount     1 ;
@@ -1219,6 +1202,10 @@ med:P74  sh:datatype    cdt:ucumunit ;
         sh:name         "code UCUM" ;
         sh:nodeKind     sh:Literal ;
         sh:path         med:codeUcum .
+
+[ sh:name  "closed by super classes"@en , "fermé par les super classes"@fr ;
+  sh:path  med:closedBySuperClasses
+] .
 
 med:P104  med:sousClasseDe           med:GroupeGenerique ;
         sh:description               "Groupe générique pour lequel cette spécialité est la spécialité de référence" ;
@@ -1366,14 +1353,13 @@ med:P38  dash:propertyRole  dash:LabelRole ;
         sh:nodeKind        sh:Literal ;
         sh:path            rdfs:label .
 
-med:P255  dash:propertyRole  dash:LabelRole ;
-        sh:datatype        rdf:langString ;
-        sh:description     "Libellé" ;
-        sh:languageIn      ( "fr" ) ;
-        sh:minCount        1 ;
-        sh:name            "libellé" ;
-        sh:nodeKind        sh:Literal ;
-        sh:path            rdfs:label .
+med:P255  sh:datatype   xsd:date ;
+        sh:description  "Date de début de cette entrée d'historique" ;
+        sh:maxCount     1 ;
+        sh:minCount     1 ;
+        sh:name         "à partir de" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         med:dateDebut .
 
 med:P171  med:sousClasseDe  med:PPhParSubstanceDosageForme ;
         sh:description    "Classement de cet élément de présentation sur un PhPID4. Cet attribut est toujours renseigné, sauf dans le cas des spécialités non virtualisables, pour lesquelles c'est seulement le classement par substance qui est indiqué.\nCet attribut peut être répété pour le cas où un même élément dans une présentation pourrait donner lieu à plusieurs formes administrables." ;
@@ -1614,9 +1600,6 @@ med:P45  med:sousClasseDe  med:Forme ;
         sh:nodeKind       sh:IRI ;
         sh:path           med:formeManufacturee .
 
-med:CauseDeNonVirtualisation
-        sh:property  med:P211 , med:P212 .
-
 med:DosageConcentration
         rdf:type                     sh:NodeShape , rdfs:Class ;
         rdfs:comment                 "Les dosages en concentration donnent la [concentration](#med:DosageConcentration_med:quantiteSubstance) de [substance](#med:DosageConcentration_med:substance), exprimée dans une certaine [unité](#med:DosageConcentration_med:unite) de concentration (comme _“mg/mL”_, _“mg/g”_, etc.), ou éventuellement une plage de concentration ([inférieure](#med:DosageConcentration_med:quantiteSubstanceInf) / [supérieure](#med:DosageConcentration_med:quantiteSubstanceSup))."@fr ;
@@ -1814,6 +1797,13 @@ med:TypeEvenement  rdf:type          rdfs:Class , sh:NodeShape ;
         sh:target                    med:TypeEvenement-target ;
         shacl-play:background-color  "00B050" .
 
+med:P256  sh:datatype   xsd:date ;
+        sh:description  "Date de fin de cette entrée d'historique" ;
+        sh:maxCount     1 ;
+        sh:name         "jusqu'au" ;
+        sh:nodeKind     sh:Literal ;
+        sh:path         med:dateFin .
+
 med:P130  sh:datatype                xsd:string ;
         sh:description               "Identifiant du groupe générique" ;
         sh:maxCount                  1 ;
@@ -1903,6 +1893,11 @@ med:P52  med:sousClasseDe  med:Substance ;
         sh:nodeKind       sh:IRI ;
         sh:path           med:substance .
 
+[ sh:description  "The class of which the value is expected to be a subClassOf"@en ;
+  sh:name         "subClass of"@en , "sous-classe de"@fr ;
+  sh:path         med:sousClasseDe
+] .
+
 med:P208  dash:propertyRole          dash:LabelRole ;
         sh:datatype                  rdf:langString ;
         sh:description               "Libellé" ;
@@ -1986,10 +1981,6 @@ med:P64  med:sousClasseDe  med:Substance ;
         sh:node           med:Substance ;
         sh:nodeKind       sh:IRI ;
         sh:path           med:substance .
-
-[ sh:name  "closed by super classes"@en , "fermé par les super classes"@fr ;
-  sh:path  med:closedBySuperClasses
-] .
 
 med:BusinessRule_16  rdf:type  sh:SPARQLConstraint ;
         dct:description  "Une Présentation ne peut avoir au maximum qu'un seul dosage concentration pour la même substance"@fr ;
@@ -2141,7 +2132,7 @@ med:BlankNode_LabelWithDates
         sh:closed             true ;
         sh:ignoredProperties  ( rdf:type rdfs:subClassOf owl:equivalentClass ) ;
         sh:nodeKind           sh:BlankNode ;
-        sh:property           med:P257 , med:P259 , med:P258 .
+        sh:property           med:P255 , med:P256 , med:P257 .
 
 med:Diagramme_ElementDosages
         dct:title  "2. Elements et Dosages"@fr ;
@@ -2172,11 +2163,6 @@ med:P245  sh:datatype                xsd:date ;
         sh:nodeKind                  sh:Literal ;
         sh:path                      dct:created ;
         shacl-play:background-color  "#EAF1DD" .
-
-[ sh:description  "The class of which the value is expected to be a subClassOf"@en ;
-  sh:name         "subClass of"@en , "sous-classe de"@fr ;
-  sh:path         med:sousClasseDe
-] .
 
 med:BusinessRule_11  rdf:type  sh:SPARQLConstraint ;
         dct:description  "Il ne faut pas avoir de doublons de libellés de substances"@fr ;
@@ -2209,13 +2195,13 @@ med:P161  med:sousClasseDe  med:Voie ;
 med:SpecialitePharmaceutique-target
         sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf med:SpecialitePharmaceutique }" .
 
-med:P257  sh:datatype   xsd:date ;
-        sh:description  "Date de début de cette entrée d'historique" ;
+med:P257  sh:datatype   rdf:langString ;
+        sh:description  "Chaine de caractère du libellé dans cette plage de date" ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
-        sh:name         "à partir de" ;
+        sh:name         "libellé" ;
         sh:nodeKind     sh:Literal ;
-        sh:path         med:dateDebut .
+        sh:path         skosxl:literalForm .
 
 med:P131  dash:propertyRole          dash:LabelRole ;
         sh:datatype                  rdf:langString ;
@@ -2269,19 +2255,19 @@ med:P41  sh:datatype    xsd:boolean ;
 med:TypeEvenement-target
         sh:select  "PREFIX med: <http://data.esante.gouv.fr/ansm/medicament/>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nSELECT ?this WHERE { ?this rdfs:subClassOf/rdfs:subClassOf med:TypeEvenement }" .
 
-med:P173  med:sousClasseDe  med:Forme ;
-        sh:description    "Forme pharmaceutique administrable de cet élément" ;
-        sh:name           "forme administrable" ;
-        sh:node           med:Forme ;
-        sh:nodeKind       sh:IRI ;
-        sh:path           med:formeAdministrable .
-
 med:P11  sh:datatype    xsd:string ;
         sh:description  "Identifiant du PhPID1" ;
         sh:maxCount     1 ;
         sh:minCount     1 ;
         sh:name         "identifiant" ;
         sh:path         skos:notation .
+
+med:P173  med:sousClasseDe  med:Forme ;
+        sh:description    "Forme pharmaceutique administrable de cet élément" ;
+        sh:name           "forme administrable" ;
+        sh:node           med:Forme ;
+        sh:nodeKind       sh:IRI ;
+        sh:path           med:formeAdministrable .
 
 med:P143  sh:datatype                xsd:string ;
         sh:description               "Code CIP constitué de 13 chiffres (code principal)" ;
