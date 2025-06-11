@@ -104,7 +104,7 @@
             <div style="text-align:right;">
               <span style="font-size:90%; font-style: italic;"> 
                 <a id="endpoint" href="https://smt.esante.gouv.fr/api/sparql">Service SPARQL du SMT</a> 
-              </span> | <a href="https://docs.google.com/spreadsheets/d/1ZkgVyfG1rnl3yZALOdxovj7ommoKDn7ieudi7jCwoYw">Configuration</a> 
+              </span> | <a href="https://docs.google.com/spreadsheets/d/1ZkgVyfG1rnl3yZALOdxovj7ommoKDn7ieudi7jCwoYw">Configuration</a> | <a href="javascript: return false;" id="advanced-simple" style="float: right;">Recherche avancée</a> 
             </div>
           </div>
 
@@ -122,8 +122,9 @@
             src="../configs/sparnatural-config.ttl"
             endpoint="https://smt.esante.gouv.fr/api/sparql"
             typePredicate="<http://www.w3.org/2000/01/rdf-schema#subClassOf>"
-            prefixes="med:http://data.esante.gouv.fr/ansm/medicament/ skos:http://www.w3.org/2004/02/skos/core# dct:http://purl.org/dc/terms/"
+            prefixes="skos:http://www.w3.org/2004/02/skos/core# dct:http://purl.org/dc/terms/"
             lang="fr"
+            defaultLang="fr"
             distinct="true"
             debug="true"
           ></spar-natural>
@@ -555,12 +556,25 @@
       }
     }
 
-    /*
-    document.getElementById('tutorial').onclick = function() {
-      sparnatural.clear();
-      initTour();
-    }
-    */
+    document.getElementById('advanced-simple').onclick = function() {
+        let ADVANCED_SRC = "../configs/RUIM-SHACL-postprocessed.ttl"
+
+        let SIMPLE_SRC = "../configs/sparnatural-config.ttl";
+
+        if(sparnatural.getAttribute("src") == SIMPLE_SRC) {
+          sparnatural.setAttribute("prefixes", "skos:http://www.w3.org/2004/02/skos/core# dct:http://purl.org/dc/terms/");
+          sparnatural.setAttribute("typePredicate", "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>");
+          sparnatural.setAttribute("src", ADVANCED_SRC);
+          $('#advanced-simple').text("Recerche simple");
+        } else {
+          sparnatural.setAttribute("prefixes", "med:http://data.esante.gouv.fr/ansm/medicament/ skos:http://www.w3.org/2004/02/skos/core# dct:http://purl.org/dc/terms/");
+          sparnatural.setAttribute("typePredicate", "<http://www.w3.org/2000/01/rdf-schema#subClassOf>");
+          sparnatural.setAttribute("src", SIMPLE_SRC);
+          $('#advanced-simple').text("Recerche avancée");
+        }        
+
+        return false;
+      }
 
   </script>
 
