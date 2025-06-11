@@ -1,0 +1,1453 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP22>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P22> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FEvenement>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/Evenement> ;
+        void:entities           "29501"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP216> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP217> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP218> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP219> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP220> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP221> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FForme>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/Forme> ;
+        void:entities           "0"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP197> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP198> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP199> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP65>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P65> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/quantiteSubstance> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP43>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P43> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dosagePresentation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP164>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P164> ;
+        void:distinctObjects  "22280"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/compose> ;
+        void:triples          "23181"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP154>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P154> ;
+        void:distinctObjects  "6"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/uniteQuantiteConditionnement> ;
+        void:triples          "7519"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP114>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P114> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/formeManufacturee> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri>
+        a                        void:Dataset ;
+        void:classPartition      <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeEvenement> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteCommuneDeDispensation> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FEvenement> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosage> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosage> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FNiveauPrescriptibilite> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FJustificationNiveauPrescriptibilite> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGroupeGenerique> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElement> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FNiveauVirtualisation> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUnite> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentation> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentration> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentation> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FOrganisation> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FJustificationNiveauVirtualisation> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FAutorisation> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeProcedure> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeDose> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGamme> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FStatutSpecialite> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutique> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDC> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FVoie> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstance> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteDePresentation> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentation> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceForme> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FForme> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstance> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeContenant> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageForme> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FBlankNode_LabelWithDates> ;
+        void:triples             "1531900"^^xsd:int ;
+        sh:suggestedShapesGraph  <http://data.esante.gouv.fr/ansm/medicament> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeProcedurehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP245>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P245> ;
+        void:distinctObjects  "3"^^xsd:int ;
+        void:property         dct:created ;
+        void:triples          "5"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP34>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P34> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/precisePPhParSubstanceDosage> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutique>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/SpecialitePharmaceutique> ;
+        void:entities           "15305"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP92> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP90> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP78> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP106> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP81> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP99> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP101> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP94> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP95> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP97> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP80> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP83> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP103> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP82> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP96> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP91> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP102> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP104> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP85> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP105> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP98> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP100> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP93> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP84> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP89> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP79> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP87> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP107> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP88> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP86> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP96>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P96> ;
+        void:distinctObjects  "22280"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/aPourPresentation> ;
+        void:triples          "22280"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FBlankNode_LabelWithDates>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/BlankNode_LabelWithDates> ;
+        void:entities           "0"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FBlankNode_LabelWithDateshttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP256> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FBlankNode_LabelWithDateshttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP257> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FBlankNode_LabelWithDateshttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP255> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP51>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P51> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP198>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P198> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP172>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P172> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/classementSubstance> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP184>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P184> ;
+        void:distinctObjects  "2822"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/codeSMS> ;
+        void:triples          "2843"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP162>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P162> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/formeManufacturee> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP121>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P121> ;
+        void:distinctObjects  "5110"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "12111"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FVoiehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP191>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P191> ;
+        void:distinctObjects  "86"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "86"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FStatutSpecialitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP240>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P240> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2002/07/owl#deprecated> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP106>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P106> ;
+        void:distinctObjects  "10"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/estSpecialiteSubstituableDans> ;
+        void:triples          "50"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP83>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P83> ;
+        void:distinctObjects  "2117"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/classificationATC> ;
+        void:triples          "15302"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP59>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P59> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/quantitePresentation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGammehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP207>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P207> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP38>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P38> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FAutorisationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP223>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P223> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/typeProcedure> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP149>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P149> ;
+        void:distinctObjects  "15305"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/presente> ;
+        void:triples          "22280"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP109>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P109> ;
+        void:distinctObjects  "36"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/identifiantElement> ;
+        void:triples          "16009"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP29>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P29> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FOrganisationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP180>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P180> ;
+        void:distinctObjects  "26"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/nomPays> ;
+        void:triples          "722"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP91>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P91> ;
+        void:distinctObjects  "603"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/fractionTherapeutique> ;
+        void:triples          "5855"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGroupeGeneriquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP132>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P132> ;
+        void:distinctObjects  "1414"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/specialiteDeReference> ;
+        void:triples          "1416"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP25>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P25> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/formeAdministrable> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP68>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P68> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/quantiteSubstanceSup> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP46>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P46> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/voie> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP167>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P167> ;
+        void:distinctObjects  "22888"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "23181"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP157>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P157> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/libelle> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceForme>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/PPhParSubstanceForme> ;
+        void:entities           "0"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP24> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP23> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP26> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP25> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP22> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP117>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P117> ;
+        void:distinctObjects  "1539"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/substancePortantLeDosage> ;
+        void:triples          "12110"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteCommuneDeDispensationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP137>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P137> ;
+        void:distinctObjects  "17356"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/codeUCD7> ;
+        void:triples          "17356"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP99>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P99> ;
+        void:distinctObjects  "3"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/prescriptibiliteEnDC> ;
+        void:triples          "15180"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FStatutSpecialitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP235>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P235> ;
+        void:distinctObjects  "5"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "5"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP101>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P101> ;
+        void:distinctObjects  "12"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/justificationPrescriptibiliteEnDC> ;
+        void:triples          "2129"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeDose>
+        dct:conformsTo  <http://data.esante.gouv.fr/ansm/medicament/TypeDose> ;
+        void:entities   "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FBlankNode_LabelWithDateshttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP255>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P255> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dateDebut> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP78>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P78> ;
+        void:distinctObjects  "15305"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/CIS> ;
+        void:triples          "15305"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP17>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P17> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/substancePortantLeDosage> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP54>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P54> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/unite> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentation>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/Presentation> ;
+        void:entities           "22280"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP152> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP154> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP146> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP147> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP153> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP155> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP160> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP156> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP148> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP161> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP162> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP149> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP143> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP157> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP158> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP150> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP144> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP151> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP159> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP145> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP175>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P175> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/uniteDePresentation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP187>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P187> ;
+        void:distinctObjects  "15303"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/estSubstanceActiveDans> ;
+        void:triples          "20630"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP144>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P144> ;
+        void:distinctObjects  "14767"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/CIP7> ;
+        void:triples          "14767"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP217>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P217> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dateNotification> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUnite>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/Unite> ;
+        void:entities           "0"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUnitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP73> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUnitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP75> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUnitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP74> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUnitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP76> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP124>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P124> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/expressionQuantiteNormalisee> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FVoiehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP194>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P194> ;
+        void:distinctObjects  "80"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/codeRMS> ;
+        void:triples          "80"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FJustificationNiveauVirtualisationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP211>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P211> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP229>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P229> ;
+        void:distinctObjects  "4"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#definition> ;
+        void:triples          "4"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUnitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP73>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P73> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP12>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P12> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP86>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P86> ;
+        void:distinctObjects  "18652"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/concernePar> ;
+        void:triples          "18652"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FVoie>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/Voie> ;
+        void:entities           "86"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FVoiehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP193> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FVoiehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP194> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FVoiehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP191> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FVoiehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP192> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FVoiehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP195> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FNiveauPrescriptibilitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP252>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P252> ;
+        void:distinctObjects  "3"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "3"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP41>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P41> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/actif> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP63>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P63> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP152>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P152> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/prescriptibleComme> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FNiveauVirtualisationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP250>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P250> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP112>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P112> ;
+        void:distinctObjects  "15305"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/compose> ;
+        void:triples          "16009"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeProcedurehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP243>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P243> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#definition> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP32>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P32> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dosageConcentration> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FJustificationNiveauPrescriptibilitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP214>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P214> ;
+        void:distinctObjects  "12"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "12"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP94>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P94> ;
+        void:distinctObjects  "2"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/substancePortantLeDosageConnue> ;
+        void:triples          "15303"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP71>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P71> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/exprimableEnPourcent> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGroupeGenerique>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/GroupeGenerique> ;
+        void:entities           "1504"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGroupeGeneriquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP131> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGroupeGeneriquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP132> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGroupeGeneriquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP130> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGroupeGeneriquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP133> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGroupeGeneriquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP134> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstance>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/Substance> ;
+        void:entities           "3360"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP189> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP182> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP188> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP184> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP187> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP186> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP183> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP185> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP170>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P170> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/typeContenant> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP182>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P182> ;
+        void:distinctObjects  "3360"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "3360"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP49>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P49> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/classementSubstanceDosageForme> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP160>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P160> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dosageConcentration> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FStatutSpecialitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP238>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P238> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         dct:created ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteCommuneDeDispensationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP140>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P140> ;
+        void:distinctObjects  "22280"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/presenteDans> ;
+        void:triples          "22280"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageForme>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/PPhParSubstanceDosageForme> ;
+        void:entities           "0"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP31> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP34> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP29> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP32> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP35> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP30> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP33> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP28> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP104>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P104> ;
+        void:distinctObjects  "1340"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/estSpecialiteDeReferenceDans> ;
+        void:triples          "1416"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP20>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P20> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/precisePPhParSubstance> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP81>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P81> ;
+        void:distinctObjects  "4267"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dateDebut> ;
+        void:triples          "15305"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP57>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P57> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/quantiteSubstanceSup> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteDePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP201>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P201> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP220>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P220> ;
+        void:distinctObjects  "22609"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/concerne> ;
+        void:triples          "29501"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP147>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P147> ;
+        void:distinctObjects  "75"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/nombreUniteDeDispensation> ;
+        void:triples          "22280"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP127>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P127> ;
+        void:distinctObjects  "406"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/substanceActive> ;
+        void:triples          "2921"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP232>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P232> ;
+        void:distinctObjects  "2"^^xsd:int ;
+        void:property         dct:modified ;
+        void:triples          "8"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUnitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP76>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P76> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#exactMatch> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FOrganisationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP178>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P178> ;
+        void:distinctObjects  "722"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "722"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP89>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P89> ;
+        void:distinctObjects  "16009"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/seComposeDe> ;
+        void:triples          "16009"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGroupeGeneriquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP130>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P130> ;
+        void:distinctObjects  "1504"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "1504"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP23>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P23> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP66>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P66> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/quantiteSubstanceInf> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP44>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P44> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dosageConcentration> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP165>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P165> ;
+        void:distinctObjects  "16010"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#subClassOf> ;
+        void:triples          "46362"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP155>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P155> ;
+        void:distinctObjects  "23181"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/seComposeDe> ;
+        void:triples          "23181"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP115>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P115> ;
+        void:distinctObjects  "2895"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/substanceActive> ;
+        void:triples          "20748"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeProcedurehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP246>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P246> ;
+        void:distinctObjects  "2"^^xsd:int ;
+        void:property         dct:modified ;
+        void:triples          "3"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP35>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P35> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/precisePPhParSubstanceForme> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP97>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P97> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/libelle> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeContenanthttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP204>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P204> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP15>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P15> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP52>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P52> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/substance> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FStatutSpecialite>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/StatutSpecialite> ;
+        void:entities           "5"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FStatutSpecialitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP238> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FStatutSpecialitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP239> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FStatutSpecialitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP236> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FStatutSpecialitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP237> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FStatutSpecialitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP240> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FStatutSpecialitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP235> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP199>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P199> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#exactMatch> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP173>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P173> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/formeAdministrable> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP185>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P185> ;
+        void:distinctObjects  "3345"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "3360"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDC>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/PrescriptionEnDC> ;
+        void:entities           "0"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP38> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP42> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP41> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP44> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP39> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP43> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP40> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP45> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP37> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP46> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP49> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP48> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP47> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP122>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P122> ;
+        void:distinctObjects  "1539"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/substance> ;
+        void:triples          "12111"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FVoiehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP192>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P192> ;
+        void:distinctObjects  "86"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "86"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGamme>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/Gamme> ;
+        void:entities           "0"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGammehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP209> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGammehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP207> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGammehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP208> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP107>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P107> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/gamme> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP84>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P84> ;
+        void:distinctObjects  "2119"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/codeATC> ;
+        void:triples          "15305"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP60>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P60> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/uniteQuantitePresentation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGammehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP208>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P208> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP39>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P39> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dateDebut> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP150>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P150> ;
+        void:distinctObjects  "17356"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/contientUniteDeDispensation> ;
+        void:triples          "22280"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP110>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P110> ;
+        void:distinctObjects  "15666"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "16009"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP30>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P30> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/substancePortantLeDosage> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentation>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/ElementPresentation> ;
+        void:entities           "23181"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP176> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP171> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP166> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP168> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP175> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP169> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP167> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP174> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP164> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP165> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP170> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP173> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP172> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP92>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P92> ;
+        void:distinctObjects  "1539"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/substancePortantLeDosage> ;
+        void:triples          "12083"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGroupeGeneriquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP133>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P133> ;
+        void:distinctObjects  "6717"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/specialiteGenerique> ;
+        void:triples          "6760"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP26>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P26> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/precisePPhParSubstance> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP69>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P69> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/uniteSup> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP47>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P47> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/uniteDePresentation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP168>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P168> ;
+        void:distinctObjects  "16009"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/manifeste> ;
+        void:triples          "23181"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP158>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P158> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/libelleCourt> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP118>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P118> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dosageConcentration> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FStatutSpecialitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP236>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P236> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#definition> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteCommuneDeDispensationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP138>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P138> ;
+        void:distinctObjects  "17353"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "17356"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP79>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P79> ;
+        void:distinctObjects  "14979"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "15305"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FBlankNode_LabelWithDateshttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP256>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P256> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dateFin> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP102>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P102> ;
+        void:distinctObjects  "722"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/titulaireCourant> ;
+        void:triples          "15305"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP18>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P18> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dosagePresentation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP55>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P55> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/quantiteSubstanceInf> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP176>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P176> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/typeDose> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP188>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P188> ;
+        void:distinctObjects  "5342"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/estFractionTherapeutiqueDans> ;
+        void:triples          "5855"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP218>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P218> ;
+        void:distinctObjects  "6346"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dateEffet> ;
+        void:triples          "29501"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP145>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P145> ;
+        void:distinctObjects  "22005"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "22280"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP125>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P125> ;
+        void:distinctObjects  "614"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/referenceDosage> ;
+        void:triples          "12111"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FVoiehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP195>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P195> ;
+        void:distinctObjects  "160"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#exactMatch> ;
+        void:triples          "160"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FJustificationNiveauVirtualisationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP212>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P212> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#example> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP230>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P230> ;
+        void:distinctObjects  "17"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "17"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUnitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP74>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P74> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/codeUcum> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP13>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P13> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/substancePortantLeDosage> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP87>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P87> ;
+        void:distinctObjects  "5"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/typeProcedureCourante> ;
+        void:triples          "15305"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FNiveauPrescriptibilitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP253>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P253> ;
+        void:distinctObjects  "3"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "3"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FJustificationNiveauVirtualisation>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/JustificationNiveauVirtualisation> ;
+        void:entities           "0"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FJustificationNiveauVirtualisationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP212> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FJustificationNiveauVirtualisationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP211> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FOrganisation>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/Organisation> ;
+        void:entities           "722"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FOrganisationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP180> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FOrganisationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP179> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FOrganisationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP178> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP64>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P64> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/substance> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP42>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P42> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/substancePortantLeDosage> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FAutorisation>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/Autorisation> ;
+        void:entities           "16283"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FAutorisationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP223> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP153>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P153> ;
+        void:distinctObjects  "353"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/quantiteConditionnement> ;
+        void:triples          "7517"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentration>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/DosageConcentration> ;
+        void:entities           "0"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP66> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP71> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP63> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP70> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP69> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP64> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP65> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP67> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP68> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP113>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P113> ;
+        void:distinctObjects  "315"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/formeManufactureeLitterale> ;
+        void:triples          "16009"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeProcedurehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP244>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P244> ;
+        void:distinctObjects  "5"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "5"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosage>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/ExpressionDeDosage> ;
+        void:entities           "12111"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP121> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP127> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP124> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP122> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP125> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP128> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP123> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP126> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP33>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P33> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/formeAdministrable> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeContenant>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/TypeContenant> ;
+        void:entities           "0"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeContenanthttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP205> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeContenanthttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP204> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP95>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P95> ;
+        void:distinctObjects  "17356"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/aPourUniteDeDispensation> ;
+        void:triples          "17356"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP197>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P197> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP171>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P171> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/classementSubstanceDosageForme> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP183>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P183> ;
+        void:distinctObjects  "1"^^xsd:int ;
+        void:property         dct:created ;
+        void:triples          "3360"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP161>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P161> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/voie> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FStatutSpecialitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP239>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P239> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         dct:modified ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteCommuneDeDispensationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP141>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P141> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/libelle> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP105>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P105> ;
+        void:distinctObjects  "1312"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/estSpecialiteGeneriqueDans> ;
+        void:triples          "6760"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP82>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P82> ;
+        void:distinctObjects  "736"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dateFin> ;
+        void:triples          "1745"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP58>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P58> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/uniteSup> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstance>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/PPhParSubstance> ;
+        void:entities           "0"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP13> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP12> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP11> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElement>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/Element> ;
+        void:entities           "16009"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP109> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP117> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP112> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP113> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP116> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP118> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP119> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP114> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP110> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP111> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP115> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP37>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P37> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteDePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP202>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P202> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP221>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P221> ;
+        void:distinctObjects  "7"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/typeEvenement> ;
+        void:triples          "29501"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP148>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P148> ;
+        void:distinctObjects  "177"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/typeDispositif> ;
+        void:triples          "1390"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP128>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P128> ;
+        void:distinctObjects  "58"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/fractionTherapeutique> ;
+        void:triples          "438"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP28>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P28> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP233>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P233> ;
+        void:distinctObjects  "1"^^xsd:int ;
+        void:property         <http://www.w3.org/2002/07/owl#deprecated> ;
+        void:triples          "1"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP90>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P90> ;
+        void:distinctObjects  "2895"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/substanceActive> ;
+        void:triples          "20630"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FOrganisationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP179>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P179> ;
+        void:distinctObjects  "717"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "722"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGroupeGeneriquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP131>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P131> ;
+        void:distinctObjects  "1504"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "1504"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeProcedure>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/TypeProcedure> ;
+        void:entities           "5"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeProcedurehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP247> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeProcedurehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP242> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeProcedurehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP245> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeProcedurehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP246> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeProcedurehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP243> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeProcedurehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP244> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP24>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P24> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/substancePortantLeDosage> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP67>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P67> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/uniteInf> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP45>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P45> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/formeManufacturee> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP166>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P166> ;
+        void:distinctObjects  "36"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/identifiantElement> ;
+        void:triples          "23181"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP156>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P156> ;
+        void:distinctObjects  "29162"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/concernePar> ;
+        void:triples          "29162"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP116>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P116> ;
+        void:distinctObjects  "603"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/fractionTherapeutique> ;
+        void:triples          "5862"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeProcedurehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP247>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P247> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2002/07/owl#deprecated> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteDePresentation>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/UniteDePresentation> ;
+        void:entities           "0"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteDePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP201> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteDePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP202> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteCommuneDeDispensationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP136>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P136> ;
+        void:distinctObjects  "17356"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/codeUCD13> ;
+        void:triples          "17356"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP100>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P100> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/justificationNiveauDeVirtualisation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP98>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P98> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/niveauDeVirtualisation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeContenanthttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP205>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P205> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP16>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P16> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP53>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P53> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/quantiteSubstance> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FJustificationNiveauPrescriptibilite>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/JustificationNiveauPrescriptibilite> ;
+        void:entities           "12"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FJustificationNiveauPrescriptibilitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP214> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP174>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P174> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dosagePresentation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP186>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P186> ;
+        void:distinctObjects  "1708"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#altLabel> ;
+        void:triples          "1710"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosage>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/PPhParSubstanceDosage> ;
+        void:entities           "0"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP17> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP16> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP19> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP18> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP15> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP20> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP216>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P216> ;
+        void:distinctObjects  "8400"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "29501"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP143>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P143> ;
+        void:distinctObjects  "22280"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/CIP13> ;
+        void:triples          "22280"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP123>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P123> ;
+        void:distinctObjects  "2707"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/expressionQuantite> ;
+        void:triples          "12111"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FVoiehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP193>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P193> ;
+        void:distinctObjects  "80"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/codeEDQM> ;
+        void:triples          "80"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeEvenement>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/TypeEvenement> ;
+        void:entities           "17"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP228> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP229> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP230> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP231> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP232> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP233> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP228>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P228> ;
+        void:distinctObjects  "17"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "17"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP11>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P11> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP85>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P85> ;
+        void:distinctObjects  "1979"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/libelleATC> ;
+        void:triples          "15305"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP61>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P61> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/uniteDePresentation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGammehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP209>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P209> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/gammeInclut> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP40>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P40> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dateFin> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP151>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P151> ;
+        void:distinctObjects  "15306"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#subClassOf> ;
+        void:triples          "44560"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FNiveauVirtualisationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP249>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P249> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP111>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P111> ;
+        void:distinctObjects  "12111"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/expressionDeDosage> ;
+        void:triples          "12111"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeProcedurehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP242>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P242> ;
+        void:distinctObjects  "5"^^xsd:int ;
+        void:property         <http://www.w3.org/2000/01/rdf-schema#label> ;
+        void:triples          "5"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosageFormehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP31>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P31> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dosagePresentation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentation>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/DosagePresentation> ;
+        void:entities           "0"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP55> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP57> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP61> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP51> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP56> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP53> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP58> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP52> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP60> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP54> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP59> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP93>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P93> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/formeManufacturee> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FGroupeGeneriquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP134>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P134> ;
+        void:distinctObjects  "50"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/specialiteSubstituable> ;
+        void:triples          "50"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosageConcentrationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP70>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P70> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/unite> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPrescriptionEnDChttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP48>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P48> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/medicamentVirtuel> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP169>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P169> ;
+        void:distinctObjects  "43"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/typeContenantLitteral> ;
+        void:triples          "23181"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP159>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P159> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dosagePresentation> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FElementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP119>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P119> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/seManifesteDans> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FNiveauPrescriptibilite>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/NiveauPrescriptibilite> ;
+        void:entities           "3"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FNiveauPrescriptibilitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP252> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FNiveauPrescriptibilitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP253> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteCommuneDeDispensationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP139>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P139> ;
+        void:distinctObjects  "15305"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/uniteDeDispensationDe> ;
+        void:triples          "17356"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FStatutSpecialitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP237>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P237> ;
+        void:distinctObjects  "5"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#notation> ;
+        void:triples          "5"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FNiveauVirtualisation>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/NiveauVirtualisation> ;
+        void:entities           "0"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FNiveauVirtualisationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP249> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FNiveauVirtualisationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP250> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP103>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P103> ;
+        void:distinctObjects  "69"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/voie> ;
+        void:triples          "16661"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FBlankNode_LabelWithDateshttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP257>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P257> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://www.w3.org/2008/05/skos-xl#literalForm> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP80>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P80> ;
+        void:distinctObjects  "2"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/actif> ;
+        void:triples          "15305"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPPhParSubstanceDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP19>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P19> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/dosageConcentration> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FDosagePresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP56>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P56> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/uniteInf> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSubstancehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP189>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P189> ;
+        void:distinctObjects  "2822"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#exactMatch> ;
+        void:triples          "2843"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteCommuneDeDispensation>
+        dct:conformsTo          <http://data.esante.gouv.fr/ansm/medicament/UniteCommuneDeDispensation> ;
+        void:entities           "17356"^^xsd:int ;
+        void:propertyPartition  <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteCommuneDeDispensationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP139> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteCommuneDeDispensationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP137> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteCommuneDeDispensationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP138> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteCommuneDeDispensationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP140> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteCommuneDeDispensationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP141> , <https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUniteCommuneDeDispensationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP136> .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP219>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P219> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/description> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FPresentationhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP146>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P146> ;
+        void:distinctObjects  "22076"^^xsd:int ;
+        void:property         <http://www.w3.org/2004/02/skos/core#altLabel> ;
+        void:triples          "22280"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FExpressionDeDosagehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP126>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P126> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/referenceDosageNormalisee> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FTypeEvenementhttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP231>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P231> ;
+        void:distinctObjects  "5"^^xsd:int ;
+        void:property         dct:created ;
+        void:triples          "8"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FUnitehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP75>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P75> ;
+        void:distinctObjects  "0"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/multiplicateurPourcent> ;
+        void:triples          "0"^^xsd:int .
+
+<https://dummy.dataset.uri/http%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FSpecialitePharmaceutiquehttp%3A%2F%2Fdata.esante.gouv.fr%2Fansm%2Fmedicament%2FP88>
+        dct:conformsTo        <http://data.esante.gouv.fr/ansm/medicament/P88> ;
+        void:distinctObjects  "4"^^xsd:int ;
+        void:property         <http://data.esante.gouv.fr/ansm/medicament/statutCourant> ;
+        void:triples          "15305"^^xsd:int .
