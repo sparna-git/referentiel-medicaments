@@ -94,7 +94,7 @@ shape:Evenement a sh:NodeShape;
 shape:Evenement-target sh:select """SELECT $this
 WHERE {
  $this a ?classeEvenement .
- VALUES ?classeEvenement {<http://data.esante.gouv.fr/ansm/medicament/Evenement> <http://data.esante.gouv.fr/ansm/medicament/Autorisation>
+ VALUES ?classeEvenement {<http://data.esante.gouv.fr/ansm/medicament/Evenement> <http://data.esante.gouv.fr/ansm/medicament/Autorisation>}
 }""" .
 
 shape:Substance a sh:NodeShape;
