@@ -30,11 +30,37 @@
 @prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
 
 <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>
-  a owl:Ontology;
-  dct:created "2025-04-16T00:00:00.000Z"^^xsd:dateTime .
+  a owl:Ontology, skos:ConceptScheme;
+  dct:created "2025-04-16T00:00:00.000Z"^^xsd:dateTime;
+  skos:hasTopConcept shape:Presentation_label, shape:Presentation_altLabel, shape:Presentation_CIP13,
+    shape:Presentation_CIP7, shape:Presentation_nombreUniteDeDispensation, shape:Presentation_typeDispositif,
+    shape:Presentation_presente, shape:Presentation_contientUniteDeDispensation, shape:Presentation_concernePar,
+    shape:Presentation_quantiteConditionnement, shape:Presentation_uniteQuantiteConditionnement,
+    shape:UniteCommuneDeDispensation_label, shape:UniteCommuneDeDispensation_codeUCD13,
+    shape:UniteCommuneDeDispensation_codeUCD7, shape:UniteCommuneDeDispensation_uniteDeDispensationDe,
+    shape:UniteCommuneDeDispensation_presenteDans, shape:SpecialitePharmaceutique_label,
+    shape:SpecialitePharmaceutique_CIS, shape:SpecialitePharmaceutique_dateDebut, shape:SpecialitePharmaceutique_dateFin,
+    shape:SpecialitePharmaceutique_classificationATC, shape:SpecialitePharmaceutique_classificationATCdirect,
+    shape:SpecialitePharmaceutique_codeATC, shape:SpecialitePharmaceutique_concernePar,
+    shape:SpecialitePharmaceutique_typeProcedureCourante, shape:SpecialitePharmaceutique_statutCourant,
+    shape:SpecialitePharmaceutique_prescriptibiliteEnDC, shape:SpecialitePharmaceutique_justificationPrescriptibiliteEnDC,
+    shape:SpecialitePharmaceutique_SAouFT, shape:SpecialitePharmaceutique_substanceActive,
+    shape:SpecialitePharmaceutique_fractionTherapeutique, shape:SpecialitePharmaceutique_substancePortantLeDosage,
+    shape:SpecialitePharmaceutique_aPourUniteDeDispensation, shape:SpecialitePharmaceutique_aPourPresentation,
+    shape:SpecialitePharmaceutique_titulaireCourant, shape:SpecialitePharmaceutique_estSpecialiteDeReferenceDans,
+    shape:SpecialitePharmaceutique_estSpecialiteGeneriqueDans, shape:SpecialitePharmaceutique_estSpecialiteSubstituableDans,
+    shape:SpecialitePharmaceutique_voie, shape:Evenement_concerne, shape:Evenement_typeEvenement,
+    shape:Evenement_dateEffet, shape:Evenement_label, shape:Substance_notation, shape:Substance_codeSMS,
+    shape:Substance_label, shape:Substance_altLabel, shape:Substance_created, shape:Substance_estFractionTherapeutiqueDans,
+    shape:Substance_estSubstanceActiveDans, shape:Substance_exactMatch, shape:ATC_labelATC,
+    shape:ATC_codeATC, shape:GroupeGenerique_notation, shape:GroupeGenerique_label, shape:GroupeGenerique_specialiteDeReference,
+    shape:GroupeGenerique_specialiteGenerique, shape:GroupeGenerique_specialiteSubstituable,
+    shape:Organisation_notation, <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Organisation_label   >,
+    shape:Organisation_nomPays, shape:TypeEvenement_label, shape:TypeProcedure_label,
+    shape:StatutSpecialite_label, shape:NiveauPrescriptibilite_label, shape:JustificationNiveauPrescriptibilite_label,
+    shape:Voie_label, shape:SubstanceSMS_label .
 
 shape:Presentation a sh:NodeShape;
-  sh:agentInstruction "Représente une spécialité pharmaceutique dans un certain packaging. Une présentation est identifiée par son code CIP13. Elle est liée à la spécialité présentée et à l’UCD contenue dans la présentation. Conceptuellement, la présentation “hérite” de toutes les caractéristiques de la spécialité dispensée (substances, type de conditionnement, forme manufacturée). Le nombre d'UCD (comme le nombre de comprimés dans la boite), le conditionnement et les éventuels dispositifs d'administration sont indiqués sur la Présentation. Les dates de commercialisation doivent être récupérées sur les Evenements de type \"début de commercilisation\" ou \"arrêt de commercialisation\" liés à la présentation."@fr ;
   sh:targetClass med:Presentation;
   sh:nodeKind sh:IRI;
   rdfs:label "Présentation"@fr;
@@ -46,7 +72,6 @@ shape:Presentation a sh:NodeShape;
     shape:Presentation_quantiteConditionnement, shape:Presentation_uniteQuantiteConditionnement .
 
 shape:UniteCommuneDeDispensation a sh:NodeShape;
-  sh:agentInstruction "Représente un comprimé, un flacon, une ampoule, etc. Une Unité Commune de dispensation est identifiée par son code UCD13. Elle est liée d’une part à sa spécialité pharmaceutique (une et une seule) et d’autre part aux présentations dans lesquelles elle se retrouve (une UCD peut se retrouver dans plusieurs présentations)."@fr ;
   sh:targetClass med:UniteCommuneDeDispensation;
   sh:nodeKind sh:IRI;
   rdfs:label "Unité de Dispensation"@fr;
@@ -57,7 +82,6 @@ shape:UniteCommuneDeDispensation a sh:NodeShape;
     shape:UniteCommuneDeDispensation_presenteDans .
 
 shape:SpecialitePharmaceutique a sh:NodeShape;
-  sh:agentInstruction "Une spécialité pharmaceutique représente un médicament autorisé, indépendamment de son packaging. C'est la classe principale. Elle est identifiée par son code CIS (code identifiant de spécialité). Elle porte des informations descriptives, comme son code ATC ou ses dates de validité. La classification ATC d’une Spécialité est indiquée dans l'attribut `classificationATC` qui donne une référence à l’entrée actuelle de la classification ATC sur laquelle est classée cette Spécialité. Chaque spécialité est catégorisée selon sa prescriptibilité en dénomination commune : prescriptible, non-prescriptible et prescriptible avec nom de marque. Le cas échéant la cause de l’exception à la prescription en DC est indiquée. La forme manufacturée de la Spécialité est indiquée. Cette forme peut être plus générique que la forme indiquée au niveau de chaque présentation de la spécialité, par exemple \"solution\" sur la spécialité, et \"solution en ampoule\" ou \"solution en flacon\" sur des présentations. A de rares exceptions, une seule forme manufacturée est indiquée. La voie d’administration de la Spécialité est également indiquée. Une spécialité est liée aux UCD qui dispensent cette spécialité et aux présentations qui contiennent cette spécialité. Elle se décompose également en Eléments contenus dans la spécialité (par exemple une poudre et un solvant). Le titulaire courant de la spécialité est indiqué. Ce titulaire peut évoluer dans le temps, mais seul le titulaire courant est indiqué. D’autres caractéristiques de la spécialité liées à son AMM et à son statut courant sont décrites dans la partie “Autorisations”."@fr ;
   sh:targetClass med:SpecialitePharmaceutique;
   sh:nodeKind sh:IRI;
   rdfs:label "Spécialité pharmaceutique"@fr;
@@ -66,14 +90,15 @@ shape:SpecialitePharmaceutique a sh:NodeShape;
   sh:property shape:SpecialitePharmaceutique_label, shape:SpecialitePharmaceutique_CIS,
     shape:SpecialitePharmaceutique_dateDebut, shape:SpecialitePharmaceutique_dateFin,
     shape:SpecialitePharmaceutique_classificationATC, shape:SpecialitePharmaceutique_classificationATCdirect,
-    shape:SpecialitePharmaceutique_concernePar, shape:SpecialitePharmaceutique_typeProcedureCourante,
-    shape:SpecialitePharmaceutique_statutCourant, shape:SpecialitePharmaceutique_prescriptibiliteEnDC,
-    shape:SpecialitePharmaceutique_justificationPrescriptibiliteEnDC, shape:SpecialitePharmaceutique_SAouFT,
-    shape:SpecialitePharmaceutique_substanceActive, shape:SpecialitePharmaceutique_fractionTherapeutique,
-    shape:SpecialitePharmaceutique_substancePortantLeDosage, shape:SpecialitePharmaceutique_aPourUniteDeDispensation,
-    shape:SpecialitePharmaceutique_aPourPresentation, shape:SpecialitePharmaceutique_titulaireCourant,
-    shape:SpecialitePharmaceutique_estSpecialiteDeReferenceDans, shape:SpecialitePharmaceutique_estSpecialiteGeneriqueDans,
-    shape:SpecialitePharmaceutique_estSpecialiteSubstituableDans, shape:SpecialitePharmaceutique_voie .
+    shape:SpecialitePharmaceutique_codeATC, shape:SpecialitePharmaceutique_concernePar,
+    shape:SpecialitePharmaceutique_typeProcedureCourante, shape:SpecialitePharmaceutique_statutCourant,
+    shape:SpecialitePharmaceutique_prescriptibiliteEnDC, shape:SpecialitePharmaceutique_justificationPrescriptibiliteEnDC,
+    shape:SpecialitePharmaceutique_SAouFT, shape:SpecialitePharmaceutique_substanceActive,
+    shape:SpecialitePharmaceutique_fractionTherapeutique, shape:SpecialitePharmaceutique_substancePortantLeDosage,
+    shape:SpecialitePharmaceutique_aPourUniteDeDispensation, shape:SpecialitePharmaceutique_aPourPresentation,
+    shape:SpecialitePharmaceutique_titulaireCourant, shape:SpecialitePharmaceutique_estSpecialiteDeReferenceDans,
+    shape:SpecialitePharmaceutique_estSpecialiteGeneriqueDans, shape:SpecialitePharmaceutique_estSpecialiteSubstituableDans,
+    shape:SpecialitePharmaceutique_voie .
 
 shape:ATC a sh:NodeShape;
   sh:nodeKind sh:IRI;
@@ -84,7 +109,6 @@ shape:ATC a sh:NodeShape;
   sh:property shape:ATC_labelATC, shape:ATC_codeATC .
 
 shape:Evenement a sh:NodeShape;
-  sh:agentInstruction "Un événement qui concerne soit des Spécialités soit des Présentations. Les événéments qui concernent les Spécialités sont de type Autorisation, Changements de procédure, Suspension, etc. Les événements qui concernent les Présentations sont de type Début de commercialisation ou Arrêt de commercialisation."@fr ;
   sh:targetClass med:Evenement;
   sh:target shape:Evenement-target;
   sh:nodeKind sh:IRI;
@@ -98,11 +122,11 @@ shape:Evenement a sh:NodeShape;
 shape:Evenement-target sh:select """SELECT $this
 WHERE {
  $this a ?classeEvenement .
- VALUES ?classeEvenement {<http://data.esante.gouv.fr/ansm/medicament/Evenement> <http://data.esante.gouv.fr/ansm/medicament/Autorisation>}
+ VALUES ?classeEvenement {<http://data.esante.gouv.fr/ansm/medicament/Evenement> <http://data.esante.gouv.fr/ansm/medicament/Autorisation>
+}
 }""" .
 
 shape:Substance a sh:NodeShape;
-  sh:agentInstruction "Une substance dans un médicament, soit une substance de base, soit un sel ou un acide, etc. Les substances sont identifiées par un identifiant interne. Elles peuvent être associées à un code SMS quand un équivalent existe. Au moins un libellé en français est donné à la substance, avec potentiellement plusieurs synonymes."@fr ;
   sh:targetClass med:Substance;
   sh:nodeKind sh:IRI;
   rdfs:label "Substance"@fr;
@@ -113,7 +137,6 @@ shape:Substance a sh:NodeShape;
     shape:Substance_estSubstanceActiveDans, shape:Substance_exactMatch .
 
 shape:GroupeGenerique a sh:NodeShape;
-  sh:agentInstruction "Un groupe regroupant des spécialités équivalentes. Les groupes génériques regroupent les spécialités par des liens de différentes natures. Chaque groupe générique indique en général une spécialité de référence (mais pas toujours, certains groupes n’ont aucune spécialité de référence), et donne les spécialités génériques équivalentes et les autres spécialités substituables."@fr ;
   sh:targetClass med:GroupeGenerique;
   sh:nodeKind sh:IRI;
   rdfs:label "Groupe générique"@fr;
@@ -123,7 +146,6 @@ shape:GroupeGenerique a sh:NodeShape;
     shape:GroupeGenerique_specialiteGenerique, shape:GroupeGenerique_specialiteSubstituable .
 
 shape:Organisation a sh:NodeShape;
-  sh:agentInstruction "Un laboratoire pharmaceutique titulaire d'une autorisation de spécialité."@fr ;
   sh:targetClass med:Organisation;
   sh:nodeKind sh:IRI;
   rdfs:label "Organisation"@fr;
@@ -133,8 +155,12 @@ shape:Organisation a sh:NodeShape;
   sh:property shape:Organisation_notation, <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Organisation_label   >,
     shape:Organisation_nomPays .
 
+shape:ElementPresentation a sh:NodeShape;
+  sh:targetClass med:ElementPresentation;
+  sh:nodeKind sh:IRI;
+  rdfs:label "Élément Présentation"@fr .
+
 shape:TypeEvenement a sh:NodeShape;
-  sh:agentInstruction "Le type d'un événement, Autorisation, Changements de procédure, Suspension, etc."@fr ;
   sh:targetClass med:TypeEvenement;
   sh:nodeKind sh:IRI;
   rdfs:label "Type d'événement"@fr;
@@ -144,7 +170,6 @@ shape:TypeEvenement a sh:NodeShape;
   sh:property shape:TypeEvenement_label .
 
 shape:TypeProcedure a sh:NodeShape;
-  sh:agentInstruction "Le type d'une procédure d'autorisation de Spécialité, comme \"Procédure nationale\", \"Procédure de reconnaissance mutuelle\", \"Procédure décentralisée\", \"Autorisation d'importation parallèle\", etc."@fr ;
   sh:targetClass med:TypeProcedure;
   sh:nodeKind sh:IRI;
   rdfs:label "Type de procédure"@fr;
@@ -154,7 +179,6 @@ shape:TypeProcedure a sh:NodeShape;
   sh:property shape:TypeProcedure_label .
 
 shape:StatutSpecialite a sh:NodeShape;
-  sh:agentInstruction "Le statut d'une Spécialité, qui peut être \"Actif\", \"Archivé\", \"Archivé administratif\", \"Retiré\" ou \"Suspension\""@fr ;
   sh:targetClass med:StatutSpecialite;
   sh:nodeKind sh:IRI;
   rdfs:label "Statut"@fr;
@@ -164,7 +188,6 @@ shape:StatutSpecialite a sh:NodeShape;
   sh:property shape:StatutSpecialite_label .
 
 shape:NiveauPrescriptibilite a sh:NodeShape;
-  sh:agentInstruction "Liste des catégories de spécialités selon la possibilité de les prescrire en dénomination commune : non prescriptible, prescriptible avec nom de marque, prescriptible. Cette liste est utilisée par coder la prescriptibilité en DC des spécialités."@fr ;
   sh:targetClass med:NiveauPrescriptibilite;
   sh:nodeKind sh:IRI;
   rdfs:label "Niveau de prescriptibilité"@fr;
@@ -174,7 +197,6 @@ shape:NiveauPrescriptibilite a sh:NodeShape;
   sh:property shape:NiveauPrescriptibilite_label .
 
 shape:JustificationNiveauPrescriptibilite a sh:NodeShape;
-  sh:agentInstruction "Liste contrôlée des justifications du niveau de prescriptiilité en dénomination commune (\"plus de trois substances\", \"gaz médicinal\", etc.), utilisée par la propriété de justification du niveau de prescriptibilité des spécialités"@fr ;
   sh:targetClass med:JustificationNiveauPrescriptibilite;
   sh:nodeKind sh:IRI;
   rdfs:label "Justification du niveau de prescriptibilité"@fr;
@@ -184,7 +206,6 @@ shape:JustificationNiveauPrescriptibilite a sh:NodeShape;
   sh:property shape:JustificationNiveauPrescriptibilite_label .
 
 shape:Voie a sh:NodeShape;
-  sh:agentInstruction "Une voie d'administration d'une spécialité, comme \"orale\", \"intra-veineuse\", \"injectable\", etc."@fr ;
   sh:targetClass med:Voie;
   sh:nodeKind sh:IRI;
   rdfs:label "Voie"@fr;
@@ -194,7 +215,6 @@ shape:Voie a sh:NodeShape;
   sh:property shape:Voie_label .
 
 shape:SubstanceSMS a sh:NodeShape;
-  sh:agentInstruction "Un identifiant de substance de l'EMA"@fr ;
   sh:targetClass <http://data.esante.gouv.fr/ema/sms>;
   sh:nodeKind sh:IRI;
   rdfs:label "Substance SMS"@fr;
@@ -204,570 +224,809 @@ shape:SubstanceSMS a sh:NodeShape;
   sh:property shape:SubstanceSMS_label .
 
 shape:Text a sh:NodeShape;
-  sh:agentInstruction "Un texte litéral"@fr ;
   sh:nodeKind sh:Literal;
   rdfs:label "Libellé"@fr;
   sh:order "10"^^xsd:integer;
   volipi:iconName "fa-thin fa-message" .
 
 shape:Date a sh:NodeShape;
-  sh:agentInstruction "Une date litérale"@fr ;
   sh:nodeKind sh:Literal;
   rdfs:label "Date"@fr;
   sh:order "18"^^xsd:integer;
   volipi:iconName "fa-thin fa-calendar-day" .
 
 shape:Code a sh:NodeShape;
-  sh:agentInstruction "Une valeur de code en texte"@fr ;
   sh:nodeKind sh:Literal;
   rdfs:label "Code"@fr;
   sh:order "17"^^xsd:integer;
   volipi:iconName "fa-thin fa-barcode" .
 
-shape:CodeUnité a sh:NodeShape ;
-  sh:agentInstruction ""@fr ;
-.
+shape:CodeUnité a sh:NodeShape .
 
 shape:NombreUnites a sh:NodeShape;
-  sh:agentInstruction "Un nombre d'unités en numérique"@fr ;
   sh:nodeKind sh:Literal;
   rdfs:label "Nombre d'unités de dispensation"@fr;
   volipi:iconName "fa-thin fa-cubes" .
 
 shape:TypeDispositif a sh:NodeShape;
-  sh:agentInstruction "Un type de dispositif d'administration, comme \"avec aiguilles\", \"avec gobelet doseur\", etc. C'est une chaine de caractères libre, pas une liste contrôlée."@fr ;
   sh:nodeKind sh:Literal;
   rdfs:label "Dispositif d'administration"@fr;
   volipi:iconName "fa-thin fa-syringe" .
 
 shape:Conditionnement a sh:NodeShape;
-  sh:agentInstruction "Utilisé comme range à la fois de la quantité de conditionnement et de l'unité."@fr ;
   sh:nodeKind sh:Literal;
   rdfs:label "Conditionnement"@fr;
   volipi:iconName "fa-thin fa-flask" .
 
-shape:Presentation_label sh:path rdfs:label;
+shape:Presentation_label a skos:Concept;
+  sh:path rdfs:label;
   sh:name "libellé"@fr;
-  sh:description "Libellé de la présentation"@fr;
+  sh:description "Libellé de l'élément présentation"@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Text;
   dash:searchWidget config-core:SearchProperty;
-  dash:propertyRole dash:LabelRole .
+  dash:propertyRole dash:LabelRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Presentation_altLabel sh:path skos:altLabel;
+shape:Presentation_altLabel a skos:Concept;
+  sh:path skos:altLabel;
   sh:name "autre dénomination"@fr;
-  sh:description "Libellé court de la présentation."@fr;
+  sh:description "Libellé court principal. Le dernier libellé court dans l'historique des libellés sera pris comme valeur."@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Text;
-  dash:searchWidget config-core:SearchProperty .
+  dash:searchWidget config-core:SearchProperty;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Presentation_CIP13 sh:path med:CIP13;
+shape:Presentation_CIP13 a skos:Concept;
+  sh:path med:CIP13;
   sh:name "code CIP13"@fr;
-  sh:description "Code CIP13 (code principal de la présentation)"@fr;
+  sh:description "Code CIP13 (code principal)"@fr;
   sh:nodeKind sh:Literal;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
   sh:node shape:Code;
-  dash:searchWidget config-core:SearchProperty .
+  dash:searchWidget config-core:SearchProperty;
+  dash:propertyRole dash:KeyInfoRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Presentation_CIP7 sh:path med:CIP7;
+shape:Presentation_CIP7 a skos:Concept;
+  sh:path med:CIP7;
   sh:name "code CIP7"@fr;
   sh:description "Code CIP7. Il n'est pas toujours présent, c'est un identifiant historique."@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Code;
-  dash:searchWidget config-core:SearchProperty .
+  dash:searchWidget config-core:SearchProperty;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Presentation_nombreUniteDeDispensation sh:path med:nombreUniteDeDispensation;
+shape:Presentation_nombreUniteDeDispensation a skos:Concept;
+  sh:path med:nombreUniteDeDispensation;
   sh:name "contient"@fr;
   sh:description "Donne le nombre d'unité de dispensation dans la présentation"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:integer;
-  sh:node shape:NombreUnites .
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:node shape:NombreUnites;
+  dash:propertyRole dash:KeyInfoRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Presentation_typeDispositif sh:path med:typeDispositif;
+shape:Presentation_typeDispositif a skos:Concept;
+  sh:path med:typeDispositif;
   sh:name "comprend"@fr;
   sh:description "Type de dispositif d'administration dans cette présentation (exemple : \"cuillère-mesure\"). Il peut y avoir plusieurs dispositifs. Ce champs n'a pas été renseigné de façon systématique."@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:TypeDispositif;
-  dash:searchWidget config-core:SearchProperty .
+  dash:searchWidget config-core:SearchProperty;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Presentation_presente sh:path med:presente;
+shape:Presentation_presente a skos:Concept;
+  sh:path med:presente;
   sh:name "présentation de"@fr;
   sh:description "Référence à la spécialité pharmaceutique présentée dans cette présentation. Cet attribut est obligatoire et unique."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:SpecialitePharmaceutique;
   dash:searchWidget config-core:AutocompleteProperty;
-  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
+  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Presentation_contientUniteDeDispensation sh:path med:contientUniteDeDispensation;
+shape:Presentation_contientUniteDeDispensation a skos:Concept;
+  sh:path med:contientUniteDeDispensation;
   sh:name "contient"@fr;
   sh:description "Référence à l'UCD contenue dans cette présentation. Une présentation ne peut contenir qu'une seule UCD."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:UniteCommuneDeDispensation;
   dash:searchWidget config-core:AutocompleteProperty;
-  config-datasources:datasource shape:search_rdfslabel_cis_cip_ucd_contains_rdfssubClassOf .
+  config-datasources:datasource shape:search_rdfslabel_cis_cip_ucd_contains_rdfssubClassOf;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Presentation_concernePar sh:path med:concernePar;
+shape:Presentation_concernePar a skos:Concept;
+  sh:path med:concernePar;
   sh:name "concernée par"@fr;
   sh:description "Référence à un évènement qui concerne cette présentation (typiquement début ou fin de commercialisation)."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:Evenement;
   dash:searchWidget config-core:NonSelectableProperty;
-  config-datasources:datasource shape:list_rdfslabel_alpha_rdfssubClassOf_with_count .
+  config-datasources:datasource shape:list_rdfslabel_alpha_rdfssubClassOf_with_count;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Presentation_quantiteConditionnement sh:path med:quantiteConditionnement;
+shape:Presentation_quantiteConditionnement a skos:Concept;
+  sh:path med:quantiteConditionnement;
   sh:name "quantité du conditionnement primaire"@fr;
   sh:description "Donne le volume, le poids, le nombre de doses ou la quantité de radioactivité contenue dans la présentation. L'unité est donnée dans un autre attribut."@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:decimal;
-  sh:node shape:Conditionnement .
+  sh:node shape:Conditionnement;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Presentation_uniteQuantiteConditionnement sh:path med:uniteQuantiteConditionnement;
+shape:Presentation_uniteQuantiteConditionnement a skos:Concept;
+  sh:path med:uniteQuantiteConditionnement;
   sh:name "unité de la quantité du conditionnement primaire"@fr;
   sh:description "Donne l'unité de la quantité du conditionnement primaire."@fr;
   sh:nodeKind sh:IRI;
   sh:datatype cdt:ucumunit;
-  sh:node shape:Conditionnement .
+  sh:node shape:Conditionnement;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:UniteCommuneDeDispensation_label sh:path rdfs:label;
+shape:UniteCommuneDeDispensation_label a skos:Concept;
+  sh:path rdfs:label;
   sh:name "a pour désignation"@fr;
   sh:description "Libellé d'affichage principal. Le dernier libellé dans l'historique des libellés sera pris comme libellé d'affichage principal."@fr;
   sh:nodeKind sh:Literal;
   sh:datatype rdf:langString;
   sh:node shape:Text;
   dash:searchWidget config-core:SearchProperty;
-  dash:propertyRole dash:LabelRole .
+  dash:propertyRole dash:LabelRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:UniteCommuneDeDispensation_codeUCD13 sh:path med:codeUCD13;
+shape:UniteCommuneDeDispensation_codeUCD13 a skos:Concept;
+  sh:path med:codeUCD13;
   sh:name "code UCD 13"@fr;
   sh:description "Code UCD13 (code principal)"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:string;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
   sh:node shape:Code;
-  dash:searchWidget config-core:SearchProperty .
+  dash:searchWidget config-core:SearchProperty;
+  dash:propertyRole dash:KeyInfoRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:UniteCommuneDeDispensation_codeUCD7 sh:path med:codeUCD7;
+shape:UniteCommuneDeDispensation_codeUCD7 a skos:Concept;
+  sh:path med:codeUCD7;
   sh:name "code UCD 7"@fr;
-  sh:description "Code UCD7 (identifiant historique)"@fr;
+  sh:description "Code UCD7"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:string;
   sh:node shape:Code;
-  dash:searchWidget config-core:SearchProperty .
+  dash:searchWidget config-core:SearchProperty;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:UniteCommuneDeDispensation_uniteDeDispensationDe sh:path med:uniteDeDispensationDe;
+shape:UniteCommuneDeDispensation_uniteDeDispensationDe a skos:Concept;
+  sh:path med:uniteDeDispensationDe;
   sh:name "est UCD de"@fr;
   sh:description "Référence à la spécialité pharmaceutique dispensée par cette UCD. Cet attribut est obligatoire et unique."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:SpecialitePharmaceutique;
   dash:searchWidget config-core:AutocompleteProperty;
-  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
+  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:UniteCommuneDeDispensation_presenteDans sh:path med:presenteDans;
+shape:UniteCommuneDeDispensation_presenteDans a skos:Concept;
+  sh:path med:presenteDans;
   sh:name "présentée dans"@fr;
   sh:description "Référence à une présentation qui contient cette UCD. Plusieurs présentations peuvent contenir la même UCD."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:Presentation;
   dash:searchWidget config-core:AutocompleteProperty;
-  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
+  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_label sh:path rdfs:label;
+shape:SpecialitePharmaceutique_label a skos:Concept;
+  sh:path rdfs:label;
   sh:name "a pour désignation"@fr;
   sh:description "Nom de spécialité"@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Text;
   dash:searchWidget config-core:SearchProperty;
-  dash:propertyRole dash:LabelRole .
+  dash:propertyRole dash:LabelRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_CIS sh:path med:CIS;
+shape:SpecialitePharmaceutique_CIS a skos:Concept;
+  sh:path med:CIS;
   sh:name "code CIS"@fr;
   sh:description "Code CIS (code principal identifiant de la spécialité)"@fr;
   sh:nodeKind sh:Literal;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
   sh:node shape:Code;
-  dash:searchWidget config-core:SearchProperty .
+  dash:searchWidget config-core:SearchProperty;
+  dash:propertyRole dash:KeyInfoRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_dateDebut sh:path med:dateDebut;
+shape:SpecialitePharmaceutique_dateDebut a skos:Concept;
+  sh:path med:dateDebut;
   sh:name "mise sur le marché"@fr;
   sh:description "Date de la (première) AMM ou de la première autorisation de cette spécialité."@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:date;
   sh:node shape:Date;
-  dash:searchWidget config-core:TimeProperty-Date .
+  dash:searchWidget config-core:TimeProperty-Date;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_dateFin sh:path med:dateFin;
+shape:SpecialitePharmaceutique_dateFin a skos:Concept;
+  sh:path med:dateFin;
   sh:name "plus active depuis"@fr;
   sh:description "Date à laquelle la spécialité n'est plus active."@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:date;
   sh:node shape:Date;
-  dash:searchWidget config-core:TimeProperty-Date .
+  dash:searchWidget config-core:TimeProperty-Date;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_classificationATC sh:path _:1c23ec99aeed4801a9fbc3eddcf4f8d69406;
+shape:SpecialitePharmaceutique_classificationATC a skos:Concept;
+  sh:path _:91358f30d9824e0aa6957b2381cfbb4c663;
   sh:name "est classée sous"@fr;
   sh:description "Référence à un élément de la classification ATC de cette spécialité. Cet attribut n'est pas historisé et contient la dernière valeur en date du code ATC. Les évolutions de l’ATC elle-même sont historisées dans le référentiel ATC. Pour certaines spécialités archivées, il est possible que la référence à l'ATC ne soit pas présente dans le cas où ce code aurait disparu avant l'ATC 2022. Après 2022 l'ATC est cumulative et mêmes les codes dépréciés restent présents."@fr;
   sh:nodeKind sh:IRI;
   sh:node shape:ATC;
   dash:searchWidget config-core:TreeProperty;
   config-datasources:treeRootsDatasource shape:tree_atc_root;
-  config-datasources:treeChildrenDatasource shape:tree_atc_child .
+  config-datasources:treeChildrenDatasource shape:tree_atc_child;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69406 rdf:first med:classificationATC;
-  rdf:rest _:1c23ec99aeed4801a9fbc3eddcf4f8d69407 .
+_:91358f30d9824e0aa6957b2381cfbb4c663 rdf:first med:classificationATC;
+  rdf:rest _:91358f30d9824e0aa6957b2381cfbb4c664 .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69407 rdf:first _:1c23ec99aeed4801a9fbc3eddcf4f8d69408;
+_:91358f30d9824e0aa6957b2381cfbb4c664 rdf:first _:91358f30d9824e0aa6957b2381cfbb4c665;
   rdf:rest rdf:nil .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69408 sh:zeroOrMorePath rdfs:subClassOf .
+_:91358f30d9824e0aa6957b2381cfbb4c665 sh:zeroOrMorePath rdfs:subClassOf .
 
-shape:SpecialitePharmaceutique_classificationATCdirect sh:path med:classificationATC;
+shape:SpecialitePharmaceutique_classificationATCdirect a skos:Concept;
+  sh:path med:classificationATC;
   sh:name "est classée sous (direct)"@fr;
   sh:description "Référence à un élément de la classification ATC de cette spécialité. Cet attribut n'est pas historisé et contient la dernière valeur en date du code ATC. Les évolutions de l’ATC elle-même sont historisées dans le référentiel ATC. Pour certaines spécialités archivées, il est possible que la référence à l'ATC ne soit pas présente dans le cas où ce code aurait disparu avant l'ATC 2022. Après 2022 l'ATC est cumulative et mêmes les codes dépréciés restent présents."@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:string;
+  sh:minCount "0"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
   sh:node shape:ATC;
   dash:searchWidget config-core:TreeProperty;
   config-datasources:treeRootsDatasource shape:tree_atc_root;
-  config-datasources:treeChildrenDatasource shape:tree_atc_child .
+  config-datasources:treeChildrenDatasource shape:tree_atc_child;
+  dash:propertyRole dash:KeyInfoRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_concernePar sh:path med:concernePar;
+shape:SpecialitePharmaceutique_codeATC a skos:Concept;
+  sh:path med:codeATC;
+  sh:name "code ATC"@fr;
+  sh:description "Code ATC sous forme littérale (par exemple “G04CA01”). Le code est explicitement répété en plus de la référence à l'URI principalement pour des questions d'affichage car le simple libellé de la catégorie est ambigü."@fr;
+  sh:nodeKind sh:Literal;
+  sh:datatype xsd:string;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:node shape:ATC;
+  dash:searchWidget config-core:StringEqualsProperty;
+  dash:propertyRole dash:KeyInfoRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
+
+shape:SpecialitePharmaceutique_concernePar a skos:Concept;
+  sh:path med:concernePar;
   sh:name "est concernée par"@fr;
   sh:description "Référence à un évènement qui concerne cette spécialité (autorisation, changement de statut, changement de procédure, etc.)"@fr;
   sh:nodeKind sh:IRI;
   sh:class med:Evenement;
-  dash:searchWidget config-core:NonSelectableProperty .
+  dash:searchWidget config-core:NonSelectableProperty;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_typeProcedureCourante sh:path med:typeProcedureCourante;
+shape:SpecialitePharmaceutique_typeProcedureCourante a skos:Concept;
+  sh:path med:typeProcedureCourante;
   sh:name "type de procédure courante"@fr;
   sh:description "Le régime de procédure courant de la spécialité. Le régime de procédure courant peut être différant du type de procédure de l'autorisation d'origine de la spécialité, dans les cas où un évènement à changé le type de procédure de la spécialité."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:TypeProcedure;
   dash:searchWidget config-core:ListProperty;
-  config-datasources:datasource shape:list_rdfslabel_alpha_rdfssubClassOf_with_count .
+  config-datasources:datasource shape:list_rdfslabel_alpha_rdfssubClassOf_with_count;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_statutCourant sh:path med:statutCourant;
+shape:SpecialitePharmaceutique_statutCourant a skos:Concept;
+  sh:path med:statutCourant;
   sh:name "a pour statut"@fr;
   sh:description "Le statut courant de la spécialité. Le statut peut évoluer au fil des évènements réglementaires qui concernent la spécialité. Cet attribut capture seulement le dernier statut de la spécialité."@fr;
   sh:nodeKind sh:IRI;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
   sh:class med:StatutSpecialite;
   dash:searchWidget config-core:ListProperty;
-  config-datasources:datasource shape:list_rdfslabel_alpha_rdfssubClassOf_with_count .
+  config-datasources:datasource shape:list_rdfslabel_alpha_rdfssubClassOf_with_count;
+  dash:propertyRole dash:KeyInfoRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_prescriptibiliteEnDC sh:path med:prescriptibiliteEnDC;
+shape:SpecialitePharmaceutique_prescriptibiliteEnDC a skos:Concept;
+  sh:path med:prescriptibiliteEnDC;
   sh:name "niveau de prescriptibilité"@fr;
   sh:description "Indique a quel degré la spécialité est prescriptible en DC : prescriptible, non-prescriptible, prescriptible avec nom de marque."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:NiveauPrescriptibilite;
   dash:searchWidget config-core:ListProperty;
-  config-datasources:datasource shape:list_rdfslabel_alpha_rdfssubClassOf_with_count .
+  config-datasources:datasource shape:list_rdfslabel_alpha_rdfssubClassOf_with_count;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_justificationPrescriptibiliteEnDC sh:path med:justificationPrescriptibiliteEnDC;
+shape:SpecialitePharmaceutique_justificationPrescriptibiliteEnDC a skos:Concept;
+  sh:path med:justificationPrescriptibiliteEnDC;
   sh:name "justification de la prescriptibilité en DC"@fr;
   sh:description "Indique la justification du niveau de prescriptibilité en DC (plus de 3 substances, gaz médicinal, etc.). Cet attribut est obligatoire si la prescriptibilité en DC est \"non prescriptible\" ou \"prescriptible avec nom de marque\". Il peut être répété."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:JustificationNiveauPrescriptibilite;
   dash:searchWidget config-core:ListProperty;
-  config-datasources:datasource shape:list_rdfslabel_alpha_rdfssubClassOf_with_count .
+  config-datasources:datasource shape:list_rdfslabel_alpha_rdfssubClassOf_with_count;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_SAouFT sh:path _:1c23ec99aeed4801a9fbc3eddcf4f8d69409;
+shape:SpecialitePharmaceutique_SAouFT a skos:Concept;
+  sh:path _:91358f30d9824e0aa6957b2381cfbb4c666;
   sh:name "contient (SA ou FT)"@fr;
   sh:description "Contient en susbtance active ou en fraction thérapeutique"@fr;
   sh:nodeKind sh:IRI;
   sh:class med:Substance;
   dash:searchWidget config-core:AutocompleteProperty;
-  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
+  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69409 sh:alternativePath _:1c23ec99aeed4801a9fbc3eddcf4f8d69410 .
+_:91358f30d9824e0aa6957b2381cfbb4c666 sh:alternativePath _:91358f30d9824e0aa6957b2381cfbb4c667 .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69410 rdf:first med:substanceActive;
-  rdf:rest _:1c23ec99aeed4801a9fbc3eddcf4f8d69411 .
+_:91358f30d9824e0aa6957b2381cfbb4c667 rdf:first med:substanceActive;
+  rdf:rest _:91358f30d9824e0aa6957b2381cfbb4c668 .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69411 rdf:first med:fractionTherapeutique;
+_:91358f30d9824e0aa6957b2381cfbb4c668 rdf:first med:fractionTherapeutique;
   rdf:rest rdf:nil .
 
-shape:SpecialitePharmaceutique_substanceActive sh:path med:substanceActive;
+shape:SpecialitePharmaceutique_substanceActive a skos:Concept;
+  sh:path med:substanceActive;
   sh:name "substance active"@fr;
   sh:description "Substance active dans la spécialité, substance \"contenue dans la boite\" (qui n'est pas forcément identique à la substance dans laquelle est exprimée le dosage). En principe toutes les spécialités ont au moins une substance active, mais des exceptions rares existent (les témoins de prick tests) où aucune substance active n'est répertoriée."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:Substance;
   dash:searchWidget config-core:AutocompleteProperty;
-  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
+  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_fractionTherapeutique sh:path med:fractionTherapeutique;
+shape:SpecialitePharmaceutique_fractionTherapeutique a skos:Concept;
+  sh:path med:fractionTherapeutique;
   sh:name "fraction thérapeutique"@fr;
   sh:description "Substance qui n'est pas directement \"contenue dans la boite\", mais qui est libérée par une des susbtance actives du médicament. Tous les éléments n'ont pas forcément de fraction thérapeutique indiquée."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:Substance;
   dash:searchWidget config-core:AutocompleteProperty;
-  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
+  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_substancePortantLeDosage sh:path med:substancePortantLeDosage;
+shape:SpecialitePharmaceutique_substancePortantLeDosage a skos:Concept;
+  sh:path med:substancePortantLeDosage;
   sh:name "substance portant le dosage"@fr;
   sh:description "Substance de cette spécialité dans laquelle est exprimée son dosage."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:Substance;
   dash:searchWidget config-core:AutocompleteProperty;
-  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
+  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_aPourUniteDeDispensation sh:path med:aPourUniteDeDispensation;
+shape:SpecialitePharmaceutique_aPourUniteDeDispensation a skos:Concept;
+  sh:path med:aPourUniteDeDispensation;
   sh:name "a pour UCD"@fr;
   sh:description "Référence à une UCD qui dispense cette spécialité. Une Spécialité peut être dispensée dans plusieurs UCD. Une Spécialité peut être dispensée dans plusieurs UCD. Elle est dispensée dans au moins une UCD."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:UniteCommuneDeDispensation;
   dash:searchWidget config-core:AutocompleteProperty;
-  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
+  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_aPourPresentation sh:path med:aPourPresentation;
+shape:SpecialitePharmaceutique_aPourPresentation a skos:Concept;
+  sh:path med:aPourPresentation;
   sh:name "est conditionnée dans"@fr;
   sh:description "Référence à une présentation qui présente cette spécialité. Une Spécialité peut être présentée dans plusieurs présentations. Une Spécialité est présente dans au moins une présentation à partir du moment où elle a été commercialisée."@fr;
   sh:nodeKind sh:IRI;
   sh:class med:Presentation;
   dash:searchWidget config-core:AutocompleteProperty;
-  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
+  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_titulaireCourant sh:path med:titulaireCourant;
+shape:SpecialitePharmaceutique_titulaireCourant a skos:Concept;
+  sh:path med:titulaireCourant;
   sh:name "titulaire courant"@fr;
   sh:description "Le titulaire est le détenteur de l'autorisation. Le plus souvent, il s'agit d'un laboratoire pharmaceutique. Cette propriété donne le titulaire courant de la spécialité, qui peut changer dans le temps. Dans le passé, il est possible qu'une spécialité ait eu des co-titulaires, dans ce cas cette propriété est renseignée deux fois."@fr;
   sh:nodeKind sh:IRI;
-  sh:class med:Organisation .
+  sh:class med:Organisation;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_estSpecialiteDeReferenceDans sh:path med:estSpecialiteDeReferenceDans;
+shape:SpecialitePharmaceutique_estSpecialiteDeReferenceDans a skos:Concept;
+  sh:path med:estSpecialiteDeReferenceDans;
   sh:name "est spécialité de référence dans"@fr;
   sh:description "Groupe générique pour lequel cette spécialité est la spécialité de référence"@fr;
   sh:nodeKind sh:IRI;
-  sh:class med:GroupeGenerique .
+  sh:class med:GroupeGenerique;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_estSpecialiteGeneriqueDans sh:path med:estSpecialiteGeneriqueDans;
+shape:SpecialitePharmaceutique_estSpecialiteGeneriqueDans a skos:Concept;
+  sh:path med:estSpecialiteGeneriqueDans;
   sh:name "est spécialité générique dans"@fr;
   sh:description "Groupe générique pour lequel cette spécialité est une spécialité générique"@fr;
   sh:nodeKind sh:IRI;
-  sh:class med:GroupeGenerique .
+  sh:class med:GroupeGenerique;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_estSpecialiteSubstituableDans sh:path med:estSpecialiteSubstituableDans;
+shape:SpecialitePharmaceutique_estSpecialiteSubstituableDans a skos:Concept;
+  sh:path med:estSpecialiteSubstituableDans;
   sh:name "est spécialité substituable dans"@fr;
   sh:description "Groupe générique pour lequel cette spécialité est une spécialité substituable"@fr;
   sh:nodeKind sh:IRI;
-  sh:class med:GroupeGenerique .
+  sh:class med:GroupeGenerique;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SpecialitePharmaceutique_voie sh:path med:voie;
+shape:SpecialitePharmaceutique_voie a skos:Concept;
+  sh:path med:voie;
   sh:name "voie"@fr;
   sh:nodeKind sh:IRI;
   sh:class med:Voie;
   dash:searchWidget config-core:ListProperty;
-  config-datasources:datasource shape:list_rdfslabel_alpha_rdfssubClassOf_with_count .
+  config-datasources:datasource shape:list_rdfslabel_alpha_rdfssubClassOf_with_count;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Evenement_concerne sh:path med:concerne;
+shape:Evenement_concerne a skos:Concept;
+  sh:path med:concerne;
   sh:name "concerne"@fr;
   sh:description "Référence à la Spécialité ou à la Présentation concernée par cet évènement"@fr;
   sh:nodeKind sh:IRI;
-  sh:or _:1c23ec99aeed4801a9fbc3eddcf4f8d69414;
+  sh:or _:91358f30d9824e0aa6957b2381cfbb4c671;
   dash:searchWidget config-core:AutocompleteProperty;
-  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
+  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69412 sh:class med:SpecialitePharmaceutique .
+_:91358f30d9824e0aa6957b2381cfbb4c669 sh:class med:SpecialitePharmaceutique .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69413 sh:class med:Presentation .
+_:91358f30d9824e0aa6957b2381cfbb4c670 sh:class med:Presentation .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69414 a rdf:List;
-  rdf:first _:1c23ec99aeed4801a9fbc3eddcf4f8d69412;
-  rdf:rest _:1c23ec99aeed4801a9fbc3eddcf4f8d69415 .
+_:91358f30d9824e0aa6957b2381cfbb4c671 a rdf:List;
+  rdf:first _:91358f30d9824e0aa6957b2381cfbb4c669;
+  rdf:rest _:91358f30d9824e0aa6957b2381cfbb4c672 .
 
-_:1c23ec99aeed4801a9fbc3eddcf4f8d69415 rdf:first _:1c23ec99aeed4801a9fbc3eddcf4f8d69413;
+_:91358f30d9824e0aa6957b2381cfbb4c672 rdf:first _:91358f30d9824e0aa6957b2381cfbb4c670;
   rdf:rest rdf:nil .
 
-shape:Evenement_typeEvenement sh:path med:typeEvenement;
+shape:Evenement_typeEvenement a skos:Concept;
+  sh:path med:typeEvenement;
   sh:name "est de type"@fr;
   sh:description "Le type de l'évènement : une autorisation, un changement de statut, etc."@fr;
   sh:nodeKind sh:IRI;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
   sh:class med:TypeEvenement;
   dash:searchWidget config-core:ListProperty;
-  config-datasources:datasource shape:list_rdfslabel_alpha_rdfssubClassOf_with_count .
+  config-datasources:datasource shape:list_rdfslabel_alpha_rdfssubClassOf_with_count;
+  dash:propertyRole dash:KeyInfoRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Evenement_dateEffet sh:path med:dateEffet;
+shape:Evenement_dateEffet a skos:Concept;
+  sh:path med:dateEffet;
   sh:name "applicable depuis"@fr;
   sh:description "Date de prise d'effet de l'évènement, qui peut être différente de sa date de notification/publication. C’est la date principale de l’événement, celle qui a un sens réglementaire."@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:date;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
   sh:node shape:Date;
-  dash:searchWidget config-core:TimeProperty-Date .
+  dash:searchWidget config-core:TimeProperty-Date;
+  dash:propertyRole dash:KeyInfoRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Evenement_label sh:path rdfs:label;
+shape:Evenement_label a skos:Concept;
+  sh:path rdfs:label;
   sh:name "a pour désignation"@fr;
   sh:description "Libellé de l'événement"@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Text;
   dash:searchWidget config-core:SearchProperty;
-  dash:propertyRole dash:LabelRole .
+  dash:propertyRole dash:LabelRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Substance_notation sh:path skos:notation;
+shape:Substance_notation a skos:Concept;
+  sh:path skos:notation;
   sh:name "code (ANSM)"@fr;
   sh:description "Identifiant technique de la substance, issu des bases ANSM"@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Code;
-  dash:searchWidget config-core:SearchProperty .
+  dash:searchWidget config-core:SearchProperty;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Substance_codeSMS sh:path med:codeSMS;
+shape:Substance_codeSMS a skos:Concept;
+  sh:path med:codeSMS;
   sh:name "code SMS"@fr;
   sh:description "Code SMS correspondant de la substance. Toutes les substances n'ont pas d'équivalent SMS, ce code n'est pas obligatoirement présent."@fr;
   sh:nodeKind sh:Literal;
+  sh:maxCount "1"^^xsd:integer;
   sh:node shape:Code;
-  dash:searchWidget config-core:AutocompleteProperty .
+  dash:searchWidget config-core:AutocompleteProperty;
+  dash:propertyRole dash:KeyInfoRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Substance_label sh:path rdfs:label;
+shape:Substance_label a skos:Concept;
+  sh:path rdfs:label;
   sh:name "a pour désignation"@fr;
   sh:description "Libellé préférentiel de la substance qui est utilisé dans les PhPID du référentiel du médicament"@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Text;
   dash:searchWidget config-core:SearchProperty;
-  dash:propertyRole dash:LabelRole .
+  dash:propertyRole dash:LabelRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Substance_altLabel sh:path skos:altLabel;
+shape:Substance_altLabel a skos:Concept;
+  sh:path skos:altLabel;
   sh:name "autre dénomination"@fr;
   sh:description "Libellé synonyme de cette substance"@fr;
   sh:nodeKind sh:Literal;
   sh:node shape:Text;
-  dash:searchWidget config-core:SearchProperty .
+  dash:searchWidget config-core:SearchProperty;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Substance_created sh:path dct:created;
+shape:Substance_created a skos:Concept;
+  sh:path dct:created;
   sh:name "date de création"@fr;
   sh:description "Date de création de la substance dans le système"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:date;
-  sh:node shape:Date .
+  sh:node shape:Date;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Substance_estFractionTherapeutiqueDans sh:path med:estFractionTherapeutiqueDans;
+shape:Substance_estFractionTherapeutiqueDans a skos:Concept;
+  sh:path med:estFractionTherapeutiqueDans;
   sh:name "fraction thérapeutique dans"@fr;
   sh:description "Référence à une spécialité dans laquelle cette substance est une fraction thérapeutique. Propriété inverse de \"fractionTherapeutique\" pour les spécialités."@fr;
   sh:nodeKind sh:IRI;
-  sh:class med:SpecialitePharmaceutique .
+  sh:class med:SpecialitePharmaceutique;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Substance_estSubstanceActiveDans sh:path med:estSubstanceActiveDans;
+shape:Substance_estSubstanceActiveDans a skos:Concept;
+  sh:path med:estSubstanceActiveDans;
   sh:name "substance active dans"@fr;
   sh:description "Référence à une spécialité dans laquelle cette substance est une substance active. Propriété inverse de \"substanceActive\" pour les spécialités."@fr;
   sh:nodeKind sh:IRI;
-  sh:class med:SpecialitePharmaceutique .
+  sh:class med:SpecialitePharmaceutique;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Substance_exactMatch sh:path skos:exactMatch;
+shape:Substance_exactMatch a skos:Concept;
+  sh:path skos:exactMatch;
   sh:name "équivalent SMS"@fr;
   sh:description "Identifiant de substance équivalente dans le référentiel SMS"@fr;
   sh:nodeKind sh:IRI;
   sh:node shape:SubstanceSMS;
   dash:searchWidget config-core:AutocompleteProperty;
-  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
+  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:ATC_labelATC sh:path rdfs:label;
+shape:ATC_labelATC a skos:Concept;
+  sh:path rdfs:label;
   sh:name "libellé"@fr;
   sh:description "Libellé de la classification ATC"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype rdf:langString;
   dash:propertyRole dash:LabelRole;
-  sh:deactivated "true"^^xsd:boolean .
+  sh:deactivated "true"^^xsd:boolean;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:ATC_codeATC sh:path skos:notation;
+shape:ATC_codeATC a skos:Concept;
+  sh:path skos:notation;
   sh:name "code"@fr;
   sh:description "Code de la classification ATC"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:string;
-  sh:node shape:Code .
+  sh:node shape:Code;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:GroupeGenerique_notation sh:path skos:notation;
+shape:GroupeGenerique_notation a skos:Concept;
+  sh:path skos:notation;
   sh:name "identifiant"@fr;
   sh:description "Identifiant du groupe générique"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:string;
-  sh:node shape:Code .
+  sh:node shape:Code;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:GroupeGenerique_label sh:path rdfs:label;
+shape:GroupeGenerique_label a skos:Concept;
+  sh:path rdfs:label;
   sh:name "libellé du groupe"@fr;
   sh:description "Libellé du groupe générique, par exemple \"PRASUGREL (CHLORHYDRATE DE) équivalent à PRASUGREL 10 mg - PRASUGREL (BROMHYDRATE DE) équivalent à PRASUGREL 10 mg - PRASUGREL (BESILATE DE) équivalent à PRASUGREL 10 mg - EFIENT 10 mg, comprimé pelliculé\""@fr;
   sh:nodeKind sh:Literal;
   sh:datatype rdf:langString;
   sh:node shape:Text;
-  dash:propertyRole dash:LabelRole .
+  dash:propertyRole dash:LabelRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:GroupeGenerique_specialiteDeReference sh:path med:specialiteDeReference;
+shape:GroupeGenerique_specialiteDeReference a skos:Concept;
+  sh:path med:specialiteDeReference;
   sh:name "spécialité de référence"@fr;
   sh:description "Spécialité de référence (princeps) du groupe générique. Un groupe générique peut ne pas avoir de spécialité de référence, ou peut en avoir plusieurs."@fr;
   sh:nodeKind sh:IRI;
-  sh:class med:SpecialitePharmaceutique .
+  sh:class med:SpecialitePharmaceutique;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:GroupeGenerique_specialiteGenerique sh:path med:specialiteGenerique;
+shape:GroupeGenerique_specialiteGenerique a skos:Concept;
+  sh:path med:specialiteGenerique;
   sh:name "spécialité générique"@fr;
   sh:description "Spécialité générique à la spécialité de référence."@fr;
   sh:nodeKind sh:IRI;
-  sh:class med:SpecialitePharmaceutique .
+  sh:class med:SpecialitePharmaceutique;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:GroupeGenerique_specialiteSubstituable sh:path med:specialiteSubstituable;
+shape:GroupeGenerique_specialiteSubstituable a skos:Concept;
+  sh:path med:specialiteSubstituable;
   sh:name "spécialité substituable"@fr;
   sh:description "Spécialité non générique mais substituable à la spécialité de référence."@fr;
   sh:nodeKind sh:IRI;
-  sh:class med:SpecialitePharmaceutique .
+  sh:class med:SpecialitePharmaceutique;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Organisation_notation sh:path skos:notation;
+shape:Organisation_notation a skos:Concept;
+  sh:path skos:notation;
   sh:name "identifiant"@fr;
   sh:description "Identifiant technique de l'organisation, issu de la base ANSM"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:string;
-  sh:node shape:Code .
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  sh:node shape:Code;
+  dash:propertyRole dash:KeyInfoRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
 <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl#Organisation_label   >
+  a skos:Concept;
   sh:path rdfs:label;
   sh:name "libellé"@fr;
   sh:description "Nom de l'organisation, issu de la base ANSM"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype xsd:string;
   sh:node shape:Text;
-  dash:propertyRole dash:LabelRole .
+  dash:propertyRole dash:LabelRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Organisation_nomPays sh:path med:nomPays;
+shape:Organisation_nomPays a skos:Concept;
+  sh:path med:nomPays;
   sh:name "nom du pays"@fr;
   sh:description "Nom du pays de cette organisation"@fr;
   sh:nodeKind sh:Literal;
-  sh:datatype rdf:langString .
+  sh:datatype rdf:langString;
+  sh:minCount "1"^^xsd:integer;
+  sh:maxCount "1"^^xsd:integer;
+  dash:propertyRole dash:KeyInfoRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:TypeEvenement_label sh:path rdfs:label;
+shape:TypeEvenement_label a skos:Concept;
+  sh:path rdfs:label;
   sh:name "libellé"@fr;
   sh:description "Libellé du vocabulaire"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype rdf:langString;
-  dash:propertyRole dash:LabelRole .
+  dash:propertyRole dash:LabelRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:TypeProcedure_label sh:path rdfs:label;
+shape:TypeProcedure_label a skos:Concept;
+  sh:path rdfs:label;
   sh:name "libellé"@fr;
   sh:description "Libellé du vocabulaire"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype rdf:langString;
-  dash:propertyRole dash:LabelRole .
+  dash:propertyRole dash:LabelRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:StatutSpecialite_label sh:path rdfs:label;
+shape:StatutSpecialite_label a skos:Concept;
+  sh:path rdfs:label;
   sh:name "libellé"@fr;
   sh:description "Libellé du vocabulaire"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype rdf:langString;
-  dash:propertyRole dash:LabelRole .
+  dash:propertyRole dash:LabelRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:NiveauPrescriptibilite_label sh:path rdfs:label;
+shape:NiveauPrescriptibilite_label a skos:Concept;
+  sh:path rdfs:label;
   sh:name "libellé"@fr;
   sh:description "Libellé du vocabulaire"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype rdf:langString;
-  dash:propertyRole dash:LabelRole .
+  dash:propertyRole dash:LabelRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:JustificationNiveauPrescriptibilite_label sh:path rdfs:label;
+shape:JustificationNiveauPrescriptibilite_label a skos:Concept;
+  sh:path rdfs:label;
   sh:name "libellé"@fr;
   sh:description "Libellé du vocabulaire"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype rdf:langString;
-  dash:propertyRole dash:LabelRole .
+  dash:propertyRole dash:LabelRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:Voie_label sh:path rdfs:label;
+shape:Voie_label a skos:Concept;
+  sh:path rdfs:label;
   sh:name "libellé"@fr;
   sh:description "Libellé du vocabulaire"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype rdf:langString;
-  dash:propertyRole dash:LabelRole .
+  dash:propertyRole dash:LabelRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
-shape:SubstanceSMS_label sh:path rdfs:label;
+shape:SubstanceSMS_label a skos:Concept;
+  sh:path rdfs:label;
   sh:name "label"@fr;
   sh:nodeKind sh:Literal;
   sh:datatype rdf:langString;
-  dash:propertyRole dash:LabelRole .
+  dash:propertyRole dash:LabelRole;
+  skos:inScheme <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl>;
+  skos:topConceptOf <https://sparna-git.github.io/referentiel-medicaments/configs/sparnatural-config.ttl> .
 
 shape:list_rdfslabel_alpha_rdfssubClassOf_with_count a config-datasources:SparqlDatasource;
   config-datasources:queryTemplate shape:query_list_label_subClassOfOf_alpha_with_count;
