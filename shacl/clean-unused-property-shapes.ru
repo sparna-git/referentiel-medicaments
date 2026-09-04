@@ -20,7 +20,7 @@ DELETE {
 DELETE {
     ?s ?p ?o
 } WHERE {
-    ?s a sh:NodeNode .
+    ?s a sh:NodeShape .
     FILTER NOT EXISTS { ?s sh:property ?something }
     ?s ?p ?o
 }
