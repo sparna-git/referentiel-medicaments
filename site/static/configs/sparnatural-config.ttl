@@ -111,9 +111,10 @@ shape:Evenement a sh:NodeShape;
   sh:property shape:Evenement_concerne, shape:Evenement_typeEvenement, shape:Evenement_dateEffet,
     shape:Evenement_label .
 
-shape:Evenement-target sh:select """SELECT $this
+shape:Evenement-target sh:select """PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT $this
 WHERE {
- $this a ?classeEvenement .
+ $this rdfs:subClassOf ?classeEvenement .
  VALUES ?classeEvenement {<http://data.esante.gouv.fr/ansm/medicament/Evenement> <http://data.esante.gouv.fr/ansm/medicament/Autorisation>
 }
 }""" .
@@ -481,7 +482,7 @@ shape:SpecialitePharmaceutique_dateFin sh:path med:dateFin;
   sh:node shape:Date;
   dash:searchWidget config-core:TimeProperty-Date .
 
-shape:SpecialitePharmaceutique_classificationATC sh:path _:d5fa920fdcb343949293453d4f1fbc602;
+shape:SpecialitePharmaceutique_classificationATC sh:path _:d5fa920fdcb343949293453d4f1fbc6062;
   sh:name "est classée sous"@fr;
   sh:description "Référence à un élément de la classification ATC de cette spécialité. Cet attribut n'est pas historisé et contient la dernière valeur en date du code ATC. Les évolutions de l’ATC elle-même sont historisées dans le référentiel ATC. Pour certaines spécialités archivées, il est possible que la référence à l'ATC ne soit pas présente dans le cas où ce code aurait disparu avant l'ATC 2022. Après 2022 l'ATC est cumulative et mêmes les codes dépréciés restent présents."@fr;
   sh:nodeKind sh:IRI;
@@ -490,13 +491,13 @@ shape:SpecialitePharmaceutique_classificationATC sh:path _:d5fa920fdcb3439492934
   config-datasources:treeRootsDatasource shape:tree_atc_root;
   config-datasources:treeChildrenDatasource shape:tree_atc_child .
 
-_:d5fa920fdcb343949293453d4f1fbc602 rdf:first med:classificationATC;
-  rdf:rest _:d5fa920fdcb343949293453d4f1fbc603 .
+_:d5fa920fdcb343949293453d4f1fbc6062 rdf:first med:classificationATC;
+  rdf:rest _:d5fa920fdcb343949293453d4f1fbc6063 .
 
-_:d5fa920fdcb343949293453d4f1fbc603 rdf:first _:d5fa920fdcb343949293453d4f1fbc604;
+_:d5fa920fdcb343949293453d4f1fbc6063 rdf:first _:d5fa920fdcb343949293453d4f1fbc6064;
   rdf:rest rdf:nil .
 
-_:d5fa920fdcb343949293453d4f1fbc604 sh:zeroOrMorePath rdfs:subClassOf .
+_:d5fa920fdcb343949293453d4f1fbc6064 sh:zeroOrMorePath rdfs:subClassOf .
 
 shape:SpecialitePharmaceutique_classificationATCdirect sh:path med:classificationATC;
   sh:name "est classée sous (direct)"@fr;
@@ -564,7 +565,7 @@ shape:SpecialitePharmaceutique_justificationPrescriptibiliteEnDC sh:path med:jus
   dash:searchWidget config-core:ListProperty;
   config-datasources:datasource shape:list_rdfslabel_alpha_rdfssubClassOf_with_count .
 
-shape:SpecialitePharmaceutique_SAouFT sh:path _:d5fa920fdcb343949293453d4f1fbc605;
+shape:SpecialitePharmaceutique_SAouFT sh:path _:d5fa920fdcb343949293453d4f1fbc6065;
   sh:name "contient (SA ou FT)"@fr;
   sh:description "Contient en susbtance active ou en fraction thérapeutique"@fr;
   sh:nodeKind sh:IRI;
@@ -572,12 +573,12 @@ shape:SpecialitePharmaceutique_SAouFT sh:path _:d5fa920fdcb343949293453d4f1fbc60
   dash:searchWidget config-core:AutocompleteProperty;
   config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
 
-_:d5fa920fdcb343949293453d4f1fbc605 sh:alternativePath _:d5fa920fdcb343949293453d4f1fbc606 .
+_:d5fa920fdcb343949293453d4f1fbc6065 sh:alternativePath _:d5fa920fdcb343949293453d4f1fbc6066 .
 
-_:d5fa920fdcb343949293453d4f1fbc606 rdf:first med:substanceActive;
-  rdf:rest _:d5fa920fdcb343949293453d4f1fbc607 .
+_:d5fa920fdcb343949293453d4f1fbc6066 rdf:first med:substanceActive;
+  rdf:rest _:d5fa920fdcb343949293453d4f1fbc6067 .
 
-_:d5fa920fdcb343949293453d4f1fbc607 rdf:first med:fractionTherapeutique;
+_:d5fa920fdcb343949293453d4f1fbc6067 rdf:first med:fractionTherapeutique;
   rdf:rest rdf:nil .
 
 shape:SpecialitePharmaceutique_substanceActive sh:path med:substanceActive;
@@ -655,19 +656,19 @@ shape:Evenement_concerne sh:path med:concerne;
   sh:name "concerne"@fr;
   sh:description "Référence à la Spécialité ou à la Présentation concernée par cet évènement"@fr;
   sh:nodeKind sh:IRI;
-  sh:or _:d5fa920fdcb343949293453d4f1fbc6010;
+  sh:or _:d5fa920fdcb343949293453d4f1fbc6070;
   dash:searchWidget config-core:AutocompleteProperty;
   config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
 
-_:d5fa920fdcb343949293453d4f1fbc608 sh:node shape:SpecialitePharmaceutique .
+_:d5fa920fdcb343949293453d4f1fbc6068 sh:node shape:SpecialitePharmaceutique .
 
-_:d5fa920fdcb343949293453d4f1fbc609 sh:node shape:Presentation .
+_:d5fa920fdcb343949293453d4f1fbc6069 sh:node shape:Presentation .
 
-_:d5fa920fdcb343949293453d4f1fbc6010 a rdf:List;
-  rdf:first _:d5fa920fdcb343949293453d4f1fbc608;
-  rdf:rest _:d5fa920fdcb343949293453d4f1fbc6011 .
+_:d5fa920fdcb343949293453d4f1fbc6070 a rdf:List;
+  rdf:first _:d5fa920fdcb343949293453d4f1fbc6068;
+  rdf:rest _:d5fa920fdcb343949293453d4f1fbc6071 .
 
-_:d5fa920fdcb343949293453d4f1fbc6011 rdf:first _:d5fa920fdcb343949293453d4f1fbc609;
+_:d5fa920fdcb343949293453d4f1fbc6071 rdf:first _:d5fa920fdcb343949293453d4f1fbc6069;
   rdf:rest rdf:nil .
 
 shape:Evenement_typeEvenement sh:path med:typeEvenement;
@@ -756,7 +757,7 @@ shape:Substance_exactMatch sh:path skos:exactMatch;
   sh:nodeKind sh:IRI;
   sh:node shape:SubstanceSMS;
   dash:searchWidget config-core:AutocompleteProperty;
-  config-datasources:datasource shape:search_rdfslabel_contains_rdfssubClassOf .
+  config-datasources:datasource shape:search_rdfslabel_contains_nolang .
 
 shape:ATC_labelATC sh:path rdfs:label;
   sh:name "libellé"@fr;
@@ -883,19 +884,23 @@ shape:SubstanceSMS_label sh:path rdfs:label;
   dash:propertyRole dash:LabelRole .
 
 shape:list_rdfslabel_alpha_rdfssubClassOf_with_count a config-datasources:SparqlDatasource;
-  config-datasources:queryTemplate shape:query_list_label_subClassOfOf_alpha_with_count;
+  config-datasources:queryTemplate config-datasources:query_list_label_alpha_with_count;
   config-datasources:labelProperty rdfs:label .
 
 shape:search_rdfslabel_contains_rdfssubClassOf a config-datasources:SparqlDatasource;
-  config-datasources:queryTemplate shape:query_search_med_subClassOf_contains;
+  config-datasources:queryTemplate config-datasources:query_search_label_contains;
+  config-datasources:labelProperty rdfs:label .
+
+shape:search_rdfslabel_contains_nolang a config-datasources:SparqlDatasource;
+  config-datasources:queryTemplate shape:query_search_label_contains_nolang;
   config-datasources:labelProperty rdfs:label .
 
 shape:search_rdfslabel_cis_cip_ucd_contains_rdfssubClassOf a config-datasources:SparqlDatasource;
-  config-datasources:queryTemplate shape:query_search_med_subClassOf_contains;
+  config-datasources:queryTemplate config-datasources:query_search_label_contains;
   config-datasources:labelPath "<http://www.w3.org/2000/01/rdf-schema#label>|<http://data.esante.gouv.fr/ansm/medicament/CIS>|<http://data.esante.gouv.fr/ansm/medicament/CIP13>|<http://data.esante.gouv.fr/ansm/medicament/codeUCD13>|<http://www.w3.org/2004/02/skos/core#altLabel>" .
 
 shape:list_literal_alpha_rdfssubClassOf a config-datasources:SparqlDatasource;
-  config-datasources:queryTemplate shape:query_list_med_subClassOf_alpha;
+  config-datasources:queryTemplate config-datasources:query_list_label_alpha;
   config-datasources:labelProperty med:unite .
 
 shape:tree_atc_root a config-datasources:SparqlDatasource;
@@ -1062,20 +1067,17 @@ WHERE {
 ORDER BY UCASE(?label)
 LIMIT 500""" .
 
-shape:query_search_med_subClassOf_contains a config-datasources:SPARQLQuery;
-  config-datasources:queryString """PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX med:<http://data.esante.gouv.fr/ansm/medicament/>
-SELECT DISTINCT ?uri ?label
+shape:query_search_label_contains_nolang config-datasources:queryString """SELECT DISTINCT ?uri ?label
 WHERE {
- ?domain rdfs:subClassOf $domain .
+ ?domain $type $domain .
  ?domain $property ?uri .
- ?uri rdfs:subClassOf $range .
+ ?uri $type $range .
  ?uri $labelPath ?label .
  FILTER(isIRI(?uri))
  FILTER(CONTAINS(LCASE(STR(?label)), LCASE(\"$key\"))) 
-} 
-ORDER BY UCASE(?label)
-LIMIT 50""" .
+ BIND( IF( STRSTARTS(LCASE(STR(?label)), LCASE(\"$key\")),0,9 ) AS ?starts ) }
+ORDER BY UCASE(STR(?label))
+LIMIT 15""" .
 
 med:Presentation a owl:Class;
   rdfs:subClassOf config-core:SparnaturalClass;
@@ -1339,7 +1341,7 @@ med:substance a owl:ObjectProperty;
   rdfs:label "contient"@fr;
   rdfs:subPropertyOf config-core:ListProperty;
   rdfs:domain med:MedicamentParSubstanceForme, med:MedicamentParSubstanceDosage, med:MedicamentParSubstance,
-    med:MedicamentParSubstanceDosageForme, med:PrescriptionEnDC;
+    med:MedicamentParSubstanceDosageForme;
   rdfs:range med:Substance;
   config-datasources:datasource this:list_rdfslabel_alpha_rdfssubClassOf_with_count .
 
@@ -1378,6 +1380,8 @@ med:uniteDePresentation a owl:ObjectProperty;
   rdfs:domain med:PrescriptionEnDC, med:Dosage;
   rdfs:range med:UniteDePresentation;
   config-datasources:datasource this:list_rdfslabel_alpha_rdfssubClassOf_with_count .
+
+med:substance rdfs:domain med:PrescriptionEnDC .
 
 med:dosagePresentation rdfs:label "dosage présentation"@fr;
   rdfs:subPropertyOf config-core:ListProperty;
