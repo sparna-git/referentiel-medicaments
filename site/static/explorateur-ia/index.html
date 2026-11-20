@@ -186,7 +186,11 @@
 
         <div class="row" style="padding-bottom:10px;">
           <div class="col-md-6">
-            
+            <!-- faceted search : the values offered depend on the rest of the query -->
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="faceted-switch">
+              <label class="form-check-label" for="faceted-switch" data-i18n="actions.faceted"></label>
+            </div>
           </div>
 
           <div class="col-md-6">
@@ -254,7 +258,13 @@
             defaultLang="fr"
             distinct="true"
             debug="true"
-          ></spar-natural>
+            facetedBrowsing="false"
+          >
+            <!-- default template of the list items : the label, and a link to open the resource -->
+            <script id="default-template" type="text/x-handlebars-template">
+              <span>{{{label}}}<span class="item-link" data-href="{{term.value}}" title="{{term.value}}"></span></span>
+            </script>
+          </spar-natural>
 
           <input type="hidden" id="query-json"></input>
         </div>
@@ -495,6 +505,7 @@
         "actions.share": "Share",
         "actions.export": "Export query",
         "actions.import": "Import query",
+        "actions.faceted": "Faceted search",
         "actions.warning.limit": "Result is always limited to 10000 lines",
         "tutorial": "First time here ? watch the tutorial !",
         "share.modal.title": "Share this query",
@@ -538,6 +549,7 @@
         "actions.share": "Partager",
         "actions.export": "Exporter la requête",
         "actions.import": "Charger une requête",
+        "actions.faceted": "Recherche à facettes",
         "actions.warning.limit": "Le nombre maximum de résultats est fixé à 10 000.",
         "tutorial": "Vous ne savez pas comment commencer ? cliquez ici pour être guidé !",
         "share.modal.title": "Partage de requête",

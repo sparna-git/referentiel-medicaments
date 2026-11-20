@@ -906,7 +906,7 @@ shape:list_literal_alpha_rdfssubClassOf a config-datasources:SparqlDatasource;
 shape:tree_atc_root a config-datasources:SparqlDatasource;
   config-datasources:queryString """PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-SELECT ?uri (CONCAT(?code, \" - \", STR(?rdfs_label)) AS ?label) (COUNT(?x) AS ?count)
+SELECT ?uri (CONCAT(?code, \" - \", STR(?rdfs_label)) AS ?label) (COUNT(DISTINCT $this) AS ?count)
 WHERE {
  ?uri rdfs:subClassOf <http://data.esante.gouv.fr/whocc/atc/ATC> .
  ?uri rdfs:label ?rdfs_label .
@@ -915,7 +915,7 @@ WHERE {
 
  # Counts how many time the URI is used as value in the criteria build in Sparnatural
  OPTIONAL {
- ?x $property ?uri .
+ $this $property ?uri .
  }
 }
 GROUP BY ?uri ?code ?rdfs_label
@@ -924,7 +924,7 @@ ORDER BY ?label""" .
 shape:tree_atc_child a config-datasources:SparqlDatasource;
   config-datasources:queryString """PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-SELECT ?uri (CONCAT(?code, \" - \", STR(?rdfs_label)) AS ?label) ?hasChildren (COUNT(?x) AS ?count)
+SELECT ?uri (CONCAT(?code, \" - \", STR(?rdfs_label)) AS ?label) ?hasChildren (COUNT(DISTINCT $this) AS ?count)
 WHERE {
  ?uri rdfs:subClassOf $node .
  ?uri rdfs:label ?rdfs_label .
@@ -936,7 +936,7 @@ WHERE {
 
  # Counts how many time the URI is used as value in the criteria build in Sparnatural
  OPTIONAL {
- ?x $property ?uri .
+ $this $property ?uri .
  }
 
 }
@@ -1069,8 +1069,8 @@ LIMIT 500""" .
 
 shape:query_search_label_contains_nolang config-datasources:queryString """SELECT DISTINCT ?uri ?label
 WHERE {
- ?domain $type $domain .
- ?domain $property ?uri .
+ $this $type $domain .
+ $this $property ?uri .
  ?uri $type $range .
  ?uri $labelPath ?label .
  FILTER(isIRI(?uri))

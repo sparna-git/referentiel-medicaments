@@ -32,6 +32,7 @@
 
   <!-- Sparnatural CSS -->
   <link href="../assets/css/sparnatural.css" rel="stylesheet" />
+  <link href="../assets/css/sparnatural-history.css" rel="stylesheet" />
   <!-- Timeline CSS -->
   <link rel="stylesheet" href="../assets/css/timeline.css" />
 
@@ -97,7 +98,11 @@
 
         <div class="row" style="padding-bottom:10px;">
           <div class="col-md-6">
-            
+            <!-- faceted search : the values offered depend on the rest of the query -->
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="faceted-switch">
+              <label class="form-check-label" for="faceted-switch" data-i18n="actions.faceted"></label>
+            </div>
           </div>
 
           <div class="col-md-6">
@@ -126,13 +131,22 @@
             defaultLang="en"
             distinct="true"
             debug="true"
-          ></spar-natural>
+            facetedBrowsing="false"
+          >
+            <!-- default template of the list items : the label, and a link to open the resource -->
+            <script id="default-template" type="text/x-handlebars-template">
+              <span>{{{label}}}<span class="item-link" data-href="{{term.value}}" title="{{term.value}}"></span></span>
+            </script>
+          </spar-natural>
 
           <input type="hidden" id="query-json"></input>
         </div>
 
         <!-- -->
         <div class="row">
+
+          <!-- history of the executed queries, opened as a modal -->
+          <sparnatural-history lang="fr"></sparnatural-history>
 
           <div class="col-md-7" style="font-style: italic; font-size:0.9em;">
             <a href="#" id="sparql-toggle"><i id="sparql-toggle-icon" class="fad fa-eye fa-fw"></i>&nbsp; <span data-i18n="actions.toggle"></span></a>
@@ -142,6 +156,8 @@
             <a href="#" id="export"><i id="export-icon" class="fad fa-file-export"></i>&nbsp; <span data-i18n="actions.export"></span></a>
             &nbsp;|&nbsp;
             <a href="#" id="import"><i id="import-icon" class="fad fa-file-import"></i>&nbsp; <span data-i18n="actions.import"></span></a>
+            &nbsp;|&nbsp;
+            <a href="#" id="history"><i id="history-icon" class="fad fa-history"></i>&nbsp; <span data-i18n="actions.history"></span></a>
           </div>
 
           <div class="col-md-5">
@@ -332,6 +348,7 @@
   <script src="tutorial.js"></script>
 
   <script src="../assets/js/sparnatural-bindings.js"></script>
+  <script src="../assets/js/sparnatural-history.js"></script>
 
   <script>
     $.urlParam = function(name){
@@ -354,6 +371,8 @@
           'actions.share': 'Share',            
           'actions.export': 'Export query',
           'actions.import': 'Import query',
+          'actions.history': 'History',
+          'actions.faceted': 'Faceted search',
           'actions.warning.limit': 'Result is always limited to 10000 lines',
           'tutorial': 'First time here ? watch the tutorial !',
           'share.modal.title': 'Share this query',
@@ -394,6 +413,8 @@
           'actions.share': 'Partager',            
           'actions.export': 'Exporter la requête',
           'actions.import': 'Charger une requête',
+          'actions.history': 'Historique',
+          'actions.faceted': 'Recherche à facettes',
           'actions.warning.limit': 'Le nombre maximum de résultats est fixé à 10 000.',
           'tutorial': 'Vous ne savez pas comment commencer ? cliquez ici pour être guidé !',
           'share.modal.title': 'Partage de requête',
@@ -504,6 +525,32 @@
     bindSparnaturalWithYasrPlugins(sparnatural, yasr);
     // binds Sparnatural with itself for the query execution and integration with yasqe and yasr
     bindSparnaturalWithItself(sparnatural, yasqe, yasr);
+
+    // history of the executed queries : saved on submit, reloaded from the modal
+    const historyComponent = document.querySelector("sparnatural-history");
+    historyComponent.setAttribute("lang", lang);
+    bindSparnaturalWithHistory(sparnatural, historyComponent);
+    document.getElementById('history').onclick = function() {
+      historyComponent.openHistoryModal();
+      return false;
+    };
+
+    // faceted search switch : Sparnatural is displayed again, then the query on screen is reloaded
+    document.getElementById('faceted-switch').addEventListener('change', function() {
+      const queryJson = document.getElementById('query-json').value;
+      if (queryJson && !sparnatural.sparnatural.isEmpty()) {
+        sparnatural.addEventListener("init", () => {
+          try {
+            sparnatural.loadQuery(JSON.parse(queryJson));
+          } catch (error) {
+            // a load stopped halfway leaves Sparnatural quiet, the run button would stay dead
+            console.warn("Query not reloaded after the faceted switch", JSON.parse(queryJson), error);
+            sparnatural.sparnatural.setQuiet(false);
+          }
+        }, { once: true });
+      }
+      sparnatural.setAttribute('facetedBrowsing', this.checked ? 'true' : 'false');
+    });
 
     document.getElementById('sparql-toggle').onclick = function() {
       if(document.getElementById('yasqe').style.display == 'none') {
