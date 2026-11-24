@@ -197,6 +197,23 @@ document.addEventListener("DOMContentLoaded", () => {
     historyComponent?.openHistoryModal();
   });
 
+  // faceted search switch : Sparnatural is displayed again, then the query on screen is reloaded
+  document.getElementById("faceted-switch")?.addEventListener("change", (e) => {
+    const queryJson = document.getElementById("query-json").value;
+    if (queryJson && !sparnatural.sparnatural.isEmpty()) {
+      sparnatural.addEventListener("init", () => {
+        try {
+          sparnatural.loadQuery(JSON.parse(queryJson));
+        } catch (error) {
+          // a load stopped halfway leaves Sparnatural quiet, the run button would stay dead
+          console.warn("Query not reloaded after the faceted switch", JSON.parse(queryJson), error);
+          sparnatural.sparnatural.setQuiet(false);
+        }
+      }, { once: true });
+    }
+    sparnatural.setAttribute("facetedBrowsing", e.target.checked ? "true" : "false");
+  });
+
   sparnaturalTextQuery?.addEventListener("loadQuery", (event) => {
     const query = event.detail.query;
     sparnatural.loadQuery(query);
