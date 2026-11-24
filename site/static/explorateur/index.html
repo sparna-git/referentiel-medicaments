@@ -148,7 +148,7 @@
           <!-- history of the executed queries, opened as a modal -->
           <sparnatural-history lang="fr"></sparnatural-history>
 
-          <div class="col-md-7" style="font-style: italic; font-size:0.9em;">
+          <div class="col-md-6" style="font-style: italic; font-size:0.9em;">
             <a href="#" id="sparql-toggle"><i id="sparql-toggle-icon" class="fad fa-eye fa-fw"></i>&nbsp; <span data-i18n="actions.toggle"></span></a>
             &nbsp;|&nbsp;
             <a href="#" id="share"><i id="share-icon" class="fad fa-share-square"></i>&nbsp; <span data-i18n="actions.share"></span></a>
@@ -156,11 +156,9 @@
             <a href="#" id="export"><i id="export-icon" class="fad fa-file-export"></i>&nbsp; <span data-i18n="actions.export"></span></a>
             &nbsp;|&nbsp;
             <a href="#" id="import"><i id="import-icon" class="fad fa-file-import"></i>&nbsp; <span data-i18n="actions.import"></span></a>
-            &nbsp;|&nbsp;
-            <a href="#" id="history"><i id="history-icon" class="fad fa-history"></i>&nbsp; <span data-i18n="actions.history"></span></a>
           </div>
 
-          <div class="col-md-5">
+          <div class="col-md-4">
             <form>
               <div class="form-group">
                 <select class="form-control" style="width:100%; appearance: auto !important;" id="select-examples">
@@ -185,6 +183,13 @@
                 </select>
               </div>
             </form>
+          </div>
+
+          <div class="col-md-2">
+            <button id="history" class="btn btn-primary" style="width: 100%">
+              <i class="fad fa-history"></i>&nbsp;
+              <span data-i18n="actions.history"></span>
+            </button>
           </div>
         </div>
 
